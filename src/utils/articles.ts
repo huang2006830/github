@@ -118,17 +118,37 @@ export function paginate<T>(items: T[], page: number, pageSize: number): { data:
   return { data, totalPages, currentPage };
 }
 
+// 站点固定分类：数组顺序即首页筛选标签顺序（“全部”由组件自己渲染）
+export const SITE_CATEGORIES: string[] = ['Python & Scala', '大数据生态', 'Linux/云原生', 'DevOps 实践'];
+
+// 分类链接使用固定英文 slug，避免中文分类名进入 URL
+const categorySlugs: Record<string, string> = {
+  'Python & Scala': 'python-scala',
+  '大数据生态': 'big-data',
+  'Linux/云原生': 'linux-cloud-native',
+  'DevOps 实践': 'devops',
+};
+
+export function getCategorySlug(category: string): string {
+  return categorySlugs[category] || slugify(category);
+}
+
+// 按固定顺序返回分类；数据里出现计划外的分类则追加在后面，避免内容“隐身”
+export function getSiteCategories(articles: Article[]): string[] {
+  const present = new Set(getAllCategories(articles));
+  const canonical = SITE_CATEGORIES.filter((cat) => present.has(cat));
+  const extras = Array.from(present)
+    .filter((cat) => !SITE_CATEGORIES.includes(cat))
+    .sort((a, b) => a.localeCompare(b, 'zh-CN'));
+  return [...canonical, ...extras];
+}
+
 // Category color mapping for placeholder gradients
 const categoryGradients: Record<string, string> = {
-  'Big Data': 'from-indigo-600 to-blue-800',
-  'Data Science': 'from-emerald-600 to-teal-800',
-  'Data Engineering': 'from-orange-600 to-red-800',
-  Programmation: 'from-violet-600 to-purple-800',
-  IA: 'from-emerald-600 to-teal-800',
-  DevOps: 'from-orange-600 to-red-800',
-  Cybersécurité: 'from-red-600 to-rose-800',
-  Cloud: 'from-sky-600 to-blue-800',
-  Web: 'from-amber-600 to-yellow-800',
+  'Python & Scala': 'from-violet-600 to-purple-800',
+  '大数据生态': 'from-indigo-600 to-blue-800',
+  'Linux/云原生': 'from-sky-600 to-cyan-800',
+  'DevOps 实践': 'from-orange-600 to-red-800',
 };
 
 export function getCategoryGradient(categories: string[]): string {
@@ -139,15 +159,10 @@ export function getCategoryGradient(categories: string[]): string {
 }
 
 const categoryColors: Record<string, string> = {
-  'Big Data': 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30',
-  'Data Science': 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-  'Data Engineering': 'bg-orange-500/20 text-orange-400 border-orange-500/30',
-  Programmation: 'bg-violet-500/20 text-violet-400 border-violet-500/30',
-  IA: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-  DevOps: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
-  Cybersécurité: 'bg-red-500/20 text-red-400 border-red-500/30',
-  Cloud: 'bg-sky-500/20 text-sky-400 border-sky-500/30',
-  Web: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+  'Python & Scala': 'bg-violet-500/20 text-violet-400 border-violet-500/30',
+  '大数据生态': 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30',
+  'Linux/云原生': 'bg-sky-500/20 text-sky-400 border-sky-500/30',
+  'DevOps 实践': 'bg-orange-500/20 text-orange-400 border-orange-500/30',
 };
 
 export function getCategoryColor(category: string): string {
@@ -155,15 +170,10 @@ export function getCategoryColor(category: string): string {
 }
 
 const categoryLabels: Record<string, string> = {
-  'Big Data': '大数据',
-  'Data Science': '数据科学',
-  'Data Engineering': '数据工程',
-  Programmation: '编程',
-  IA: '人工智能',
-  DevOps: 'DevOps',
-  Cybersécurité: '网络安全',
-  Cloud: '云计算',
-  Web: 'Web',
+  'Python & Scala': 'Python & Scala',
+  '大数据生态': '大数据生态',
+  'Linux/云原生': 'Linux / 云原生',
+  'DevOps 实践': 'DevOps 实践',
 };
 
 export function getCategoryLabel(category: string): string {

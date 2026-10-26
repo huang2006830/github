@@ -2,6 +2,34 @@
   "month": "2026-08",
   "articles": [
     {
+      "id": "dcec0cf89504",
+      "title": "开学大二想走网安方向，这个方向建议选吗？",
+      "description": "开学大二，想要走网安方向，不知道为什么我暑假学完python后，感觉很迷茫，我不知道我如果选择网安这个方向过后结果是什么？有没有很好的出路？我的努力会有效果吗？我感到很焦虑，过来人能给点建议吗？顺便给点学习网安的建议和学习网安的网站最好是文档版，谢谢了学过python，Java，数据库MySQL，c++",
+      "link": "https://segmentfault.com/q/1010000048225619",
+      "pubDate": "2026-08-28T14:02:43.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "7646e5c12ef2",
+      "title": "我搭建的神经网络代码哪里出了问题？",
+      "description": "有人能帮忙看一下我自定义的卷积神经网络的代码哪里出了问题吗，我想做的是图像分类，循环的过程中验证集的损失值越来越大而且accuracy一直在0.1徘徊（我是小白真的不知道怎么办了）#调用库 import numpy as np import matplotlib.pyplot as plt #画图 from PIL import Image #读图 import os import splitfolders #自动划分数据集 from tensorflow.keras.preprocessing.image import ImageDataGenerator from tensorflow.keras.models import Sequential from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout from tensorflow.keras.optimizers import Adam from sklearn.metrics import…",
+      "link": "https://segmentfault.com/q/1010000048218350",
+      "pubDate": "2026-08-27T11:22:41.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
       "id": "eeecf86336c6",
       "title": "GeoRA: 为RLVR设计的LoRA——ACL 2026杰出论文解析",
       "description": "ACL（Annual Meeting of the Association for Computational Linguistics）是计算语言学和自然语言处理（NLP）领域的国际顶级学术会议，是CCF-A类会议，也是中国计算机学会推荐的自然语言处理方向最高等级国际学术会议。ACL 2026杰出论文奖（Outstanding Paper）在圣地亚哥揭晓，全球共 18 篇入选，美团履约技术团队的《GeoRA:Geometry-Aware Low-Rank Adaptation for RLVR》 就是其中之一。 论文下载：GeoRA：Geometry-Aware Low-Rank Adaptation for RLVR 讲解视频：ACL2026 杰出论文分享（受智源社区邀请） RLVR已经成为提升大模型推理能力的关键范式，但它的训练开销较高，于是一个自然的技术就是用 LoRA 这类参数高效微调方法来做 RLVR。但是，LoRA 及其变体几乎都是在 SFT 场景下建立并验证的。而近期一系列机制研究表明，RLVR 与 SFT 的优化几何存在本质差异：RLVR…",
@@ -10,9 +38,8 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/97ea31d07a6d2933012521da83d6af45614059.png",
       "type": "blog"
@@ -26,9 +53,8 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p1.meituan.net/meituantechblog/8f6d0d2a1b53e0fbe26ec7f5426bd45a302269.png",
       "type": "blog"
@@ -42,37 +68,36 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/9720828f0ff8f07f6ce01f56d9e3f820362245.png",
       "type": "blog"
     },
     {
-      "id": "4395164548a7",
-      "title": "AI 可观测性与 Trace：如何还原 Agent 的完整执行过程",
-      "description": "接口返回 200，耗时也正常，智能客服给出的退款规则却是错的。 打开监控面板，只能看到这次请求调用过大模型，并且正常生成了回答。再往下查就麻烦了：是知识库没有召回正确资料，Prompt 拼错了，模型忽略了上下文，还是某个工具返回了旧数据？普通接口日志通常回答不了这些问题。 一次 AI 请求可能会经过问题改写、知识库检索、重排、模型调用、工具调用和结果校验。Agent 还可能重复执行其中几步。每一步看起来都调用成功，错误结果却会继续传给下一步，最后得到一段格式正常、内容有问题的回答。 排查时需要顺着这条执行过程往回找：当时用了哪个模型和 Prompt，检索到了哪些文档，调用了什么工具，Agent 重试了几次，最终回答参考了哪些结果。 这些信息都落在同一条调用链里，才能继续定位问题。 为什么 AI 应用不能只看接口是否成功？ 传统后端监控主要看 QPS、错误率、P99 延迟、CPU、内存和数据库慢查询。这些指标可以反映服务有没有异常，却解释不了模型为什么生成了当前答案。 以 RAG 为例，问题改写偏了，后面的召回结果通常也会跟着偏；正确文档虽然被召回，却可能在重排时掉出…",
-      "link": "https://javaguide.cn/ai/system-design/ai-observability.html",
-      "pubDate": "2026-08-16T00:16:35.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "eb1397db7d7e",
+      "title": "如何判断 OpenAI 兼容接口是否静默忽略 temperature 等请求参数？",
+      "description": "如何判断 OpenAI 兼容接口是否静默忽略 temperature 等请求参数？我在测试一些兼容 OpenAI SDK 的大模型 API。目前遇到一个判断问题：部分接口收到不支持的参数时会直接报错，但也可能正常返回 200，无法确认参数是实际生效，还是被网关静默忽略。例如下面的代码分别使用 temperature=0 和 temperature=1，对同一个提示词重复请求：import os from collections import Counter from openai import OpenAI client = OpenAI( api_key=os.environ[&quot;TEST_API_KEY&quot;], base_url=os.environ[&quot;TEST_BASE_URL&quot;], ) MODEL = os.environ[&quot;TEST_MODEL&quot;] PROMPT = &quot;生成一个不超过 12 个字的科幻小说标题，只输出标题&quot; def run_test(temperature: float,…",
+      "link": "https://segmentfault.com/q/1010000048158559",
+      "pubDate": "2026-08-13T14:52:03.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
       "categories": [
-        "Programmation"
+        "Python & Scala"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "ac8c20b08bfc",
-      "title": "Agent 项目面试怎么讲？从系统架构、技术选型到 Badcase 复盘",
-      "description": "Agent/AI 应用方向的面试，基本不会停留在背概念，一般都是结合你的项目往深了问：为什么这样设计、线上出过什么问题、怎么定位和修复。 如果你在面试之前，只背 ReAct、RAG、Memory、MCP、Function Calling 等核心概念，通常应付不了面试追问： 你做的到底是不是 Agent，为什么不能用普通接口或固定工作流解决？ 一个请求进来后，经过了哪些组件，状态和数据怎么流转？ 关键方案是根据什么约束选出来的，代价是什么？ 项目失败过什么，你怎么定位、修复并防止它再次发生？ 为了方便大家更容易理解，我在文中会以一个智能售后工单 Agent 为例，来串起来这些问题。 不论你的项目是不是类似的，都没关系，文中分享的方法都是通用的。你在准备自己的项目时，业务背景、职责、数据规模和指标都要换成真实内容。 Agent 项目面试到底在考什么？ 先看面试官为什么这么问。Agent 项目不像 CRUD 项目有成熟的评价标准，面试官没法只凭“做过”两个字判断你的水平，只能靠追问来核实三件事： 项目是不是真的。…",
-      "link": "https://javaguide.cn/ai/interview-questions/agent-project-interview-guide.html",
-      "pubDate": "2026-08-15T07:02:21.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "206da4c99f26",
+      "title": "脚本难题，请指教,如何解决这个问题？",
+      "description": "求大佬指教。最近写了一个网站的抢购脚本，但是感觉抢购速度没有别人的快，网页上的按钮没有接口只能模拟人操作，网站导出来的文件有几万行。速度还有提升的空间吗或者如何改进让抢购速度提高？ def selenium_upload(self, brand='AD'): if not self.driver: try: self.init_driver(brand) except Exception as e: logger.error(f&quot;初始化驱动失败: {e}&quot;) return False else: # ---------- 清理残留弹窗 ---------- try: modal = self.driver.find_element(By.XPATH, '//div[contains(@class, &quot;ant-modal&quot;)]') if modal.is_displayed(): logger.info(&quot;检测到残留弹窗，尝试关闭&quot;) cancel_btn =…",
+      "link": "https://segmentfault.com/q/1010000048135898",
+      "pubDate": "2026-08-09T01:26:22.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
       "categories": [
-        "Programmation"
+        "Python & Scala"
       ],
       "image": null,
       "type": "blog"

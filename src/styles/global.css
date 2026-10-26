@@ -88,3 +88,198 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ────────────────────────────────────────────────────────────
+   Markdown 文档页（学习资料 / 极客速查）
+   这两个页面以 Markdown 手工维护，样式在此统一，避免逐页写 class。
+   ──────────────────────────────────────────────────────────── */
+.doc-content {
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  color: #d4d4d8;
+  word-wrap: break-word;
+}
+
+.doc-content > *:first-child {
+  margin-top: 0;
+}
+
+.doc-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.doc-content h2 {
+  margin: 2.75rem 0 1rem;
+  padding-bottom: 0.55rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fafafa;
+  border-bottom: 1px solid #27272a;
+  scroll-margin-top: 5.5rem;
+}
+
+.doc-content h3 {
+  margin: 1.9rem 0 0.7rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f4f4f5;
+  scroll-margin-top: 5.5rem;
+}
+
+.doc-content h4 {
+  margin: 1.35rem 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e4e4e7;
+}
+
+.doc-content p {
+  margin: 0.85rem 0;
+}
+
+.doc-content ul,
+.doc-content ol {
+  margin: 0.85rem 0;
+  padding-left: 1.4rem;
+}
+
+.doc-content ul {
+  list-style: disc;
+}
+
+.doc-content ol {
+  list-style: decimal;
+}
+
+.doc-content li {
+  margin: 0.4rem 0;
+}
+
+.doc-content li > ul,
+.doc-content li > ol {
+  margin: 0.35rem 0;
+}
+
+.doc-content li::marker {
+  color: #6366f1;
+}
+
+.doc-content a {
+  color: #818cf8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(129, 140, 248, 0.4);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.doc-content a:hover {
+  color: #a5b4fc;
+  text-decoration-color: rgba(165, 180, 252, 0.9);
+}
+
+.doc-content strong {
+  color: #fafafa;
+  font-weight: 600;
+}
+
+.doc-content em {
+  color: #e4e4e7;
+}
+
+.doc-content code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.3rem;
+  background: #27272a;
+  color: #c7d2fe;
+  white-space: nowrap;
+}
+
+.doc-content pre {
+  margin: 1.1rem 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid #27272a;
+  border-radius: 0.75rem;
+  background: #0b0b0e;
+  overflow-x: auto;
+}
+
+.doc-content pre code {
+  padding: 0;
+  background: transparent;
+  color: #d4d4d8;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.doc-content blockquote {
+  margin: 1.1rem 0;
+  padding: 0.8rem 1.1rem;
+  border-left: 3px solid #6366f1;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: rgba(99, 102, 241, 0.08);
+  color: #a1a1aa;
+}
+
+.doc-content blockquote p {
+  margin: 0.35rem 0;
+}
+
+.doc-content table {
+  width: 100%;
+  margin: 1.25rem 0;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.doc-content thead {
+  background: #18181b;
+}
+
+.doc-content th {
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  font-weight: 600;
+  color: #a1a1aa;
+  border: 1px solid #27272a;
+  white-space: nowrap;
+}
+
+.doc-content td {
+  padding: 0.55rem 0.85rem;
+  color: #d4d4d8;
+  border: 1px solid #27272a;
+  vertical-align: top;
+}
+
+.doc-content tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.doc-content tbody tr:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.doc-content hr {
+  margin: 2.25rem 0;
+  border: 0;
+  border-top: 1px solid #27272a;
+}
+
+.doc-content img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #27272a;
+}
+
+/* 窄屏下表格可横向滚动，避免撑破布局 */
+@media (max-width: 640px) {
+  .doc-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

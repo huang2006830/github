@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { loadAllArticles, loadWorldArticles, getAllCategories, getCategoryColor, getCategoryLabel, slugify, getMetaDescription } from '../../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllCategories, getCategoryColor, getCategoryLabel, getCategorySlug, getMetaDescription } from '../../utils/articles';
 import { withBase } from '../../utils/url';
 
 export function getStaticPaths() {
@@ -11,7 +11,7 @@ export function getStaticPaths() {
   const paths: any[] = [];
 
   for (const cat of categories) {
-    const catSlug = slugify(cat);
+    const catSlug = getCategorySlug(cat);
     const catArticles = allArticles.filter((a) => a.categories.includes(cat));
     const totalPages = Math.max(1, Math.ceil(catArticles.length / PAGE_SIZE));
 
@@ -58,12 +58,12 @@ for (let i = 1; i <= totalPages; i++) {
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": `${categoryLabel} - 大数据技术学习站`,
+    "name": `${categoryLabel} - 大数据运维与开发实战站`,
     "description": `${categoryLabel}分类下共 ${totalArticles} 篇文章。`,
     "url": `${siteUrl}/categorie/${catSlug}/`,
     "numberOfItems": totalArticles,
     "inLanguage": "zh-CN",
-    "isPartOf": { "@type": "WebSite", "name": "大数据技术学习站", "url": siteUrl },
+    "isPartOf": { "@type": "WebSite", "name": "大数据运维与开发实战站", "url": siteUrl },
   })} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",

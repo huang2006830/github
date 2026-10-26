@@ -16,7 +16,7 @@ const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/
 const BROWSER_HEADERS: Record<string, string> = {
   'User-Agent': USER_AGENT,
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+  'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
   'Accept-Encoding': 'gzip, deflate, br',
   'Connection': 'keep-alive',
   'Cache-Control': 'no-cache',
@@ -84,6 +84,23 @@ function truncateDescription(text: string | undefined, maxLength = 500): string 
   const clean = text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
   if (clean.length <= maxLength) return clean;
   return clean.slice(0, maxLength).replace(/\s+\S*$/, '') + '…';
+}
+
+// 个人博客的 RSS 常混入与主题无关的内容（游记、理财、生活记录），
+// 在 feeds.yaml 中用 exclude 关键字过滤，保持站点主题纯净。
+function isExcluded(feedConfig: FeedsConfig['feeds'][number], text: string): boolean {
+  const keywords = feedConfig.exclude || [];
+  return keywords.some((keyword) => text.includes(keyword));
+}
+
+// 部分源（如 InfoQ）的摘要只有一个跳转提示，直接用会让卡片近乎空白，
+// 这类摘要统一替换为中性描述。
+function normalizeDescription(raw: string | undefined, sourceName: string): string {
+  const clean = truncateDescription(raw);
+  if (!clean || /^点击查看原文[>»]?\s*$/.test(clean)) {
+    return `${sourceName} 的最新内容，点击「阅读原文」查看完整全文。`;
+  }
+  return clean;
 }
 
 async function sleep(ms: number): Promise<void> {
@@ -251,6 +268,10 @@ async function processFeed(feedConfig: FeedsConfig['feeds'][number], existingIds
     const id = generateId(link);
     if (existingIds.has(id)) continue;
 
+    const title = item.title || 'Sans titre';
+    const rawDescription = item.contentSnippet || item.content || item.summary;
+    if (isExcluded(feedConfig, `${title} ${rawDescription || ''}`)) continue;
+
     const pubDate = item.pubDate || item.isoDate || new Date().toISOString();
     const parsedDate = new Date(pubDate);
     if (parsedDate.getTime() < MIN_DATE.getTime()) continue;
@@ -258,8 +279,8 @@ async function processFeed(feedConfig: FeedsConfig['feeds'][number], existingIds
 
     articles.push({
       id,
-      title: item.title || 'Sans titre',
-      description: truncateDescription(item.contentSnippet || item.content || item.summary),
+      title,
+      description: normalizeDescription(rawDescription, feedConfig.name),
       link,
       pubDate: new Date(pubDate).toISOString(),
       source: feedConfig.name,
@@ -321,8 +342,8 @@ async function main() {
 
   const config: FeedsConfig = parse(readFileSync(FEEDS_FILE, 'utf-8'));
 
-  const fr = await processCollection('Flux francophones', config.feeds, DATA_DIR);
-  const world = await processCollection('Flux internationaux', config.feeds_world || [], DATA_WORLD_DIR);
+  const fr = await processCollection('中文源', config.feeds, DATA_DIR);
+  const world = await processCollection('国际源', config.feeds_world || [], DATA_WORLD_DIR);
 
   const totalNew = fr.newCount + world.newCount;
   const totalArticles = fr.totalIds + world.totalIds;

@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { loadAllArticles, loadWorldArticles, getRelatedArticles, formatDate, getCategoryColor, getCategoryGradient, getCategoryLabel, getFreshnessBadge, getTypeLabel, getTypeColor, slugify, getMetaDescription } from '../../utils/articles';
+import { loadAllArticles, loadWorldArticles, getRelatedArticles, formatDate, getCategoryColor, getCategoryGradient, getCategoryLabel, getFreshnessBadge, getTypeLabel, getTypeColor, slugify, getCategorySlug, getMetaDescription } from '../../utils/articles';
 import { withBase } from '../../utils/url';
 
 export function getStaticPaths() {
@@ -49,7 +49,7 @@ const siteUrl = new URL(withBase('/'), Astro.site).toString().replace(/\/$/, '')
       "description": article.description,
       "datePublished": article.pubDate,
       "author": { "@type": "Organization", "name": article.source, "url": article.sourceUrl },
-      "publisher": { "@type": "Organization", "name": "大数据技术学习站", "url": siteUrl },
+      "publisher": { "@type": "Organization", "name": "大数据运维与开发实战站", "url": siteUrl },
       ...(article.image ? { "image": article.image } : {}),
       "mainEntityOfPage": article.link,
       "inLanguage": "zh-CN",
@@ -99,7 +99,7 @@ const siteUrl = new URL(withBase('/'), Astro.site).toString().replace(/\/$/, '')
     <!-- Meta -->
     <div class="flex flex-wrap items-center gap-2 mb-4">
       {article.categories.map((cat) => (
-        <a href={withBase(`/categorie/${slugify(cat)}`)} class={`px-2.5 py-1 text-xs font-medium rounded-full border ${getCategoryColor(cat)} hover:opacity-80 transition-opacity`}>
+        <a href={withBase(`/categorie/${getCategorySlug(cat)}`)} class={`px-2.5 py-1 text-xs font-medium rounded-full border ${getCategoryColor(cat)} hover:opacity-80 transition-opacity`}>
           {getCategoryLabel(cat)}
         </a>
       ))}

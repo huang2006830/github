@@ -178,39 +178,24 @@ for (let i = 1; i <= totalPages; i++) {
   }
 
   const categoryColors: Record<string, string> = {
-    'Big Data': 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30',
-    'Data Science': 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-    'Data Engineering': 'bg-orange-500/20 text-orange-400 border-orange-500/30',
-    Programmation: 'bg-violet-500/20 text-violet-400 border-violet-500/30',
-    IA: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
-    DevOps: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
-    'Cybersécurité': 'bg-red-500/20 text-red-400 border-red-500/30',
-    Cloud: 'bg-sky-500/20 text-sky-400 border-sky-500/30',
-    Web: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+    'Python & Scala': 'bg-violet-500/20 text-violet-400 border-violet-500/30',
+    '大数据生态': 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30',
+    'Linux/云原生': 'bg-sky-500/20 text-sky-400 border-sky-500/30',
+    'DevOps 实践': 'bg-orange-500/20 text-orange-400 border-orange-500/30',
   };
 
   const categoryGradients: Record<string, string> = {
-    'Big Data': 'from-indigo-600 to-blue-800',
-    'Data Science': 'from-emerald-600 to-teal-800',
-    'Data Engineering': 'from-orange-600 to-red-800',
-    Programmation: 'from-violet-600 to-purple-800',
-    IA: 'from-emerald-600 to-teal-800',
-    DevOps: 'from-orange-600 to-red-800',
-    'Cybersécurité': 'from-red-600 to-rose-800',
-    Cloud: 'from-sky-600 to-blue-800',
-    Web: 'from-amber-600 to-yellow-800',
+    'Python & Scala': 'from-violet-600 to-purple-800',
+    '大数据生态': 'from-indigo-600 to-blue-800',
+    'Linux/云原生': 'from-sky-600 to-cyan-800',
+    'DevOps 实践': 'from-orange-600 to-red-800',
   };
 
   const categoryLabels: Record<string, string> = {
-    'Big Data': '大数据',
-    'Data Science': '数据科学',
-    'Data Engineering': '数据工程',
-    Programmation: '编程',
-    IA: '人工智能',
-    DevOps: 'DevOps',
-    'Cybersécurité': '网络安全',
-    Cloud: '云计算',
-    Web: 'Web',
+    'Python & Scala': 'Python & Scala',
+    '大数据生态': '大数据生态',
+    'Linux/云原生': 'Linux / 云原生',
+    'DevOps 实践': 'DevOps 实践',
   };
 
   function getCatLabel(cat: string): string {

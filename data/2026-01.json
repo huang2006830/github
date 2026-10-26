@@ -2,31 +2,87 @@
   "month": "2026-01",
   "articles": [
     {
-      "id": "c29a4d70df18",
-      "title": "2026最新Java面试+后端面试PDF资料",
-      "description": "大家好，我是 Guide。 2026 版后端 PDF 面试资料终于搞定了！这次的更新量大得惊人，熬了几个通宵，总算能拿出来见人了。 在上一版的基础上，我把内容又往深里挖了挖。目前这份资料已经涵盖了 Java 核心、计算机基础、数据库、缓存、分布式、设计模式、智力题、学习路线、面经等全方位内容。毫不夸张地说，你备战后端面试需要的硬核干货，这一份全包了！ 为了让大家看得更爽，我对其中大部分 PDF 进行了“推倒重来式”的优化： 重构面试突击系列：将原先臃肿的内容拆分成多篇，逻辑更清晰。 重写设计模式总结：新增多道高频设计模式面试题，优化内容表达。 全方位细节完善：每一个知识点都反复推敲，确保没有逻辑断层。 这些 PDF 面试资料的质量都非常高，绝大部分都是 Guide 的原创，也会有一些其他优质技术博主分享的原创资料。 之所以一直坚持出 PDF 版，是因为有一些朋友比较喜欢看 PDF 资料，甚至把 PDF 资料打印出来学习。 截止到目前，这套资料在各个渠道的汇总下载量已经突破了 35w+ 。 说实话，这个数字对我来说不只是流量，更是沉甸甸的信任和责任。…",
-      "link": "https://javaguide.cn/interview-preparation/pdf-interview-javaguide.html",
-      "pubDate": "2026-01-21T03:04:06.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "19b5343df2a1",
+      "title": "为什么我的Python字典循环后不显示结果？",
+      "description": "# 使用用户输入填充字典 responses = {} # 设置一个标志，指出调查是否继续 polling_active = True while polling_active: # 提示输入被调查者的名字和问答 name = input(&quot;\\nWhat is your name? &quot;) reponse = input(&quot;Which mountain would you like to climb someday? &quot;) # 将回答存储在字典中 repeat = input(&quot;Would you like to let another person respond? (yes/no)&quot;) if repeat == 'no': polling_active = False # 调查结束，显示结果 print(&quot;\\n--- Poll Results ---&quot;) for name, response in responses.items(): print(f&quot;{name} would like to…",
+      "link": "https://segmentfault.com/q/1010000047584162",
+      "pubDate": "2026-01-30T15:33:25.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
       "categories": [
-        "Programmation"
+        "Python & Scala"
       ],
-      "image": "https://oss.javaguide.cn/github/javaguide/intro/pdf-interview-javaguide.png",
+      "image": null,
       "type": "blog"
     },
     {
-      "id": "45fc6507648c",
-      "title": "大模型实战项目 + Agent实战项目：Spring AI 面试平台与 RAG 知识库",
-      "description": "很多后端同学准备简历项目时都会遇到同一个问题：项目里全是增删改查（CRUD），技术栈看起来不少，但面试官很难继续深挖，也很难体现你对 大模型应用开发、RAG 知识库、Agent 工程落地 这些新方向的理解。 这篇要介绍的就是一个面向 Java 后端的 大模型实战项目 + Agent 实战项目：基于 Spring Boot 4.0、Java 21、Spring AI 2.0 构建 AI 智能面试辅助平台，把简历分析、AI 模拟面试、RAG 知识库问答、语音面试、异步任务处理、分布式限流等能力串成一个完整项目。 如果你想找一个能写进简历、能用于面试讲解、也能系统学习 Spring AI 和 RAG/Agent 实战的项目，这个项目会比单纯堆业务表的 CRUD 项目更适合你。 项目介绍 这是一个基于 Spring Boot 4.0 + Java 21 + Spring AI 2.0 的 AI 智能面试辅助平台。系统提供三大核心功能： 智能简历分析：上传简历后，AI 自动进行多维度评分并给出改进建议 模拟面试系统：基于简历内容生成个性化面试题，支持实时问答和答案评估 RAG…",
-      "link": "https://javaguide.cn/zhuanlan/interview-guide.html",
-      "pubDate": "2026-01-12T06:25:02.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "3a06f7166c72",
+      "title": "pytest-result-log插件没了吗？有什么可替换的插件？",
+      "description": "现在pytest-result-log插件是没了吗？如果没了有什么替代的插件吗？为什么我尝试使用pip install pytest-result-log安装时爆出以下的错误ERROR: Could not find a version that satisfies the requirement pytest-result-log (from versions: none)ERROR: No matching distribution found for pytest-result-log",
+      "link": "https://segmentfault.com/q/1010000047583938",
+      "pubDate": "2026-01-30T11:10:27.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
       "categories": [
-        "Programmation"
+        "Python & Scala"
       ],
-      "image": "https://oss.javaguide.cn/xingqiu/pratical-project/interview-guide/page-resume-history.png",
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "ca3938f07419",
+      "title": "怎么查看 readthedocs.io 上某个文档的原始 markdown 是什么？",
+      "description": "比如 https://fastapi-login.readthedocs.io/advanced_usage/ 这个文档，我想知道他的代码蓝色标记和红色的警告块是怎么来的 这看起来不是 markdown 本身支持的语法吧？是 readthedocs 提供的扩展语法吗？",
+      "link": "https://segmentfault.com/q/1010000047579736",
+      "pubDate": "2026-01-29T03:14:02.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "6bbb03e1cbdf",
+      "title": "除了阿里云和火山云，还有哪些便宜好用的算力平台？",
+      "description": "你们都在用哪些便宜好用的算力平台呀？求推荐~~~找了一些，阿里云和火山云好贵啊，autodl好用但是一卡难抢~哭死",
+      "link": "https://segmentfault.com/q/1010000047561735",
+      "pubDate": "2026-01-23T08:36:26.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "2919799d72a3",
+      "title": "PY代码协助优化？",
+      "description": "import tkinter as tk from tkinter import ttk, filedialog, messagebox, scrolledtext import pandas as pd import numpy as np from tkinter.font import Font from dataclasses import dataclass from typing import List, Dict, Tuple import json import os from datetime import datetime import warnings warnings.filterwarnings('ignore') @dataclass class Product: &quot;&quot;&quot;商品数据类&quot;&quot;&quot; product_code: str product_name: str category: str year: int season: str subcategory: str tag_price: float…",
+      "link": "https://segmentfault.com/q/1010000047557430",
+      "pubDate": "2026-01-22T01:59:09.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "0770391437cf",
+      "title": "github 的搜索功能经常导致无法搜索到需要的问题怎么办？",
+      "description": "╰─➤ ipython 1 ↵ Python 3.14.2 (main, Dec 5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)] Type 'copyright', 'credits' or 'license' for more information IPython 9.9.0 -- An enhanced Interactive Python. Type '?' for help. Tip: Use `object?` to see the help on `object`, `object??` to view its source Cmd click to launch VS Code Native REPL In [1]: exec('import eventlet; eventlet.monkey_patch()') &lt;string&gt;:1: DeprecationWarning: Eventlet is deprecated. It is currently being maintained in…",
+      "link": "https://segmentfault.com/q/1010000047525537",
+      "pubDate": "2026-01-06T15:21:01.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
       "type": "blog"
     }
   ]

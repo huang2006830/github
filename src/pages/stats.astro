@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { loadAllArticles, loadWorldArticles, getAllCategories, getAllSources, getCategoryColor, getCategoryLabel, slugify } from '../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllCategories, getAllSources, getCategoryColor, getCategoryLabel, getCategorySlug } from '../utils/articles';
 import { withBase } from '../utils/url';
 
 const allArticles = [...loadAllArticles(), ...loadWorldArticles()];
@@ -11,7 +11,7 @@ const sources = getAllSources(allArticles);
 const catStats = categories.map((cat) => ({
   name: cat,
   label: getCategoryLabel(cat),
-  slug: slugify(cat),
+  slug: getCategorySlug(cat),
   count: allArticles.filter((a) => a.categories.includes(cat)).length,
 })).sort((a, b) => b.count - a.count);
 

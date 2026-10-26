@@ -1,0 +1,50 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+    updated?: string | Date;
+    tags?: string[];
+    editHint?: boolean;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const { title, description, editHint = true, tags = [] } = frontmatter;
+
+// YAML 里的 2026-10-26 会被解析成 Date，这里统一按 YYYY-MM-DD 展示
+const updatedDate = frontmatter.updated ? new Date(frontmatter.updated) : null;
+const updatedLabel =
+  updatedDate && !Number.isNaN(updatedDate.getTime())
+    ? updatedDate.toISOString().slice(0, 10)
+    : undefined;
+---
+
+<Layout title={title} description={description}>
+  <article class="fade-in-up max-w-4xl mx-auto">
+    <header class="mb-8 pb-6 border-b border-zinc-800/60">
+      {tags.length > 0 && (
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+          {tags.map((tag) => (
+            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">{tag}</span>
+          ))}
+        </div>
+      )}
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">{title}</h1>
+      {description && <p class="text-sm text-zinc-400 leading-relaxed">{description}</p>}
+      {updatedLabel && <p class="text-xs text-zinc-600 mt-3">最近更新：{updatedLabel}</p>}
+    </header>
+
+    <div class="doc-content">
+      <slot />
+    </div>
+
+    {editHint && (
+      <p class="mt-12 pt-6 border-t border-zinc-800/60 text-xs text-zinc-600 leading-relaxed">
+        维护提示：本页内容为手工维护的 Markdown，可在仓库对应文件中直接编辑，新增条目请保持同级列表格式。
+      </p>
+    )}
+  </article>
+</Layout>

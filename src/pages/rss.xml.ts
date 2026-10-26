@@ -7,8 +7,8 @@ export function GET(context: APIContext) {
   const articles = loadAllArticles().slice(0, 50);
 
   return rss({
-    title: '大数据技术学习站 — 每日聚合',
-    description: '大数据、数据科学与数据工程领域的最新文章，每日自动更新。',
+    title: '大数据运维与开发实战站 — 每日聚合',
+    description: 'Python/Scala 数据开发、Spark/Flink 实战、Linux/云原生运维与 DevOps 实践的最新文章，每日自动更新。',
     site: new URL(withBase('/'), context.site!),
     items: articles.map((article) => ({
       title: article.title,

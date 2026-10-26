@@ -5,6 +5,8 @@ export interface FeedConfig {
   name: string;
   categories: string[];
   type?: FeedType;
+  /** 标题或摘要命中这些关键字时跳过该条目，用于过滤个人博客里的非技术内容 */
+  exclude?: string[];
 }
 
 export interface FeedsConfig {

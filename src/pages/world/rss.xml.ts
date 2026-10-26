@@ -7,7 +7,7 @@ export function GET(context: APIContext) {
   const articles = loadWorldArticles().slice(0, 50);
 
   return rss({
-    title: '大数据技术学习站 — 国际视野',
+    title: '大数据运维与开发实战站 — 国际视野',
     description: '国际来源的大数据与数据科学文章，每日自动更新。',
     site: new URL(withBase('/'), context.site!),
     items: articles.map((article) => ({

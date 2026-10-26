@@ -1,13 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleListPage from '../../components/ArticleListPage.astro';
-import { loadAllArticles, getAllCategories, getAllSources, getAllTypes } from '../../utils/articles';
+import { loadAllArticles, getSiteCategories, getAllSources, getAllTypes } from '../../utils/articles';
 
 export function getStaticPaths() {
   const PAGE_SIZE = 15;
   const allArticles = loadAllArticles();
   const totalPages = Math.max(1, Math.ceil(allArticles.length / PAGE_SIZE));
-  const categories = getAllCategories(allArticles);
+  const categories = getSiteCategories(allArticles);
   const sources = getAllSources(allArticles);
   const types = getAllTypes(allArticles);
 

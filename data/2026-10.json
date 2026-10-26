@@ -2,151 +2,507 @@
   "month": "2026-10",
   "articles": [
     {
-      "id": "e2c1704220d9",
-      "title": "涛思数据获评国家级专精特新“小巨人”企业",
-      "description": "北京涛思数据科技有限公司通过多轮多层评审，正式获得专精特新“小巨人”企业称号",
-      "link": "https://www.taosdata.com/news/40024.html",
-      "pubDate": "2026-10-26T09:03:06.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "c6e71c1bd6ec",
+      "title": "Claude Duet 发布：主动型 Agent 三巨头集结，为什么都搬进了“云端虚拟电脑”",
+      "description": "Claude Duet 发布：主动型 Agent 三巨头集结，为什么都搬进了\"云端虚拟电脑\" 一、先看事实：Claude Duet 是什么？ 发布：当地时间 10 月 21 日，Anthropic 以",
+      "link": "https://juejin.cn/post/7700814369021509674",
+      "pubDate": "2026-10-26T09:50:06.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
-      ],
-      "image": "https://www.taosdata.com/wp-content/uploads/2026/10/feishu-20261026-090120-4985.jpg",
-      "type": "blog"
-    },
-    {
-      "id": "65d4e1d27906",
-      "title": "陶建辉获聘中国通信标准化协会本体工程专家委员会首批委员",
-      "description": "首批共 28 位专家，将围绕本体工程与知识管理方向开展技术研究、标准研制、产业应用推进与标准体系建设等工作。",
-      "link": "https://www.taosdata.com/news/40019.html",
-      "pubDate": "2026-10-26T08:27:34.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Engineering"
-      ],
-      "image": "https://www.taosdata.com/wp-content/uploads/2026/10/feishu-20261026-075250-2960-scaled.jpg",
-      "type": "blog"
-    },
-    {
-      "id": "4e696c487549",
-      "title": "工业互联网数据交易市场：企业间数据价值流通的技术与信任体系",
-      "description": "工业数据流通的核心障碍不是技术而是信任与合规，数据所有者担心滥用泄露、使用者担心质量时效，监管关注数据安全法与GDPR的合规红线，构建数据交易市场需解决三方痛点。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39959.html",
-      "pubDate": "2026-10-23T08:16:37.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "7ade4e2cc768",
-      "title": "工业互联网平台 API 设计指南：从 RESTful 到 gRPC 的接口工程",
-      "description": "工业数据平台API体系直接决定MES、SCADA、AI平台的开发效率，工业场景对实时性、带宽效率、生态兼容性的特殊要求让API选型比通用互联网更复杂。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39958.html",
-      "pubDate": "2026-10-23T08:15:59.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "4277c829ddaa",
+      "title": " HNSW 深度解析：从图构建、搜索机制到企业级向量检索实践",
+      "description": "深入解析 HNSW 向量检索算法，讲解随机分层、节点插入、邻居选择、候选集与结果集、efSearch 参数调优、召回率与性能权衡，并通过示意图和通俗比喻帮助理解核心原理。",
+      "link": "https://juejin.cn/post/7700796216566464538",
+      "pubDate": "2026-10-26T09:46:56.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "d9a4eb441a3e",
-      "title": "工业互联网化工过程 APC 先进过程控制：MPC 模型预测控制的数据驱动实现",
-      "description": "化工过程多变量耦合、非线性、时变特性让单回路PID难以理想，MPC模型预测控制是当前解决多变量耦合最有效的方法，数据驱动模型识别让MPC从机理建模转向更灵活的方式。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39957.html",
-      "pubDate": "2026-10-23T08:15:32.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "6a638ffb4cbf",
+      "title": "doc2docx方案，开源！",
+      "description": "​ 最近我们 JitWord 协同AI文档团队开源了一个方案，能一键把 Word 中老旧格式（.doc格式）文件转换为通用的 .docx 格式，从而能在 Web 端实现对 Word 老旧格式的预览。",
+      "link": "https://juejin.cn/post/7700603865700663336",
+      "pubDate": "2026-10-26T09:35:22.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "a1986fda44cd",
-      "title": "工业互联网实时算法引擎：规则引擎、CEP 与 AI 推理的统一架构",
-      "description": "工业实时数据处理有三类需求：简单条件判断、复杂事件模式识别、AI模型推理，分别对应规则引擎、CEP、AI推理，统一架构目标是在一个引擎中同时支持三类算法。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39956.html",
-      "pubDate": "2026-10-23T08:15:06.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "14fb973be972",
+      "title": "新质生产力路线图：从Linux到数据库，企业落地要点都在这",
+      "description": "政策层面对“关键核心技术攻关”与“产业链供应链安全”的强调，使基础软件成为新质生产力路线图中一个无法绕开的交汇点。2026年10月国务院印发的《关于发展新质生产力的意见》从科技创新、产业创新、发展方式",
+      "link": "https://juejin.cn/post/7700627964493807658",
+      "pubDate": "2026-10-26T09:34:14.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "8260bfa864a4",
-      "title": "工业互联网产品全生命周期追溯：批次级数据关联的工程实现",
-      "description": "追溯是工业数据平台核心应用，监管合规、质量改进、供应链协同都依赖可靠体系，需覆盖原材料入厂到退役回收五个维度，每个环节数据来源、标识方式、关联逻辑不同，工程复杂度远高于单点系统。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39953.html",
-      "pubDate": "2026-10-23T08:09:25.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "7d27dbdd4584",
+      "title": "JitOFD：一款面向信创与档案场景的 Web 端 OFD 编辑器",
+      "description": "OFD 国标落地多年，但 Web 端一直停留在 \"只能预览\"：改个日期要下载桌面客户端，移动端打不开，转曲文字只能看不能改。本文记录自研浏览器端 OFD 编辑引擎的完整实践 ——Canvas + 虚拟",
+      "link": "https://juejin.cn/post/7700781925654626338",
+      "pubDate": "2026-10-26T09:31:33.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
-      ],
-      "image": "https://s.w.org/images/core/emoji/17.0.2/72x72/2194.png",
-      "type": "blog"
-    },
-    {
-      "id": "d9720a519296",
-      "title": "工业互联网 ISO 27001 与 IEC 62443：信息安全管理体系双标准落地",
-      "description": "通用ISO 27001提供管理框架但缺乏工业技术控制，IEC 62443定义工业控制系统安全要求但管理框架需自行补充，企业需构建双标准融合的落地路径。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39955.html",
-      "pubDate": "2026-10-23T08:08:52.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "6a43a1f69c18",
-      "title": "工业互联网边缘网关选型：CPU、接口与软件栈的系统考量",
-      "description": "边缘网关是工业数据链路第一站，负责将PLC、CNC、传感器的多种协议转换成OPC UA、MQTT统一格式，选型不是简单硬件参数对比而是硬件算力、接口能力、软件栈等五维协同评估。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39954.html",
-      "pubDate": "2026-10-23T08:06:27.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "7416fbeaf1ea",
+      "title": "Grok Bot 两周实测：把 6 个 Bot 拉进群，我给自己搭了协同小队",
+      "description": "高强度用了两周 Grok Bot 之后，我发现这玩意是真的会上瘾。 现在基本上走路在看，喝水在看，连蹲坑的时候掏出手机也在刷。 说实话，早在八月份它刚发布的时候我就知道了。 那时候到处都是铺天盖地的“",
+      "link": "https://juejin.cn/post/7700798335888490511",
+      "pubDate": "2026-10-26T09:22:56.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "44b1dd799dec",
-      "title": "工业互联网 AI 质检：从视觉检测到缺陷根因追溯的数据闭环",
-      "description": "AI视觉检测在汽车、电子、光伏等行业普及速度快，显著降低漏检率和人工成本，但质检数据与上游CNC参数、注塑工艺的关联链路没有打通，数据价值未充分释放。",
-      "link": "https://www.taosdata.com/iiot-knowledge/39952.html",
-      "pubDate": "2026-10-23T08:04:11.000Z",
-      "source": "涛思数据",
-      "sourceUrl": "https://www.taosdata.com/feed",
+      "id": "fd296b50a482",
+      "title": "ArkGenie 的技术原理：从一段 SSE 到一个可交互 Surface",
+      "description": "ArkGenie 的技术原理：从一段 SSE 到一个可交互 Surface ArkGenie 的关键代码不在某个按钮的样式，而在几条边界：网络回调不能直接改 UI，旧请求不能污染新请求，流式文本不能每",
+      "link": "https://juejin.cn/post/7700798335888392207",
+      "pubDate": "2026-10-26T09:09:15.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
       "categories": [
-        "Big Data",
-        "Data Engineering"
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "d06d7cfa765f",
+      "title": "你的Flutter项目要不要紧急升级3.47.8？",
+      "description": "Flutter 3.47.8修复了证书信任问题。本文讲清漏洞原理、Dart网络请求为何受影响，以及不同项目该如何安排升级和处理线上版本。",
+      "link": "https://juejin.cn/post/7700796727406968859",
+      "pubDate": "2026-10-26T09:07:42.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "af7fa371a47b",
+      "title": "NVIDIA RTX Spark 编码代理性能与本地 AI 开发机配置",
+      "description": "RTX Spark 在编码代理任务中比 Intel Panther Lake 12Xe 快 4.6 倍，配备最高 128 GB 统一内存和 740 亿参数压缩模型，笔记本已售。",
+      "link": "https://juejin.cn/post/7700895710035656730",
+      "pubDate": "2026-10-26T09:01:02.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "ee2befcfd94d",
+      "title": "CircleCI 正式发布 Machine Runner Orchestrator",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/y7YQmP1p42Uj69H1C6uf?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-26T09:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "030e2d204b9b",
+      "title": "在 HarmonyOS 上做一套真正能接入应用的 AI 对话组件：ArkGenie 项目介绍",
+      "description": "在 HarmonyOS 上做一套真正能接入应用的 AI 对话组件：ArkGenie 项目介绍 很多 AI 对话 Demo 的代码并不长。一个输入框、一个消息列表，再调用一次大模型接口，页面就能把回复显",
+      "link": "https://juejin.cn/post/7700781925654413346",
+      "pubDate": "2026-10-26T08:59:58.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "638629d0063b",
+      "title": "Kimi K3.1 Pro 编程实测：3个月27万行代码，每年1.7万预算下如何9分钟修好顽固Bug",
+      "description": "前大厂技术Leader实测Kimi K3.1 Pro：详细拆解SWE Marathon 51.7%跑分与API Token成本账单，实战演示9分钟零人工修复字流X长文配图顽固Bug",
+      "link": "https://juejin.cn/post/7700627964493447210",
+      "pubDate": "2026-10-26T08:53:14.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "56ea522839e4",
+      "title": "知己知彼，百战不殆：AI SKILL 实现原理剖析",
+      "description": "OneX平台内置了一个智能体。本文深入刨析SKILL实现原理，一问读懂 SKILL 究竟是什么东西，如何使用和调优。",
+      "link": "https://juejin.cn/post/7700786487088431147",
+      "pubDate": "2026-10-26T08:50:02.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "aa5f3f493d8c",
+      "title": "掀桌子了！Kimi K3.1 Pro 这效果也太离谱了。",
+      "description": "过去两个月，OpenAI 、A 社相继发布 sota 模型，一直霸榜各种测评榜单将近两个月。 而这两个月，却是国模的至暗时刻，被直指蒸馏、被质疑，然后我们也没有拿出能力足以抗衡的 Pro 模型。 然而",
+      "link": "https://juejin.cn/post/7700627964493365290",
+      "pubDate": "2026-10-26T08:42:06.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e083d76c500f",
+      "title": "关于 Arthas",
+      "description": "命令： 表达式常用变量：params 入参数组（params[0]）、 returnObj返回值、 throwExp异常、 target this（实例字段：target.someField）、#co",
+      "link": "https://juejin.cn/post/7700753560883888169",
+      "pubDate": "2026-10-26T08:31:53.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "bb93064568f2",
+      "title": "用 Kimi K3.1 Pro 重新介绍 AgentCore",
+      "description": "今天凌晨 Kimi 发布 K3.1 Pro，在前端页面、Three.js 交互场景有明显提升。本文使用 Qoder 上提供的 K3.1Pro 模型，设计并排版了介绍 AgentCore 的全新方式",
+      "link": "https://juejin.cn/post/7700697808307388431",
+      "pubDate": "2026-10-26T08:29:18.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "3d3737e3b0c4",
+      "title": "从零手搓 RAG 之 Embedding 技术",
+      "description": "从零手搓 RAG 之 Embedding 技术 前言 上一篇介绍了如何把 markdown 格式的文件切片，接下来要把每个片段交给嵌入模型（embedding model），编码成一组高维浮点数。",
+      "link": "https://juejin.cn/post/7700764385023180810",
+      "pubDate": "2026-10-26T08:07:56.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "094590160960",
+      "title": "GenUI SDK v1.4.0 的 React 渲染器到底做对了什么？",
+      "description": "React 渲染器从 alpha 到正式版经历了什么、三框架一致性到底意味着什么、以及这套方案在生产环境中值不值得押注。",
+      "link": "https://juejin.cn/post/7700544342428008474",
+      "pubDate": "2026-10-26T08:06:59.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "7c06a1d7f526",
+      "title": "Cloudflare 的 OHTTP 网关拒绝解密通过 Cloudflare 传入的请求",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/4647jBOxmf3Ut0i1aVbx?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-25T14:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "808935c79b5e",
+      "title": "四分之一PR是“AI垃圾”！Linux基金会发布新报告：AI写代码快了52%，开源维护者却更累了",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/9TSuUDxrUSGS26XTA2yB?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-25T10:30:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "c034d909fc9d",
+      "title": "Java 近期新闻：Grails 8、Open Liberty、GlassFish、Infinispan、LangChain4j、Spock",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/BHWP4JJDeExZZWsifFlg?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-25T09:06:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "d9ad1c857f7a",
+      "title": "jQuery 4.0 源码架构与工程实践-第 01 章 · 全景与工程结构：一个 20 岁库的自省",
+      "description": "jQuery 4.0 源码架构与工程实践-第 01 章 · 全景与工程结构：一个 20 岁库的自省 本章导览 任何一份源码阅读笔记，都应该从\"这份文件是什么\"开始。本章不写任何 API 用法，只做一件",
+      "link": "https://juejin.cn/post/7700152107848237065",
+      "pubDate": "2026-10-25T04:33:30.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "a3c986fa4445",
+      "title": "你以为 OCR 慢？实测 81.3 s 里全是故障代价：如何把「定格态」消掉，让耗时从 6.5 s 到 13 倍差距显出原形",
+      "description": "你如果盯着一次只读探针的耗时发愁，可能会以为该优化 OCR：同一套代码、同一个引擎、同一台机器，一次 81.3 s，另一次 6.5 s。那一刻我卡在\"到底该优化什么\"上：你以为是识别慢，结果诊断下来是",
+      "link": "https://juejin.cn/post/7700050834004443174",
+      "pubDate": "2026-10-25T02:18:10.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "850d6c2933e7",
+      "title": "11-01 温哥华不回拨：用 60 行 Python 查你的工单系统会不会差一小时（KeepRobots 工程笔记）",
+      "description": "BC 省全年 UTC-7，11-01 温哥华不回拨。时区库低于 2026b 的系统会算成 UTC-8，派单和 SLA 计时差一小时。附 Python 检测脚本和升级清单。",
+      "link": "https://juejin.cn/post/7700055962984087561",
+      "pubDate": "2026-10-24T21:13:24.000Z",
+      "source": "稀土掘金",
+      "sourceUrl": "https://juejin.cn/rss",
+      "categories": [
+        "Python & Scala",
+        "大数据生态"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e82eb1474364",
+      "title": "React 19.3 新增 browser() API，使“仅客户端渲染”成为一等公民",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/jNX6EAzqP34xRjqUMU1N?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-24T13:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e0989f565744",
+      "title": "何时应使用 Liquid Clustering？湖仓布局策略基准测试",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/lkefSu7SjjIHL1Fmk0Pv?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-24T10:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "ebceb9ba9c97",
+      "title": "智源众智 FlagOS 2.2 让前沿模型与多元算力协同演进",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/mhdJwMMzYFedMFHKfHWs?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T19:40:29.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "b09d0b4720ed",
+      "title": "刘铁岩、诺奖、图灵奖得主等嘉宾共话AI的下一个十年：Transformer一统天下之后，AI的下一张王牌是什么？",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/UmD4aAerZEts8sZ5t791?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:54:19.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "82d96e749fc5",
+      "title": "AI Agent 正在改写 CPU 的价值：当 Token 变成行动，算力竞争不再只是拼 GPU",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/AkDgwN6h72cqUOJ35Zok?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:53:09.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "3ebd8968ff16",
+      "title": "PostgreSQL 19 发不出来？AI“找茬”太快，人类修Bug的速度跟不上了",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/Q6mgHWCSqV6KeZzee3NT?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:48:25.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "f54daf4de532",
+      "title": "“让Token不空转”，讯飞如何把Agent推进企业核心流程",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/Lo9TLlRdvy4II38yaex0?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:40:09.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "604028c8682f",
+      "title": "奥特曼最新 45 分钟访谈：一年不写代码、压力大到不想起床，还嫌 ChatGPT 太谄媚",
+      "description": "InfoQ 中文 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://www.infoq.cn/article/sI3z2UMCrB5PPVDWTsLo?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:35:04.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "大数据生态",
+        "Linux/云原生",
+        "DevOps 实践"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "89350115bc11",
+      "title": "如何设计接口，统计各个模块的三个类型的值？",
+      "description": "1、我要统计各个模块的的数量，一级模块9个，二级模块33个，每个一级对应1~6个子模块，每个子模块返回三个类型的值。2、我有个想法，接口想设计成，共请求10次，其中的九次，传入不同的模块名，返回不同的结果，这样可以并发、异步处理各个模块的计算，提高页面加载速度；剩下的一次是一个汇总接口，汇总各个模块各个类型的值，包括一级模块汇总，所有一级模块汇总，3、只是由于水平有限，不知道其他接口和汇总接口怎么设计是合理的、常用的，其他接口和汇总接口是否都可以都快速返回，返回顺序 中，是不是汇总接口肯定是最后一个返回？4、项目使用python开发语言，python的设计、组织、写法、文件目录拆分上，我也不是很清楚5、综上所述，请帮忙提供一个具体一点的方案和示例",
+      "link": "https://segmentfault.com/q/1010000048369167",
+      "pubDate": "2026-10-23T02:33:33.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
       ],
       "image": null,
       "type": "blog"
@@ -160,9 +516,8 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/f96887d93b880574e0fb9ebad114faba529816.png",
       "type": "blog"
@@ -176,11 +531,38 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/449102302ea0d472417c6fff369dd63882001.png",
+      "type": "blog"
+    },
+    {
+      "id": "e2c12b310128",
+      "title": "Python 爬取 Google 搜索结果时频繁遇到验证码，有什么可靠的解决方案？",
+      "description": "Python 爬取 Google 搜索结果时频繁遇到验证码，有什么可靠的解决方案？最近在研究使用 Python 获取 Google 搜索结果，用于关键词研究和 SEO 数据分析。尝试直接请求 Google 搜索页面时，发现有时无法获取正常的搜索结果，而是跳转到验证码页面。即使更换请求方式，也不一定能稳定获取数据。想请教有实际开发经验的朋友：这种情况主要与请求频率、IP 信誉、请求特征还是其他因素有关？使用 Playwright 等浏览器自动化工具，能否改善结果获取的稳定性？如果需要批量获取关键词对应的搜索结果，官方 API、第三方 SERP API 和自行采集这几种方案，哪一种更适合长期使用？对于自行采集的方案，应该如何设计异常检测、重试和失败回退机制？希望了解各方案在稳定性、成本和维护工作量方面的实际差异，欢迎分享经验。",
+      "link": "https://segmentfault.com/q/1010000048353146",
+      "pubDate": "2026-10-15T01:06:11.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e4bd5d25bc99",
+      "title": "有重复元素的列表，按元素出现次数降序排序，为什么没有成功？",
+      "description": "我的代码目的是想按单词的出现次数降序排列，但是输出结果与未排序前一样，我想知道为什么。words = ['a', 'b', 'a', 'c', 'b', 'a'] words.sort(key=lambda w: -words.count(w)) print(words) 输出结果：PS D:\\Code&gt; &amp; C:\\Users\\27751\\AppData\\Local\\Programs\\Python\\Python313\\python.exe d:/Code/python.py ['a', 'b', 'a', 'c', 'b', 'a']期望结果：想按单词的出现次数降序排列实际结果：与未排序前一样",
+      "link": "https://segmentfault.com/q/1010000048337134",
+      "pubDate": "2026-10-08T07:41:21.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
       "type": "blog"
     }
   ]

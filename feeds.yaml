@@ -1,18 +1,37 @@
+# 大数据运维与开发实战站 — RSS 源配置
+#
+# 分类只能取以下四个值（顺序即首页筛选标签顺序）：
+#   "Python & Scala" / "大数据生态" / "Linux/云原生" / "DevOps 实践"
+# 注意 "Python & Scala" 含 &，在 YAML 中必须加引号。
+#
+# 选源原则：中文、技术深度优先、每个源都能覆盖到至少一个栏目，
+# 五个源合起来兼顾“大数据组件 / Linux·K8s 运维 / DevOps / Python·Scala 开发”。
+
 feeds:
+  # ── 大数据组件与工程实践 ──
   - url: https://tech.meituan.com/atom.xml
     name: 美团技术团队
-    categories: [Big Data, Data Engineering, Data Science]
+    categories: ["大数据生态", "DevOps 实践"]
 
-  - url: https://blog.csdn.net/u013411339/rss/list
-    name: CSDN 大数据
-    categories: [Big Data, Data Engineering, Data Science]
+  - url: https://www.infoq.cn/feed
+    name: InfoQ 中文
+    categories: ["大数据生态", "Linux/云原生", "DevOps 实践"]
 
-  - url: https://javaguide.cn/atom.xml
-    name: JavaGuide
-    categories: [Programmation]
+  # ── Linux / 云原生运维 ──
+  - url: https://blog.ops-coffee.cn/feed.xml
+    name: 运维咖啡吧
+    categories: ["Linux/云原生", "DevOps 实践"]
+    # 该博客同时发布游记与自研工具动态，按关键字过滤，只保留运维技术内容
+    exclude: ["向云端", "自驾", "财务管家", "理财"]
 
-  - url: https://www.taosdata.com/feed
-    name: 涛思数据
-    categories: [Big Data, Data Engineering]
+  # ── Python / Scala 数据开发 ──
+  - url: https://segmentfault.com/feeds/tag/python
+    name: SegmentFault Python
+    categories: ["Python & Scala"]
+
+  # ── 综合实战 ──
+  - url: https://juejin.cn/rss
+    name: 稀土掘金
+    categories: ["Python & Scala", "大数据生态"]
 
 feeds_world: []

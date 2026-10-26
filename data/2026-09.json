@@ -2,6 +2,34 @@
   "month": "2026-09",
   "articles": [
     {
+      "id": "f2fed144a3c4",
+      "title": "怎么加密打包python程序？",
+      "description": "哈喽，大家好，这是我第一天接触这个论坛，也是第一次提问！我想问问各位技术大师开发的python程序怎么加密打包，不会让别人轻易解包？我现在只会在终端用pyinstaller命令打包，但这个方法很容易就能解包！谢谢各位大师！希望能在这里获得详细的“加密打包python程序”的方法！",
+      "link": "https://segmentfault.com/q/1010000048320497",
+      "pubDate": "2026-09-27T11:49:41.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "8a13d7441b47",
+      "title": "胶带粘连包裹识别问题?",
+      "description": "现在问题就是有胶布的包裹,可能会识别成多个包裹我尝试去调节置信度和iou的参数,但还是解决不了这个问题",
+      "link": "https://segmentfault.com/q/1010000048312539",
+      "pubDate": "2026-09-22T10:40:37.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
       "id": "9be80dfe1c4d",
       "title": "MTFM：美团统一推荐基座大模型在外卖多业务场景的落地实践",
       "description": "美团在 MTGR 基础上提出统一推荐基座大模型 MTFM，首次实现外卖多个主要业务的统一精排模型。围绕规模可扩展性、场景可延展性与架构高效性三大挑战，MTFM以异构 Tokenizer 与动态掩码实现多场景特征免对齐，通过混合注意力与 Target Scale-Up 提升模型 Scaling 能力，借鉴 LLM 优化实践提升深层网络训练效果，并以 User-Level 训练范式与定制算子保证系统开销可控。美团外卖多个业务订单量提升 2.06%~6.68% 不等，推理成本降低 24%，相关工作已被 KDD 2026 收录。 1. 引言 我们去年提出了 MTGR[1] —— 一种新的生成式精排框架，在美团外卖推荐场景验证了 Scaling Law 的有效性，并取得显著业务收益。然而，推荐领域的 Scaling Law 探索往往局限于单场景内部，模型被限制在单场景孤岛中，跨场景的数据、算力和架构无法充分复用。在美团这一问题尤为突出，推荐覆盖外卖首页、拼好饭等多个业务场景，各场景长期独立建模。与此同时，大语言模型（LLM）已验证一条清晰路径：基座模型（Foundation…",
@@ -10,11 +38,24 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/5dcc2af83b5b9da04717c9fcff76b69a1943722.png",
+      "type": "blog"
+    },
+    {
+      "id": "248aa86d28a8",
+      "title": "LangChain Agent多轮工具调用后忽略输出约束，长任务下如何保证指令遵循？",
+      "description": "问题描述在做一个自动化代码审查的Agent，流程是：读取diff → 分析改动 → 调用多个工具收集上下文 → 生成审查意见。实际跑到第5、6步之后，模型开始忽略system prompt里定好的输出格式约束，返回纯文本而不是约定的JSON，多轮之后越来越明显。运行环境Python 3.11 / langchain 0.2.x模型：gpt-4o（deepseek-chat 复现了同样现象）关键代码SYSTEM_PROMPT = &quot;&quot;&quot; 你是一个代码审查助手。 【重要】所有输出必须是合法 JSON：{&quot;risk&quot;: [...], &quot;suggestion&quot;: [...]} &quot;&quot;&quot; for step in workflow_steps: result = agent.invoke( {&quot;messages&quot;: state[&quot;messages&quot;] + [step.to_message()]} )…",
+      "link": "https://segmentfault.com/q/1010000048296778",
+      "pubDate": "2026-09-15T08:25:15.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
       "type": "blog"
     },
     {
@@ -26,11 +67,24 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/5a8954c2e7b681ee8fb8d2c8a73868cd157865.png",
+      "type": "blog"
+    },
+    {
+      "id": "f27f7a63508f",
+      "title": "前后端不分离的项目（python+jquery）容器化方案？",
+      "description": "前后端不分离的项目（python+jquery），在容器化改造时，一般是一条流水线一个仓库一个镜像，还是两条流水线两个镜像？虽然理论上都可以，但是两条流水线两个仓库两个镜像，增加了一些改造成本。总来来说，还是没有改造思路。我目前还在一条流水线一个仓库一个镜像上挣扎",
+      "link": "https://segmentfault.com/q/1010000048288385",
+      "pubDate": "2026-09-10T11:25:38.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
       "type": "blog"
     },
     {
@@ -42,11 +96,24 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/714ba0bf48f2186bd418d3778da7e214293923.png",
+      "type": "blog"
+    },
+    {
+      "id": "1ed5173c070f",
+      "title": "语法错误（Syntax Errors）‌和‌异常（Exceptions）‌两大类。怎么解决？",
+      "description": "语法错误（Syntax Errors）‌和‌异常（Exceptions）‌两大类。怎么解决？",
+      "link": "https://segmentfault.com/q/1010000048267714",
+      "pubDate": "2026-09-03T10:37:51.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
       "type": "blog"
     },
     {
@@ -58,9 +125,8 @@
       "source": "美团技术团队",
       "sourceUrl": "https://tech.meituan.com/atom.xml",
       "categories": [
-        "Big Data",
-        "Data Engineering",
-        "Data Science"
+        "大数据生态",
+        "DevOps 实践"
       ],
       "image": "https://p0.meituan.net/meituantechblog/a7c5a936998959a941d145ac3eebe7334801382.png",
       "type": "blog"

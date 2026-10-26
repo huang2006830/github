@@ -2,283 +2,46 @@
   "month": "2026-06",
   "articles": [
     {
-      "id": "b585519d94d5",
-      "title": "操作系统文件系统详解：inode、VFS、Page Cache 与日志机制",
-      "description": "写一个保存文件的接口，最直觉的写法是：拿到路径，open 一个文件，把数据 write 进去，最后 close。文件少、并发低、机器不出故障的时候，这套流程看起来没什么难度。 可一到面试追问，问题就来了。open() 返回的 fd 到底指向什么？文件名是存在 inode 里吗？两个硬链接为什么能看到同一份内容？write() 返回成功，数据是不是已经落盘？日志文件删了，为什么 df -h 还是显示磁盘满？ 这些问题都绕不开文件系统。它要把路径解析成文件对象，把文件的第 N 个字节定位到底层数据块，还要处理权限、缓存、删除、重命名和崩溃恢复。 答案就藏在 inode、dentry、VFS、Page Cache 和日志机制里。 下面先从最基础的问题讲起：文件系统到底在管什么？ 文件系统到底在管什么？ 平时写代码，看到的是路径、文件名、目录、read、write。对于建立在本地块设备上的文件系统，底层通常是逻辑块、扇区和设备 I/O；文件系统把这些低层资源组织成文件、目录和元数据。 不过，并不是所有文件系统都对应本机磁盘。tmpfs 主要以内存作为后端，procfs…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/file-system.html",
-      "pubDate": "2026-06-26T11:15:54.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "24dee9f307cd",
+      "title": "足球比赛分析系统：多智能体架构下如何提升预测精度与代码质量？",
+      "description": "Delah·德尔哈 — 一个基于13智能体协作的足球比赛分析系统，求大佬们帮看架构和代码仓库：https://gitee.com/delhah/delhah项目简介Delah 是一个全自动足球赛事分析系统，基于 81,666 场真实历史比赛数据，通过 13 个智能体协作完成：数据采集 → 特征工程 → 多模型融合预测 → 纯分析决策 → 内容生成。V10.0 版本已移除所有投注逻辑，专注比赛方向分析。技术栈Python 3.8+ / SQLite4个基模型融合：泊松 + Dixon-Coles + Elo + XGBoost联赛定制配置（16个联赛独立参数）13智能体协作架构（每个智能体有独立职责和数据库）目前做的工作去投注化改造（V10.0）：移除所有 EV/Kelly/仓位逻辑，改为纯方向推荐+置信度+模型分歧度自动赔率采集：Football-Data / API-Football 多源采集特征工程统一：13维特征标准化前端 Dashboard…",
+      "link": "https://segmentfault.com/q/1010000047927675",
+      "pubDate": "2026-06-27T09:53:38.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
       "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/file-system-responsibilities.webp",
-      "type": "blog"
-    },
-    {
-      "id": "4e1a64aca8e1",
-      "title": "操作系统内存管理详解：分页、分段、页面置换、Swap 与 OOM",
-      "description": "打开一个普通进程的内存信息，你会看到很多看起来反直觉的数字：进程有自己的虚拟地址空间，地址范围可能很大；真正占用的物理内存又是另一回事；同一个动态库还可能被多个进程共享。 程序写代码时只是在访问地址，操作系统看到的却是一堆更具体的问题：这块内存给谁？能不能让别的进程碰？物理内存不够时换谁出去？释放之后留下的空洞还能不能继续用？ 这就是内存管理要处理的事。小 G 建议不要一上来就背分页、分段、TLB 这些名词，先抓住一条线：操作系统把程序看到的地址和真实物理内存隔开，再用分配、映射、保护和回收把内存管起来。 VSZ、RSS 和 PSS 分别代表什么？ Linux 里最容易看错的是进程内存数字。ps 里的 VSZ、/proc//status 里的 VmSize，表示进程已经映射的虚拟地址空间大小。它可能包含尚未真正驻留的匿名映射、文件映射、共享库和预留地址，不能直接当成物理内存占用。 RSS 表示当前驻留在 RAM 中、并映射给该进程的页面总量。共享库、共享内存、Page Cache 中的共享页也会算进每个相关进程的 RSS，所以把多个进程 RSS 直接相加容易重复计算。 PSS…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/memory-management.html",
-      "pubDate": "2026-06-26T11:15:54.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/memory-management-responsibilities.webp",
-      "type": "blog"
-    },
-    {
-      "id": "6de959262d62",
-      "title": "测试开发学习路线（2026 最新版）：AI 时代如何从测试走向质量工程",
-      "description": "你好，我是 Guide。这是面向测试开发方向的学习路线 2026 最新版。 后台经常有同学问： Java 后端太卷了，能不能转测开？ 测开是不是比开发简单一点？ AI 都能写测试用例了，测试岗位以后还值得学吗？ 我的判断比较直接：测开可以作为一个不错的求职方向，但别把它理解成“后端学不动后的备选”。测试开发工程师（Software Development Engineer in Test，简称 SDET）确实在测试体系里更偏技术，但它要求你能把编程、测试理论、工程工具、业务理解和质量保障串起来。 如果只是会点手工测试、会点 Postman、会写几条 Selenium 脚本，在现在的环境里竞争力不太够。更好的方向是：能写自动化框架，能接 CI/CD，能看日志和监控定位问题，能做接口、UI、性能和稳定性验证，还能把 AI 用在用例生成、脚本维护、日志分析、缺陷归因和 AI 应用评测里。 这篇路线主要写给三类同学： 计算机相关专业，想准备测试开发、自动化测试、质量工程方向的同学。 已经在做功能测试，想补编程和自动化能力的同学。 有 Java / Python /…",
-      "link": "https://javaguide.cn/roadmap/test-development-roadmap.html",
-      "pubDate": "2026-06-25T03:21:42.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
+        "Python & Scala"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "99872ca49b4a",
-      "title": "Loop Engineering 是什么？为什么说它是新瓶装旧酒？",
-      "description": "CI 失败后，Agent 可以读失败日志、定位相关文件、运行最小测试集，再把排查结果写回 Issue。第一次排查没有收敛时，任务还会遇到一个更实际的问题：下一轮由谁启动，继续读哪些材料，什么时候该停下来交给人处理？ Loop Engineering 讨论的就是这段外层流程。它负责把 Agent 的一次次执行接起来：CI、PR 或定时任务触发下一轮，项目规则和相关证据进入上下文，测试与审查决定结果是否可信，状态记录让后续任务可以从上次停下的地方继续。 从公开讨论看，这个名称在 2026 年 6 月上旬 开始热起来，Addy Osmani 于 6 月 7 日发表了相关文章。Claude Code 与 Codex 中的 /loop、/goal、Automations 等能力，配合 Skills、Sub-agent、工作区隔离和 MCP/Connector，已经能组成类似流程。 Loop Engineering 到底是什么？ Loop Engineering 用来安排 Agent…",
-      "link": "https://javaguide.cn/ai/agent/loop-engineering.html",
-      "pubDate": "2026-06-17T07:01:36.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "33d888b1cbff",
+      "title": "GitHub Codespaces 一直加载不出来是什么原因？如何解决？",
+      "description": "请问github的codespace点进去一直加载不出来是什么缘故？我前几天开始纯小白自学python并直接在codespaces里面练习代码、上传存档，之前一直没问题的，今天突然加载几分钟了还是加载不进去，GitHub的其他功能都可以正常使用，网速也正常。可以有个好心的大佬告诉我为啥会这样吗？感谢！！我希望可以继续正常登入codespaces练习并存档代码:(",
+      "link": "https://segmentfault.com/q/1010000047922859",
+      "pubDate": "2026-06-27T04:38:41.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
       "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/ai/agent/loop-engineering-outer-loop.webp",
-      "type": "blog"
-    },
-    {
-      "id": "c938ec303e90",
-      "title": "学习路线合集（2026 最新版）：Java 后端、AI Agent、AI 应用开发、全栈与测开",
-      "description": "这里统一整理 JavaGuide 中适合按路线学习的内容，帮助你根据目标选择 2026 最新版学习路径，而不是在大量文章里来回跳。 如果你正在准备后端面试，优先看 Java 后端路线；如果你已经有 Java/Go 后端基础，想进入 AI 应用开发或 Agent 方向，可以从 AI 应用开发路线开始；如果你希望提升独立交付能力，可以看全栈学习建议；如果你想准备测试开发、自动化测试或 AI 测试方向，可以看测开学习路线。 后端方向 Java 后端学习路线（2026 最新版）：从 Java 基础、集合、并发、JVM、Spring、数据库、分布式到项目实践，适合 Java 后端系统学习和求职准备。 AI 方向 Java/Go 开发者 AI 应用开发与 Agent 学习路线（2026 最新版）：面向后端开发者，按大模型基础、LLM API、Prompt、RAG、Agent、工程化和项目实战拆解学习路径。 后端开发者转型 AI Agent 学习建议（2026 最新版）：先判断是否适合转型，再看 Java AI 与 Python AI 怎么选、能投什么岗位、应该如何学习。 全栈方向…",
-      "link": "https://javaguide.cn/roadmap/",
-      "pubDate": "2026-06-16T07:22:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
+        "Python & Scala"
       ],
       "image": null,
       "type": "blog"
     },
     {
-      "id": "592c468563c5",
-      "title": "后端开发者转型 AI Agent 学习建议（2026 最新版）",
-      "description": "大家好，我是 Guide。这是后端开发者转型 AI Agent 方向的学习建议 2026 最新版。 最近后台和星球里，经常看到类似的问题： 做了几年 Java / Go 后端，现在要不要往 AI Agent 转？ Python 要学到什么程度？原来的后端经验还值不值钱？ 我一般会先问对方一句：你想去做模型训练，还是想把大模型接进真实业务系统？ 大多数后端同学说的是后者。那就不用把自己吓住。你过去做的高并发、鉴权、数据库、缓存、消息队列、部署、监控，并没有因为 LLM 出现就过期。企业真的要把 Agent 上线，最后还是要处理权限、状态、超时、成本、审计、回滚这些问题。 这篇先聊转型判断和路线。更细的技术学习清单，可以看这篇：Java/Go 开发者 AI 应用开发与 Agent 学习路线（2026 最新版）。 先判断要不要转 现在招聘市场确实变了。AI 应用、RAG、Agent、AI 平台相关岗位越来越多，传统纯 CRUD 岗位的空间在收缩。 但岗位变多，不等于每个人都要马上切过去。 动手前，先回答三个问题： 你已经感觉当前后端路径遇到了天花板吗？ 未来 2~3 个月，你能不能每周拿出…",
-      "link": "https://javaguide.cn/roadmap/backend-to-ai-agent-roadmap.html",
-      "pubDate": "2026-06-16T07:22:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "id": "db23b0a18e5d",
+      "title": "明镜荡｜上海出发一小时的宝藏湖荡露营地",
+      "description": "运维咖啡吧 的最新内容，点击「阅读原文」查看完整全文。",
+      "link": "https://blog.ops-coffee.com/r/city-china-jiangsu-suzhou-kunshan-mingjingdang.html",
+      "pubDate": "2026-06-13T13:13:24.000Z",
+      "source": "运维咖啡吧",
+      "sourceUrl": "https://blog.ops-coffee.cn/feed.xml",
       "categories": [
-        "Programmation"
+        "Linux/云原生",
+        "DevOps 实践"
       ],
       "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "f3866a004a12",
-      "title": "后端开发者全栈学习路线（2026 最新版）：AI 时代如何补齐前端和交付能力",
-      "description": "这是面向后端开发者的全栈学习路线 2026 最新版。后台经常有人问我： 后端要不要学前端？ AI 都能写页面了，我还要不要系统学 Vue、React？ 全栈以后会越来越吃香吗？ 我的判断比较直接：如果你是 Java / Go 后端，想提升独立交付能力，全栈值得学。但学习方式要换一换，别再按几年前那种路线，把 HTML、CSS、JavaScript、框架源码、工程化、Node 全部从头啃一遍，再等自己“准备好了”才写页面。 AI 时代，全栈能力的重点已经变了。 过去，全栈更像一个人硬学两套技术栈。现在更像是后端开发者保住自己的工程底座，再借助 AI 快速补齐前端、交互、联调和部署这几块短板。你不一定要成为专业前端，但至少要能把一个后台管理功能从数据库、接口、页面、权限、部署一路跑通。 这篇主要写给后端同学。目标很明确：看懂页面、改得动组件、讲得清交互，最后能独立交付一个完整功能。 先校准目标：全栈要能交付完整功能 有些同学理解的全栈，是后端会写一点页面，前端会写一点接口。 这还不够。 真正有用的全栈能力，至少要能串起一条完整链路： 需求理解 -> 页面结构 -> 接口设计 ->…",
-      "link": "https://javaguide.cn/roadmap/full-stack-roadmap.html",
-      "pubDate": "2026-06-16T07:22:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "2608c78c2f31",
-      "title": "Java 后端学习路线（2026 最新版）",
-      "description": "这是 Java 学习路线的 2026 最新版，每年都会根据当下 Java 后端求职和招聘的最新要求进行全面的优化和改进。 这篇文章可能是你所见过的最用心、最全面的 Java 后端学习路线，共 4w+ 字。不过，也不用担心内容太多学不完，我会按照学习难度给出找一份小厂工作必学的内容以及适合循序渐进提高 Java 后端开发能力的学习路线。 对于初学者，你可以按照这篇文章推荐的学习路线和资料进行系统性的学习；对于有经验的开发者，你可以根据这篇文章更一步地深入学习 Java 后端开发，提升个人竞争力。 为了保证内容不至于太杂，这篇文章不会展开讲学习方法和成长建议，这部分可以看 JavaGuide「程序人生」里的几篇文章： 程序员如何快速学习新技术 程序员的技术成长战略 给想成长为高级别开发同学的七条建议 这篇文章也不会涉及到计算机基础的内容，关于计算机基础知识的学习可以参考我的网站上的分享：计算机基础书籍推荐。…",
-      "link": "https://javaguide.cn/roadmap/java-roadmap.html",
-      "pubDate": "2026-06-16T07:22:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/interview-preparation/java-learning-route/java-learning-route-2024.png",
-      "type": "blog"
-    },
-    {
-      "id": "e7a75378f7b2",
-      "title": "Java/Go 开发者 AI 应用开发与 Agent 学习路线（2026 最新版）",
-      "description": "你好，我是 Guide。这是面向 Java/Go 后端开发者的 AI 应用开发与 Agent 学习路线 2026 最新版。JavaGuide 这两年陆续写了不少 AI 应用开发文章，公众号累计阅读超过 100w+。 公众号后台经常看到类似的留言： 我是 Java / Go 后端，想往 AI 应用开发走，第一步该干什么？ Python 要不要学到很深？RAG、Agent、Prompt 到底先碰哪一个？ 我一般会先确认一件事：你想转模型算法，还是想把大模型接进业务系统里？ 大多数后端同学问的都是第二种。业务系统、数据库、缓存、消息队列、限流熔断、链路追踪，这些经验到了 AI 应用里仍然能用，只是上游从确定的 HTTP / RPC 接口，换成了一个更慢、更贵、更不稳定的大模型接口。 麻烦也在这里。同一个请求，今天回答 A，明天可能回答 B；你让它返回 JSON，它可能少字段、乱格式、超时，甚至把不确定内容说得很像真的。过去你主要处理接口失败、并发、数据一致性；现在还要处理模型输出的不确定性、上下文污染、Token 成本和幻觉。 所以这份路线按工程落地来写。你可以先把它理解成三段：…",
-      "link": "https://javaguide.cn/roadmap/java-to-ai-roadmap.html",
-      "pubDate": "2026-06-16T07:22:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "0451f9655cef",
-      "title": "操作系统锁与同步机制详解：mutex、semaphore、condition variable、spinlock 与 futex",
-      "description": "两个线程同时给同一个计数器加 1，看起来很小的一件事，最后结果却可能少加一次。 原因其实很简单。count++ 在源码里是一行，机器执行时通常要经历读取、计算、写回几个步骤。线程 A 刚读到旧值，还没写回；线程 B 也读到了同一个旧值。两边各自算出新值，最后写回的却是同一个结果。 为了避免这类并发问题，操作系统提供了锁和一系列同步机制。它们要解决的问题不只是一段代码能不能同时执行，还包括线程该不该阻塞、资源数量怎么控制、条件不满足时怎么等待。到了内核里，还要继续考虑中断、抢占、多 CPU、实时性和调度延迟。 这篇文章只讲操作系统视角下的同步机制。Java 里的 synchronized、ReentrantLock、AQS、CAS 和锁优化已经在 Java 锁详解 里展开过，这里不会重复那套内容。本文重点看 mutex、semaphore、condition variable、spinlock、futex 这些概念各自解决什么问题。等理解了这些同步原语，再去看 死锁详解，就更容易看懂“等待关系为什么会绕成环”。 先通过一张表大致看一下这些同步机制分别解决什么问题： | 机制 |…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/os-lock-and-sync.html",
-      "pubDate": "2026-06-15T05:36:52.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "05a43af520dc",
-      "title": "Java 锁详解：互斥锁、读写锁、自旋锁与 synchronized 锁优化",
-      "description": "学 Java 并发时，锁相关的名字很容易让大家搞混：互斥锁、读写锁、自旋锁、悲观锁、乐观锁、CAS、AQS、synchronized、ReentrantLock、StampedLock、偏向锁、轻量级锁、重量级锁。 这些名字并不都在同一个分类维度里。 有的说“谁能进入临界区”，比如互斥锁和读写锁；有的说“拿不到锁时怎么等”，比如自旋锁和阻塞锁；有的说“修改共享数据前先锁住，还是提交时再校验”，比如悲观锁和乐观锁；还有的说 HotSpot 在不同竞争强度下怎么优化 synchronized。 这篇文章先把锁的坐标系立起来，再看 Java 里常用锁工具怎么落地。关于悲观锁、乐观锁和 CAS 的细节，站内已经有两篇文章详细介绍：乐观锁和悲观锁详解、CAS 详解。本文只保留必要上下文，重点放在“锁体系怎么串起来”。 PS：本文主要以 HotSpot / OpenJDK 为背景。synchronized 的 monitor 互斥和内存语义属于 Java/JVM 规范层面；对象头、Mark Word、轻量级锁、锁膨胀这些内容属于 HotSpot 实现优化，Java…",
-      "link": "https://javaguide.cn/java/concurrent/java-lock.html",
-      "pubDate": "2026-06-14T23:24:11.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "67981a3fee07",
-      "title": "死锁详解：四个必要条件、Java 死锁排查与数据库死锁处理",
-      "description": "线程 A 已经拿到了资源 1，线程 B 也拿到了资源 2。接下来，线程 A 想继续往下走，需要资源 2；线程 B 想继续往下走，又需要资源 1。 两个线程都没抛异常，也不是 CPU 把机器打满了。线上看到的现象可能只是几个请求一直不返回，线程池里的工作线程慢慢被占住。 这类问题麻烦就麻烦在这里：程序没有“算错”，而是卡在一条自己解不开的等待链上。 线程死锁说的就是这种情况：一组线程互相等对方释放资源，等待关系绕成闭环，参与其中的线程都没办法靠自己继续执行。 如果这些线程正好承载订单、支付、库存这类关键流程，外部看到的就不只是某个线程 BLOCKED 了，而是接口超时、队列堆积，甚至进程迟迟退不干净。 把范围放大一点，死锁不只属于 Java 线程。进程、数据库事务、分布式任务，只要互相占着资源再继续等待，都可能卡成同样的形状。这里的资源也不一定是操作系统教材里的打印机、磁带机，它可以是 Java 对象监视器、ReentrantLock、数据库行锁、分布式锁、连接池里的连接、线程池里的工作线程，甚至是管道缓冲区。 后面会用 Java 代码演示，是因为这类例子最容易复现。但要记住，死锁不是…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/dead-lock.html",
-      "pubDate": "2026-06-13T03:53:15.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/dead-lock-deadlock-scenario.png",
-      "type": "blog"
-    },
-    {
-      "id": "0f474304ea6a",
-      "title": "进程间通信（IPC）详解：管道、消息队列、共享内存、Socket 与 Binder",
-      "description": "两个进程想交换一段数据，最直觉的想法是：A 进程把数据写到自己的内存里，然后 B 进程直接去读就行了。 不过，这在操作系统里行不通。每个进程都有独立的虚拟地址空间，A 进程里的 0x7f... 地址和 B 进程里的 0x7f... 地址并不是同一块内存。用户态进程之间不能随便互相摸内存，否则权限隔离也没法谈。 所以 IPC（Inter-Process Communication，进程间通信） 绕不开操作系统。 不要想得太复杂，我更习惯把 IPC 看成三件事：怎么传数据、怎么同步控制流、怎么做命名和权限检查。只记“管道、消息队列、共享内存”这些名字，很容易背完就忘。 IPC 到底在解决什么？ IPC 先解决数据怎么过去。 管道和字节流 Socket 传连续字节，消息边界由应用约定；消息队列、数据报 Socket、Binder 事务传一条条消息，天然有边界；共享内存让多个进程映射同一块物理内存，映射完成后读写共享区域不需要每次陷入内核。 它还要解决同步。 共享内存只解决“看见同一份数据”，不解决“谁先写、谁后读”。多个进程同时改同一个环形队列，如果没有互斥锁、信号量、futex…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/ipc.html",
-      "pubDate": "2026-06-11T05:47:26.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/java/new-features/ipc-why-ipc.png",
-      "type": "blog"
-    },
-    {
-      "id": "15ee0e58cb2e",
-      "title": "进程与线程详解：区别、状态、通信、上下文切换与虚拟线程",
-      "description": "进程和线程是操作系统里最基础、也最容易被混着背的两个概念。 面试里问它们的区别，很多回答会停在“进程是资源分配的基本单位，线程是 CPU 调度的基本单位”。这句话可以作为入口，但不够用。 继续往下追，就会遇到一串更具体的问题：为什么进程之间默认隔离？线程到底共享了什么？fork() 后父子进程有哪些东西相同、哪些东西已经分开？为什么多线程程序里随便 fork() 会出问题？Java 虚拟线程又算不算操作系统线程？ 这篇文章就顺着这些问题展开。先把程序、进程、线程的边界讲清楚，再看 Linux 里的 fork、exec、wait、clone，最后回到上下文切换、线程模型和 Java 虚拟线程。读的时候可以抓住一条主线：进程更像资源和隔离边界，线程更像一条可以被调度的执行路径。 程序、进程和线程分别是什么？ 程序是存放在磁盘上的一组指令和数据，比如一个可执行文件、一个 JAR 包。它还没有真正运行，只是静态文件。…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/process-and-thread.html",
-      "pubDate": "2026-06-11T05:47:26.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/relationship-between-program-process-and-thread.png",
-      "type": "blog"
-    },
-    {
-      "id": "90fd150b7aa0",
-      "title": "I/O 多路复用详解：select、poll、epoll 原理与区别",
-      "description": "写一个 TCP 服务端，最直觉的写法是：主线程 accept 一个连接，就丢给一个新线程去 read、处理、write。连接少的时候这套跑得很好。 可一旦连接数冲到上万，问题就来了。在不少 Linux 发行版里，新线程默认会预留数 MB 的栈空间，常见配置是 8 MB（实际值取决于 ulimit -s、运行库和线程属性）。一万个连接哪怕栈页是按需提交的，预留的地址空间、真正用到的栈页加上线程元数据叠起来也很可观；更要命的是几千上万个线程挤在几个 CPU 核上，光是线程间的上下文切换就把 CPU 啃掉一大半，真正干活的时间所剩无几。更别提大部分连接其实是空闲的——它们各自占着一个线程，却只是在那儿干等数据。 这就是经典的 C10K 问题：怎么让一个（或少数几个）线程，同时盯着成千上万个连接，谁来数据了就处理谁。 答案就是 I/O 多路复用。 下面按 select、poll、epoll 的顺序往下讲，它们解决的是同一个问题，但一个比一个聪明。 什么是 I/O 多路复用？ 要讲清楚，得先知道一次网络读操作在内核里其实分成两个阶段：…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/io-multiplexing.html",
-      "pubDate": "2026-06-10T13:41:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/io-multiplexing-io-two-phases.png",
-      "type": "blog"
-    },
-    {
-      "id": "39d8739b57f3",
-      "title": "虚拟内存详解：地址转换、TLB、缺页异常与页面置换",
-      "description": "打开任务管理器时，你可能会看到一个挺反直觉的现象：每个进程都像拿着一大片“自己的内存”，有些进程里的地址看起来还差不多，但它们并不会互相影响。浏览器、IDE、数据库同时跑，大家都以为自己有一块连续、干净、独占的空间。 这不是因为程序之间互相信任，而是操作系统在中间加了一层翻译。 程序看到的是虚拟地址，真正落到内存条上的位置，由内核和硬件一起决定。虚拟内存要讲的，也就是这层翻译怎么做、进程为什么能隔离、内存不够时又怎么把一部分数据先挪到磁盘上。 没有虚拟内存会怎样？ 先看一个反例。 很多人大学里玩过单片机。单片机上没有复杂的操作系统，CPU 直接操作物理地址。这个环境里如果想同时跑两个程序，麻烦马上就来了：第一个程序往地址 2000 写了个值，第二个程序也刚好把数据放在 2000，那一写就把对方的数据覆盖了，两个程序一起出问题。 原因也不绕：两个程序都在直接引用同一套物理地址，谁也躲不开谁。 操作系统的做法是加一层隔离：给每个进程发一套独立的“虚拟地址”。进程只跟自己的虚拟地址打交道，这个地址最后落到哪块物理内存上，进程不用知道，操作系统统一安排。 于是就有了两个概念：…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/virtual-memory.html",
-      "pubDate": "2026-06-10T13:41:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/virtual-memory-virtual-physical-mapping.png",
-      "type": "blog"
-    },
-    {
-      "id": "2e2a0745ac75",
-      "title": "零拷贝详解：mmap、sendfile 与 splice",
-      "description": "面试里有个很常见的套路：先问你“Kafka 为什么快”“RocketMQ 为什么扛得住堆积”，等你答出顺序写、Page Cache、零拷贝之后，面试官顺势往下挖：“零拷贝具体省掉了哪几次拷贝？”“mmap 和 sendfile 有什么区别？”“splice 又是干嘛的？” 到这一步，很多人就开始打太极了。能背出“零拷贝就是不经过用户态”的不少，能把四次拷贝、两次 DMA、几次上下文切换的账算清楚的不多。 这篇文章就从一次文件发送说起：传统 I/O 会拷几次，零拷贝的“零”到底省在哪，mmap、sendfile、splice 三条路线分别省了什么，又各自要付出什么代价。 在文章正式开始之前，我们需要把计算口径定下来。 后面提到“几次拷贝、几次切换”时，默认按下面这个简化模型来算。换了场景，数字就会变： 场景是把一个普通文件通过 TCP socket 发出去，且数据初始不在 Page Cache 里（需要真正读盘）。 不涉及 TLS 加密、压缩、格式转换这类要在用户态碰数据的处理。 设备支持常见的 DMA 与 scatter-gather。…",
-      "link": "https://javaguide.cn/cs-basics/operating-system/zero-copy.html",
-      "pubDate": "2026-06-10T13:41:53.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/zero-copy-traditional-read-write.png",
-      "type": "blog"
-    },
-    {
-      "id": "e2e3ad248ad2",
-      "title": "CLAUDE.md 最佳实践：该写什么、不该写什么、项目变大后怎么拆",
-      "description": "你好，我是小 G。前几天分享 Claude Code 使用技巧 时，我简单介绍了 CLAUDE.md。有 G 友在评论区问，这个文件能不能单独写一篇。 很多朋友第一次看到 CLAUDE.md，会把它当成另一份 README。README 主要给人介绍项目，CLAUDE.md 则给 Claude Code 提供工作指令，例如项目怎么启动、哪些文件不能改、接口返回格式是什么、改完代码要运行哪些检查。 这些内容当然可以在每次新会话里重新说明，但很容易漏。长期有效、Claude 又无法从代码中准确推断的规则，更适合提前写进 CLAUDE.md。 本文结合 Claude Code 官方文档和自己的使用经验，介绍 CLAUDE.md 该写什么、怎样拆分以及后续如何维护。 还有个小提醒：Claude Code 迭代很快，.claude/rules/ 和 Auto Memory 这两块尤其容易随版本变化。本文按 2026-07-24 的官方文档核对。实际落地前，先用 claude --version 确认版本，再用 /context 查看本会话实际加载的指令；/memory…",
-      "link": "https://javaguide.cn/ai-coding/practices/claude-md-best-practices.html",
-      "pubDate": "2026-06-07T15:20:18.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/claudecode/claude-md-best-practices-rule-files-relationship.png",
-      "type": "blog"
-    },
-    {
-      "id": "2d9586e8b5b8",
-      "title": "Vibe Coding 实用技巧总结：Git、Spec、上下文管理与多 Agent 协作",
-      "description": "你好，我是小 G。上个周末，我通过文字消息分享了一些 Vibe Coding 的小技巧。这篇文章把当时没展开的内容补完整，也顺便整理一下这几年实际用 AI 编程时踩过的坑。 正文开始之前，想问问大家：你还记得自己第一次 Vibe Coding 的感觉吗？ 我反正是特别上头，24 年第一次接触 Cursor，真是惊为天人。那种感觉就像小时候刚接触游戏一样，但比游戏还爽一些。每天最开心的事情就是 Vibe Coding，看着代码一行一行被自动写出来。就感觉自己一天做的事情比过去一周还要多。 那段时间是真的游戏都不想碰了，就想着 AI 能帮我多干点活。 但爽完之后，翻车情况也越来越多，经常会遇到一些莫名其妙的问题。这让我意识到，单纯凭感觉去 Vibe Coding 是不太可行的。 下面这些，是小 G 这几年用 AI 编码踩出来的一些经验。不花哨，但都挺管用。 先把 Git 准备好 如果只选一个最重要的 Vibe Coding 技巧，小 G 会选 Git。 原因很简单：AI 写错一行代码不可怕，可怕的是它一口气改了 20 个文件，等你发现方向不对，已经不知道哪一块该留、哪一块该扔。Git…",
-      "link": "https://javaguide.cn/ai-coding/practices/the-cool-tricks-for-vibe-coding.html",
-      "pubDate": "2026-06-05T10:10:23.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/claudecode/vibe-coding-practices-comments.png",
-      "type": "blog"
-    },
-    {
-      "id": "aa3a8c436d2c",
-      "title": "MiniMax M3 + Claude Code 实战：Redis 故障排查、SCAN 算法复刻与监控面板搭建",
-      "description": "你好，我是小 G。MiniMax M3 前几天发布了，不少朋友第一时间用上，反馈都还不错，也有不少朋友留言让我实测一波。 不是不想测，前几天确实太忙了，想赶在秋招之前对 JavaGuide 进行一波优化，这是每一年都会做的事情。 根据 MiniMax 官方介绍，M3 是其首个同时提供 1M 上下文、原生多模态和前沿 Coding 能力的开放权重模型。这是厂商对产品的定位，是否适合具体代码库仍要靠任务验证。 官方公布的基准结果包括：SWE-Bench Pro 59.0%、Terminal-Bench 2.1 66.0%、MCP Atlas 74.2%。这些数字对应指定评测集和评测配置，不是本文独立复测结果。 我更关心它进入真实工程后的表现。 因此，我用一个过去遇到的线上故障来检验。已知现象是业务高峰期前台请求受影响，排查线索指向后台异步任务中的完整 Redis SCAN 循环；它是否因长期占用连接而构成主因，还要结合监控和复现验证。 该案例涉及复杂业务链路推理和全局诊断。同时，我会在完成故障定位和止血后，继续用 M3 尝试 Redis 源码（C）到 Go 的功能复刻、以及前后端…",
-      "link": "https://javaguide.cn/ai-coding/cases/cc-m3.html",
-      "pubDate": "2026-06-05T10:10:23.000Z",
-      "source": "JavaGuide",
-      "sourceUrl": "https://javaguide.cn/atom.xml",
-      "categories": [
-        "Programmation"
-      ],
-      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/m3/image-20260604122811898.png",
       "type": "blog"
     }
   ]

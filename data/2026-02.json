@@ -1,0 +1,61 @@
+{
+  "month": "2026-02",
+  "articles": [
+    {
+      "id": "c05b383bbdbc",
+      "title": "为什么我的账户突然出现大量疑似机器人的粉丝？",
+      "description": "这两天忽然很多粉丝，但是从账户来看像是机器人，思否平台怎么回事？这两天看了一下，基本都是机器人，每天20个左右。好无聊！",
+      "link": "https://segmentfault.com/q/1010000047617887",
+      "pubDate": "2026-02-24T01:12:16.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "1e79a744b278",
+      "title": "glances 怎么切换到 mem 内存占用选项？",
+      "description": "现在按键盘的向右变成 command 右滑了我记得以前按键盘的向右就是切换 tabglances 版本是最新的 4.5.0.1",
+      "link": "https://segmentfault.com/q/1010000047603296",
+      "pubDate": "2026-02-10T03:21:57.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "48347132ddb3",
+      "title": "对写出好的代码，ai IDE 的差距大还是ai model 的差距大？",
+      "description": "AI IDE 很多：trae、qoder、CodeBuddy、CodeFlicker、kiro、Cursor我现在就用过 trae 和 vscode，对于其他的没有经验。这些 ai ide 的差异都是啥？上下文工程不一样吗？会有大差别吗？ 对写出好的代码，AI ide 的差距大还是ai 模型的差距大？我感觉 trae 只会写代码，不会检查写出来的代码能不能跑假设都是使用 glm4.7 模型，从 trae 换成 opencode 会有收益吗？",
+      "link": "https://segmentfault.com/q/1010000047592473",
+      "pubDate": "2026-02-04T07:16:18.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "81e405897102",
+      "title": "pylance 的 python.analysis.typeCheckingMode 和 pydantic 动态生成的 class 冲突怎么办？",
+      "description": "不管设置为哪一档，都会冲突我的 pydantic 模型是这样定义的class UserRegisterResponse(BaseModel): user: UserResponse | None = Field(None, description='用户信息') registered: bool = Field(default=False, description='是否注册成新号') already_exist: bool = Field(default=False, description='邮箱是否已存在') message: str = Field(default='', description='描述信息, 对外，前端可直接渲染')pylance 眼中动态生成的 class 是这样的class UserRegisterResponse( *, user: UserResponse | None, registered: bool = False, already_exist: bool = False, message: str = '' )为什么会出现 user:…",
+      "link": "https://segmentfault.com/q/1010000047591369",
+      "pubDate": "2026-02-03T16:14:58.000Z",
+      "source": "SegmentFault Python",
+      "sourceUrl": "https://segmentfault.com/feeds/tag/python",
+      "categories": [
+        "Python & Scala"
+      ],
+      "image": null,
+      "type": "blog"
+    }
+  ]
+}

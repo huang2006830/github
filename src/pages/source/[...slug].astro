@@ -55,12 +55,12 @@ for (let i = 1; i <= totalPages; i++) {
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": `${source.name} - 大数据技术学习站`,
+    "name": `${source.name} - 大数据运维与开发实战站`,
     "description": `来自 ${source.name} 的 ${totalArticles} 篇文章。`,
     "url": `${siteUrl}/source/${source.slug}/`,
     "numberOfItems": totalArticles,
     "inLanguage": "zh-CN",
-    "isPartOf": { "@type": "WebSite", "name": "大数据技术学习站", "url": siteUrl },
+    "isPartOf": { "@type": "WebSite", "name": "大数据运维与开发实战站", "url": siteUrl },
   })} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
