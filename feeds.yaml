@@ -3,20 +3,16 @@ feeds:
     name: 美团技术团队
     categories: [Big Data, Data Engineering, Data Science]
 
-  - url: https://www.infoq.cn/feed
-    name: InfoQ 中文
-    categories: [Big Data, Data Engineering, Cloud]
+  - url: https://blog.csdn.net/u013411339/rss/list
+    name: CSDN 大数据
+    categories: [Big Data, Data Engineering, Data Science]
 
-  - url: https://www.qbitai.com/feed
-    name: 量子位
-    categories: [Data Science, IA]
+  - url: https://javaguide.cn/atom.xml
+    name: JavaGuide
+    categories: [Programmation]
 
   - url: https://www.taosdata.com/feed
     name: 涛思数据
     categories: [Big Data, Data Engineering]
-
-  - url: http://www.199it.com/feed
-    name: 199IT
-    categories: [Big Data, Data Science]
 
 feeds_world: []

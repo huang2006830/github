@@ -1,0 +1,315 @@
+{
+  "month": "2026-03",
+  "articles": [
+    {
+      "id": "4c1643916b80",
+      "title": "IDEA + Qoder 插件多场景实战：接口优化与代码重构",
+      "description": "大家好，我是小 G。如果你是 JetBrains IDE 的重度用户，大概率有过这样的纠结：想用 AI 辅助编程，但主流工具——Cursor、Trae、Qoder——大多基于 VS Code。切过去？舍不得 JetBrains 调试和重构体验。不切？又感觉错过了 AI 的效率红利。 有朋友会说：Claude Code、Gemini CLI 这些终端工具不是挺香的吗？确实香，但说实话，CLI 模式也有明显的短板：没有原生 UI 交互，看代码、审 diff 都不够直观。虽然可以通过一些开源项目（如 vibe kanban、1Code）来缓解，但在做复杂项目时，还是存在一些局限性。 现在的后端开发者，大致分成了四大阵营： | 阵营 | 工具组合 | 特点 | |",
+      "link": "https://javaguide.cn/ai-coding/cases/idea-qoder-plugin.html",
+      "pubDate": "2026-03-29T06:07:23.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "0cd8a6fe79dd",
+      "title": "Trae + MiniMax 多场景实战：Redis 故障排查与跨语言重构",
+      "description": "大家好，我是小 G。前面分享过一篇 IDEA 搭配 Qoder 插件的实战，那篇主要讲在 JetBrains 体系内用 AI 辅助编码。这篇换个角度，聊聊 Trae IDE 接入大模型 的实战体验。 Trae 是字节跳动推出的 AI 编程 IDE，基于 VS Code 生态，支持接入多种大模型。本文使用 MiniMax M2.7 作为示例，但 Trae 的接入方式是通用的——换成 Claude、GPT 等其他模型，流程基本一致。 我这里使用 MiniMax 是因为我刚好订阅了 MiniMax Code Plan 想要实际测试一些，并非广告，你可以换成其他模型，思路都是一样的。 我选了两个比较有代表性的复杂场景来实际验证： 场景一：接口突然大量超时，日志只指向 Redis，但项目里多处都在用 Redis，很难快速定位根因。 场景二：把 Redis 的慢查询指令从 C 语言源码完整复刻到 Go 实现，考验跨语言重构和上下文理解能力。 快速上手：Trae 接入大模型 Trae 支持接入多种大模型，下面以接入自定义模型为例，演示通用配置流程。 第一步：到 Trae…",
+      "link": "https://javaguide.cn/ai-coding/cases/trae-m2.7.html",
+      "pubDate": "2026-03-29T06:07:23.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/m2.7/trae-add-model-entry.png",
+      "type": "blog"
+    },
+    {
+      "id": "16e5702c0fb7",
+      "title": "AI Agent 核心概念：Agent Loop、Plan-and-Execute、A2A、Agentic Workflows、Tools 注册",
+      "description": "“帮我排查今天早上 user-service 接口变慢的原因，并把结果发给负责人。”这类请求没有固定答案：先查监控、日志还是 Heap Dump，要看前一步拿到了什么证据。即使已经发现慢 SQL，也还得判断要不要继续查执行计划、怎样组织结论、是否可以发出通知。 聊天模型可以给出一份排查清单，却不会自己把这条路径走完。要完成任务，模型需要选择工具、读取工具结果，再据此决定下一步或结束。AI Agent 处理的就是这段连续的决策与执行过程。 工具接得越多，执行路径越不能随意放开。订单扣库存、审批流这类步骤明确的工作，仍应由传统程序或 Workflow 控制；只有中间步骤依赖实时证据、无法预先写死时，才需要让 Agent 参与判断。 后文会从演进、执行循环、工具接入和常见范式拆开这条链路，并给出 Agent、Workflow 与传统编程的选型依据。 AI Agent 的演进 Agent 的能力不是一次性出现的。模型先获得外部调用能力，随后才有编排、长任务和长期在线这些需求。 2022 年，ChatGPT…",
+      "link": "https://javaguide.cn/ai/agent/agent-basis.html",
+      "pubDate": "2026-03-26T09:55:47.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/agent/agent-core-arch.png",
+      "type": "blog"
+    },
+    {
+      "id": "90b7fd7da834",
+      "title": "什么是 Model Context Protocol (MCP)？和 Function Calling、Agent 什么关系？",
+      "description": "同一个 Git 工具接到 Claude Desktop、Cursor 和自建 Agent 时，往往要各写一层适配。工具参数、鉴权方式或版本一变，接入它的多个客户端都得跟着改。 MCP 约定外部系统以 Server 形式暴露能力，支持该协议的 Host 通过 Client 发现并调用这些能力。它处理的是工具和数据源的接入；模型如何决定调用、任务如何编排，仍属于 Function Calling 和 Agent 的职责。 本文以当前稳定的 2025-11-25 revision 为主。2025-03-26 版本把早期 HTTP+SSE 传输调整为 Streamable HTTP，2025-06-18 加入 Elicitation，2025-11-25 又增加了实验性的 Tasks、URL 模式 Elicitation 等内容。客户端和 SDK 可能只实现其中一部分，接入前要同时确认协议 revision、SDK 版本和 Host 能力。 MCP 到底是什么？ MCP 全称是 Model Context Protocol，中文一般叫“模型上下文协议”。 把 MCP…",
+      "link": "https://javaguide.cn/ai/agent/mcp.html",
+      "pubDate": "2026-03-26T09:55:47.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/skills/mcp-simple-diagram.png",
+      "type": "blog"
+    },
+    {
+      "id": "8f2cbb9535f0",
+      "title": "LLM 运行机制：Token、上下文窗口与采样参数怎么影响输出",
+      "description": "温度已经设为 0，结构化输出仍可能解析失败；上下文塞满文档后，模型也可能漏掉中间位置的关键约束。这些现象需要从 Token 切分、上下文容量和解码策略分别排查。 排查这些问题，要先看一次调用由哪些 Token 组成，再核对上下文预算以及 Temperature、Top-p、Top-k 等解码参数。文中的 Token 数和参数范围只用于解释机制，实际计费与能力上限仍以目标模型的 API 文档和响应 usage 为准。 Token 和上下文为什么决定成本与效果？ 当你在输入法里打“今天天气真”，它会自动建议“好”。大模型同样在预测后续内容，只不过它参考的是前面几千甚至几十万个字。每次生成一个 Token（文本碎片），再把它加入上下文并预测下一个，直到回答结束。 这个过程叫做自回归生成（Autoregressive Generation）。 自回归生成把后面的几个概念串在了一起： Token：模型每一步“补”的文本碎片。 上下文窗口：一次调用里模型可处理的总 Token 上限，系统提示词、历史消息、当前输入和输出预算都会占用。 Temperature /…",
+      "link": "https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html",
+      "pubDate": "2026-03-26T09:55:47.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/llm/llm-token-process.png",
+      "type": "blog"
+    },
+    {
+      "id": "f2a655ac46ba",
+      "title": "RAG 基础概念：检索、生成与工程取舍",
+      "description": "做企业知识库问答时，很多团队的第一反应都是：把文档全塞给大模型，让它自己读。 文档少的时候，这招确实能跑。一旦知识库涨到几十万字，问题很快就出来了：每次请求都可能撞 Token 上限，刚更新的内容模型也不一定知道。更现实一点，企业文档还要考虑权限、溯源、成本和延迟，不能靠“全塞进去”硬扛。 RAG 会在模型回答前从知识库中检索相关内容，再把这些内容交给模型，让回答尽量落在可核对的证据上。检索、上下文组织和生成任一环节出错，最终答案都可能偏离原文。 什么是 RAG？ RAG（Retrieval-Augmented Generation，检索增强生成） 就是把信息检索和大语言模型绑在一起用。系统先从知识库里检索出和当前问题相关的片段，知识库可以是数据库、文档集合，也可以是企业内部系统。然后把这些片段和原始问题一起喂给 LLM，让模型基于检索内容回答，而不是只靠训练时记住的知识。 为什么需要 RAG？ LLM 训练数据再大，也绕不开几个问题。RAG 正好可以在这些地方进行弥补。 第一是知识时效性。…",
+      "link": "https://javaguide.cn/ai/rag/rag-basis.html",
+      "pubDate": "2026-03-26T09:55:47.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/rag/rag-index-and-retrieval-explainer.webp",
+      "type": "blog"
+    },
+    {
+      "id": "9ceec997a746",
+      "title": "RAG 向量索引算法和向量数据库",
+      "description": "把 Embedding 存进普通字段并逐条计算距离，数据量小时可以作为精确检索基线。数据规模、并发或延迟要求上升后，全表扫描的计算开销会随向量数量线性增长，此时需要评估 ANN 索引或专门的向量检索系统。 本文从距离度量和索引算法讲起，再结合 PostgreSQL + pgvector 说明 HNSW、IVFFLAT 的参数、过滤行为和选型方法。 Embedding 和向量检索是什么关系？ 向量数据库并不是直接理解文本。它存储和检索的是 Embedding。 Embedding 的过程是：把一段文本交给 Embedding 模型，模型输出一个固定维度的稠密向量。可以粗略理解成“文本语义坐标”。两段文本语义越接近，它们在向量空间里的距离通常也越近。 RAG 的向量检索链路可以简化成这样： 文档 Chunk -> Embedding 模型 -> 文档向量 -> 写入向量数据库 用户问题 -> Embedding 模型 -> 查询向量 -> 检索最相似的 Top-K 文档向量 基础概念可以看 RAG 基础篇。本文重点放在后半段：这些向量怎么高效存储、索引和检索。 RAG…",
+      "link": "https://javaguide.cn/ai/rag/rag-vector-store.html",
+      "pubDate": "2026-03-26T09:55:47.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/rag/rag-embedding-vector-retrieval.png",
+      "type": "blog"
+    },
+    {
+      "id": "546d1deec3d4",
+      "title": "10 道 AI 编程相关的开放性面试问题",
+      "description": "腾讯面试的时候，面试官问我：“用过什么 AI 编程工具？”。我说：“Trae。” 空气突然安静了两秒。我搞不清楚为什么面试官沉默了，当时我还在想：“是不是我回答得不够高级？”。 面试被挂后才意识到：Trae 是字节的，腾讯家的是 CodeBuddy，阿里家的是 Qoder。 段子归段子！今天小 G 分享 9 道当下校招和社招技术面试中经常会被问到的 AI 编程开放性问题，希望对你有帮助。 ⭐ AI 编程 IDE：Cursor、Claude Code 等工具的使用技巧 ⭐ AI 对后端开发的影响：AI 会淘汰初级程序员吗？最大风险是什么？ ⭐ 未来核心竞争力：3 年后端工程师的核心竞争力是什么？ AI 编程 IDE 使用技巧 用过什么 AI 编程 IDE 吗？什么感觉？ 目前整体感觉是：AI 编程能力进步很快。它已经从几年前简单的代码补全，进化成了一个可以深度协作的工程助手。 我总结了一套自己的使用方法论： 在接手复杂项目或模块时，我不会直接让 AI 写代码，而是先让 Cursor…",
+      "link": "https://javaguide.cn/ai-coding/practices/ai-ide.html",
+      "pubDate": "2026-03-26T09:55:47.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "d901ac3d0927",
+      "title": "为什么忘记密码时只能重置，不能告诉你原密码？",
+      "description": "这是一个挺有意思的问题，很多公司也在面试中问过。挺简单的，不知道大家平时在重置密码的时候有没有想过这个问题。 回答这个问题其实就一句话：因为服务端也不知道你的原密码是什么。存原密码的程序员已经被开了 🤣。 如果服务端知道你的原密码，那就是严重的安全风险问题了。 我们这里来简单分析一下。 这篇文章不会谈论太多加密算法相关的内容，感兴趣的朋友可以看这篇文章：常见加密算法总结。 为什么服务端不知道你的原密码？ 做过开发的应该都知道，服务端在保存密码到数据库的时候，绝对不能直接明文存储。 如果明文存储的话，风险太大： 数据库数据有被盗的风险 有数据库权限的内部人员可能恶意利用 黑客入侵后可以直接获取所有用户密码 因此，密码必须经过处理后才能存储。这个处理方式就是使用哈希算法。 哈希算法简介 哈希算法也叫散列函数或摘要算法，它的作用是对任意长度的数据生成一个固定长度的唯一标识，也叫哈希值、散列值或消息摘要（后文统称为哈希值）。 哈希算法有两个关键特点： 不可逆性：你无法通过哈希之后的值再得到原值。这是核心！ 确定性：相同的输入永远产生相同的输出。…",
+      "link": "https://javaguide.cn/system-design/security/why-password-reset-instead-of-retrieval.html",
+      "pubDate": "2026-03-23T08:33:10.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/system-design/security/reset-password-page.png",
+      "type": "blog"
+    },
+    {
+      "id": "0d2372f94fae",
+      "title": "Java 26 新特性概览",
+      "description": "JDK 26 于 2026 年 3 月 17 日 发布，这是一个非 LTS（非长期支持版）版本。上一个长期支持版是 JDK 25，下一个长期支持版预计是 JDK 29。 JDK 26 共有 10 个新特性，这篇文章会挑选其中较为重要的一些新特性进行详细介绍： JEP 517: HTTP/3 for the HTTP Client API (为 HTTP Client API 引入 HTTP/3 支持) JEP 522: G1 GC: Improve Throughput by Reducing Synchronization (G1 GC 吞吐量优化) JEP 516: Ahead-of-Time Object Caching with Any GC (AOT 对象缓存支持任意 GC) JEP 500: Prepare to Make Final Mean Final (准备让 final 真正不可变) JEP 526: Lazy Constants (延迟常量, 第二次预览) JEP 525: Structured Concurrency (结构化并发, 第六次预览) JEP…",
+      "link": "https://javaguide.cn/java/new-features/java26.html",
+      "pubDate": "2026-03-21T06:28:26.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/java/new-features/jdk8~jdk24.png",
+      "type": "blog"
+    },
+    {
+      "id": "9e43bb7b8fe4",
+      "title": "引入Copilot，AI时代的报表开发新范式",
+      "description": "不过，这也有个坏处，就是要求输入的语句有一定规范性，不能过于随意，其实这对于程序员来讲并不是多大的负担，程序员本来就习惯了更为严格的程序代码，这个 Copilot 要求规范复杂度远远低于程序语言（以及报表原来那些公式），甚至低于 Excel 水平，程序员掌握起来并没有难度，而且，Copilot 还配有贴心的帮助功能，全程辅助用户精准输入指令。Copilot 的每一步输出都是确定的，它根据规则生成的执行命令是清晰的，如果遇到听不懂的指令，它会提示“无法识别”，而不会像 LLM 编造一个似是而非的结果；",
+      "link": "https://blog.csdn.net/u013411339/article/details/159180664",
+      "pubDate": "2026-03-17T00:31:01.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "5423e78fe5dc",
+      "title": "2026年的Redis-AI能力史诗级增强！",
+      "description": "语义缓存的做法是：把用户的 query 转成向量，在缓存中找语义最接近的历史 query，如果相似度超过阈值，直接返回缓存的 LLM 响应。不是和 Milvus、Pinecone 争\"最强向量数据库\"的位置，而是打\"一站式\"的牌—你的缓存、向量、会话、特征，都可以放在同一个 Redis 里管理，减少架构复杂度。Redis 在其中承担的是向量存储和检索层的角色。这个模块的设计理念是\"数据在哪里，计算就在哪里\"——既然特征数据已经在 Redis 里了，不如直接在 Redis 内部完成推理，省去数据搬运的开销。",
+      "link": "https://blog.csdn.net/u013411339/article/details/159137638",
+      "pubDate": "2026-03-16T00:30:49.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "4d0ffb97f56a",
+      "title": "一个极简的AI Agentic Engineering技术栈学习路线",
+      "description": "Anthropic的开发者们定义了这样一套和大模型交互的标准，但是这套标准争议很大，我个人的看法是：无论MCP还是Skill，大概率都是AI发展中的中间产物。这部分在使用Trae这样的工具的时候，不同的工具提供了不同的开发方式，例如Trae的SOLO Code、SOLO Build模式等，他们分别适用不同的场景，这个需要自己多多体验。但是客观的说，Sping AI更适合后端的微服务架构，更适合做大规模的生产服务，所以如果你有Java基础，可以直接从Spring AI开始学习。另外尽量节省token消耗。",
+      "link": "https://blog.csdn.net/u013411339/article/details/159023417",
+      "pubDate": "2026-03-13T00:04:20.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "29e7b4188395",
+      "title": "Arthas Agent诊断利器来袭，从命令行到自然语言的跨越。",
+      "description": "这款由阿里巴巴开源的Java诊断神器，在GitHub上斩获了37,000+Star，是无数Java程序员的线上排障必备工具。Arthas Agent将AI的自然语言理解能力与Arthas强大的诊断能力相结合，让Java应用诊断变得前所未有的简单。Agent 自动执行 thread -n 3，获取 CPU Top 3 线程，分析堆栈，给出诊断结论。截至2025年底，Arthas已迭代至4.x版本，最新版本带来了多项重磅更新：。理解自然语言：将你的诊断需求翻译成安全、精确的 Arthas 命令。",
+      "link": "https://blog.csdn.net/u013411339/article/details/158983288",
+      "pubDate": "2026-03-12T00:31:22.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "a7cdc052b9af",
+      "title": "MySQL索引失效场景总结",
+      "description": "在数据库性能优化中，索引是最直接有效的优化手段之一。然而，建了索引并不等于一定能用上索引。实际开发中，我们经常遇到这样的困惑：明明在字段上建立了索引，查询却依然慢如蜗牛，通过 EXPLAIN 分析发现居然是全表扫描。 导致索引失效的原因多种多样，既有 SQL 语句写法问题，也有索引设计不当的因素。有些失效场景是显性的（如违背最左前缀原则），有些则非常隐蔽（如隐式类型转换）。如果不深入了解这些失效场景，很容易在生产环境中埋下性能隐患。 本文将系统总结 MySQL 索引失效的常见场景，分析失效背后的原理机制，并提供相应的优化建议，帮助你在日常开发和排查问题中快速定位并解决索引失效问题。 SELECT * 查询（成本权衡） 核心定义：SELECT * 本身不会直接导致索引失效。它是一种”非覆盖索引”查询，如果 WHERE 条件命中了索引，索引依然会被初步考虑。 回表成本决策：当查询需要的字段不在索引树中时，MySQL 必须拿着主键回聚簇索引查找整行数据（回表）。优化器会对比”索引扫描 + 回表”与”直接全表扫描”的成本。如果查询结果占总数据量的比例较高（通常阈值在…",
+      "link": "https://javaguide.cn/database/mysql/mysql-index-invalidation.html",
+      "pubDate": "2026-03-09T10:52:44.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "d0c9c19b06eb",
+      "title": "AI大模型相关数据类岗位技术面试重点。",
+      "description": "这些部门和公司因为没有「技术债」，没有历史包袱，所以更加期望直接使用业内最前沿的技术方案，例如相当多的部门数据直接入湖，所以类似Hudi/Paimon类的框架掌握是基本要求。因为大模型所需要的数据多样，非标准数据占比高，多模态数据多，各种图片/视频/音频等所以需要用到大量的对象存储，例如云厂商OSS/COS等，开源的Minio/Ceph等。从技术上来讲，用到的技术栈和数仓方向没有显著的差异，但是需要一些大模型的基本知识，并且针对性的学习一些技术栈。主要是用来做数据的embedding，用来检索，召回；",
+      "link": "https://blog.csdn.net/u013411339/article/details/158875918",
+      "pubDate": "2026-03-09T00:31:18.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "abbcc2f9a33f",
+      "title": "大数据核心框架更新周报｜ClickHouse多版本齐发、Fluss0.9发布、Delta Lake引入Catalog管理表",
+      "description": "表级查询超时是一个实用的运维能力补充，对于存在个别慢查询表的集群有直接价值。：一周发布 5 个版本，看起来密集，但实际上是 ClickHouse 多分支并行维护策略的常规节奏，主要内容是各分支的安全补丁和 Bug 修复。Delta Lake 4.1.0 的 Catalog 管理表和 ClickHouse 26.2 的 BigLake 集成反映了同一个方向：Catalog 的角色正在从被动的\"表在哪里\"索引，转变为主动的表生命周期管理服务——负责提交协调、扫描规划、权限控制和跨表事务。",
+      "link": "https://blog.csdn.net/u013411339/article/details/158755978",
+      "pubDate": "2026-03-06T01:01:28.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "8f6fc890efbf",
+      "title": "所有大数据人，今年的新方向，彻底赢麻了！！",
+      "description": "讲解复杂技术的同时，还拥有非常丰厚的产品商业化经验，了解诸多行业内幕！只有充分了解大模型的技术原理、AI产品结构，才能了解背后的数据链。详细讲解案例的思路、应用场景，以及背后的技术原理、核心技术！既懂数据、又了解AI业务的数据人，势必是未来更抢手个和更具竞争力的AI数据人才！25年AI产品全面爆发！，能直接对话大佬和专业助教，不懂就问，超详细的案例，小白也能轻松get！，都可以直接在自己的工作中使用，让自己的产品/项目有可借鉴的成功案例！本次课程，专门面向数据人群，解析当下最热门的AI产品应用的必备的。",
+      "link": "https://blog.csdn.net/u013411339/article/details/158723940",
+      "pubDate": "2026-03-05T01:04:39.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "5ce2b1d55650",
+      "title": "ZAB 协议详解：ZooKeeper 原子广播、消息广播、崩溃恢复与 Leader 选举",
+      "description": "作为一款极其优秀的分布式协调框架，ZooKeeper 的高可用和数据一致性备受业界推崇。很多人误以为 ZooKeeper 使用的是大名鼎鼎的 Paxos 算法，但实际上，它的“灵魂”是一个专门为其定制的共识协议——ZAB（ZooKeeper Atomic Broadcast，原子广播协议）。 ZAB 并非像 Paxos 那样是通用的分布式一致性算法，它是一种特别为 ZooKeeper 设计的、支持崩溃可恢复的原子消息广播算法。基于 ZAB 协议，ZooKeeper 实现了一种主备模式的架构，来保持集群中各个副本之间的数据一致性。 这篇文章只讲 ZAB 的协议过程。如果你还不熟悉 ZooKeeper 的 ZNode、Watcher、Session 和应用场景，建议先读 ZooKeeper 入门指南。如果你想先理解 Leader、Quorum 和脑裂这些通用问题，可以先读 分布式协调详解。 ZAB 集群的核心角色与状态 在深入协议运作之前，我们需要先了解 ZooKeeper 集群中的三个主要角色： Leader（领导者）：…",
+      "link": "https://javaguide.cn/distributed-system/protocol/zab.html",
+      "pubDate": "2026-03-04T08:41:16.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/distributed-system/protocol/zab-zxid-structure.png",
+      "type": "blog"
+    },
+    {
+      "id": "f94a79aae509",
+      "title": "【AI驱动的学习策略】AI时代的学习思路和方式已经发生了根本性的改变。",
+      "description": "这个过程就变成了，基于AI agent/SKILL构建/开发项目，把问题/解决方案/版本更新总结下来，这些总结反馈给新的AI agent/SKILL，让他的能力更上一层楼。现在有了AI的加成，你可以创建专属的SKILL，帮你把工作中遇到的问题，框架更新的内容整理成标准文档，这个文档可以投喂给你的另外的SKILL，让他的能力变得越来越强。很多同学包括我在内在接触/学习新的技能/框架的同时，会天然抗拒，因为接触到不懂的内容，而我的兴趣又不高，甚至是被动学习，从不懂到懂的过程是很痛苦的。",
+      "link": "https://blog.csdn.net/u013411339/article/details/158685753",
+      "pubDate": "2026-03-04T01:01:27.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e247e2a7a702",
+      "title": "如何基于Redis实现消息队列？",
+      "description": "先说结论：可以是可以，但要看具体场景。和专业的消息队列（如 Kafka、RabbitMQ）相比，还是有一些欠缺的地方。 正式开始介绍之前，我们先来看看：一个生产级 MQ 需要具备哪些核心能力？ | 能力维度 | 定义 | 关键指标/特征 | | :",
+      "link": "https://javaguide.cn/database/redis/redis-stream-mq.html",
+      "pubDate": "2026-03-01T07:29:56.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
+    }
+  ]
+}

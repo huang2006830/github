@@ -2,6 +2,20 @@
   "month": "2026-07",
   "articles": [
     {
+      "id": "1d87c1155598",
+      "title": "mattpocock/skills：我最推荐的 4 个 AI 编程 Skill",
+      "description": "你好，我是小 G。 我在 AI 编程 Skills 选型清单 和 强模型时代，AI 编程 Skills 还有必要装吗？ 这两篇文章中，都提到了 mattpocock/skills，grilling 还专门拿了实际项目举例。 有不少读者朋友对 grilling 感兴趣。不过，回头看，这两篇都写得太简略了。文章只留下“让 Agent 持续追问”这个印象，一次只问一个问题、哪些信息该让 Agent 自己查、什么时候才能开始执行，都没有展开。 所以我重新读了一遍仓库里的 SKILL.md。mattpocock/skills 把常见工程问题拆成了较小、方便修改、可以组合的 Skill：需求含糊就补需求澄清，Bug 难查就补诊断流程，准备交付再补代码审查。 这种拆法很合我的使用习惯。Codex、Claude Code 已经能稳定完成的基础动作，无须每次重教；哪个环节经常返工，就给哪个环节加一小段流程。 群里讨论时，大家提到的也是类似问题：完整套件容易让小任务背上过重的流程，grilling 虽然会连续追问，但需求确实能收得更清楚。 除了 grilling…",
+      "link": "https://javaguide.cn/ai-coding/practices/mattpocock-skills.html",
+      "pubDate": "2026-07-31T06:23:27.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/skills/group-chat-superpowers-grilling-feedback.png",
+      "type": "blog"
+    },
+    {
       "id": "13b0020a08a0",
       "title": "美团正式发布 CatPaw：全场景 AI Agent，从个人提效到企业智能化",
       "description": "本月，美团 LongCat 2.0 已正式开源，总参数 1.6T，平均激活约 48B，动态范围 33B 到 56B，原生支持 1M 超长上下文。这是首个在五万张国产算力卡上完成全流程训练与推理的万亿参数模型。开源只是第一步，让 LongCat 2.0 在真实的工作任务中成为可靠的“工作伙伴”，才是真正的考验。 现在，搭载 LongCat 2.0 的美团全场景 AI Agent 平台 CatPaw 正式上线，将模型能力从“跑得动”推向“用得好”。CatPaw 提供开箱即用的 AI 智能工作台与企业级 Agent 开发托管能力。 不仅如此，依托美团十余年深耕本地生活的行业积累，CatPaw 将商家经营、服务履约与消费决策的深度认知融入其中，助力企业构建 AI 数字员工、推进业务智能化升级。 目前，CatPaw 已在美团内部大规模落地：累计覆盖 9 万员工、搭建 Agent 3 万个，并在多个真实业务场景中完成验证。 全时段运行，多终端协作的 AI 智能工作台 01 移动/PC/云端，全时段多端协作 提供独立的移动端 App 与 PC…",
@@ -15,6 +29,188 @@
         "Data Science"
       ],
       "image": "https://p0.meituan.net/meituantechblog/a690ba49597fd8720f96ea56573b54cc151290.png",
+      "type": "blog"
+    },
+    {
+      "id": "44ca425857ab",
+      "title": "Claude Code 上下文管理详解：窗口预算、压缩与长任务治理",
+      "description": "大家好，我是小 G。最近星球里有不少 G 友分享 Agent 岗位的面经，我看了一下，发现问到上下文管理的次数比较多。 我在之前的文章中已经分享过一篇： 上下文工程(Context Engineering) 是什么？和 Prompt Engineering 有什么区别？，介绍了上下文管理的核心内容。 所以，这篇想结合最顶级的 Coding Agent——Claude Code，进一步挖掘一下底层思想。 它不只是怎么压缩聊天记录，还关系到任务目标、工具输出、文件记录和交接信息分别该留在哪里。 Claude Code 执行 /compact 后，会用结构化摘要替换此前的会话历史，并重新加载部分持久化指令。 摘要通常会保留任务目标、重要约束、关键决策、当前进度和相关代码线索，但不保证保留完整的文件内容、检索结果及测试输出。后续如果需要这些材料的精确内容，应重新读取或重新执行。…",
+      "link": "https://javaguide.cn/ai-coding/principles/claude-code-context-management.html",
+      "pubDate": "2026-07-27T07:43:41.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/claude-code/claude-code-context-management-interview-questions.png",
+      "type": "blog"
+    },
+    {
+      "id": "0ec7e353a781",
+      "title": "强模型时代，AI 编程 Skills 还有必要装吗？",
+      "description": "前几天在知乎看到一个问题：Codex 用上 GPT-5.6 后，Skills 还有多少必要？ 一条提问和我自己的使用变化不能代表行业趋势。更准确地说，我发现手里一部分开发类 Skill 的收益正在下降，所以想重新检查哪些该留、哪些该删。 我现在看到一个 Skill，会先看它到底能提供什么能力。如果没有确切作用的话，肯定是不会装的。 前两年，模型干活经常漏步骤，Skill 写得越细越让人安心。现在 GPT-5.6、Kimi K3、Claude Fable 5 等模型已经能完成不少基础动作，我也开始重新检查手里的 Skill。 下面我会以 Codex 作为 Coding Agent 为例来谈，其他都是类似的。 很多基础步骤已经不用单独教了 以前的开发类 Skill 经常写成一张操作清单：怎么读项目，怎么找调用链，改完代码跑哪些测试，提交 PR 前再检查什么。模型能力还不够稳定时，这些提醒确实有用。 现在让 Codex 修一处…",
+      "link": "https://javaguide.cn/ai-coding/practices/skill-selection-and-pruning.html",
+      "pubDate": "2026-07-24T13:07:45.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/skills/zhihu-codex-gpt56-skills-question.png",
+      "type": "blog"
+    },
+    {
+      "id": "e06cfbffa3da",
+      "title": "CPU 调度与系统负载详解",
+      "description": "CPU 调度不只是 FCFS、RR、CFS 这些算法名词。排查线上问题时，还要弄清线程为什么被换下去、上下文切换的成本在哪里，以及 load average 很高但 CPU 使用率不高意味着什么。 这些问题背后是同一组约束：CPU 核心有限，任务需要排队，调度器负责决定谁先运行；系统指标则帮助判断任务是在争抢 CPU、等待 I/O，还是卡在内核、中断或虚拟化层。 比如一台有 8 个逻辑 CPU 的机器，load average 已到 40，但 CPU 还有空闲，%Cpu(s) 里的 wa 长期偏高。此时直接去找 CPU 热点函数可能没有结果，机器上更可能堆了一批等待 I/O 的任务。CPU 使用率和 load average 需要分开判断。 为什么需要 CPU 调度 CPU 核心有限，可运行任务可能很多。 在一个 Java 服务中，业务线程、GC 线程、JIT 线程、Netty 事件循环线程都可能要跑；同机还可能有日志采集、监控 Agent、定时任务和数据库客户端。如果系统可用的是 8 个逻辑 CPU，同一时刻最多只能让大约 8 个可运行任务占用 CPU，其余任务只能排队、睡眠或等待…",
+      "link": "https://javaguide.cn/cs-basics/operating-system/cpu-scheduling-and-load.html",
+      "pubDate": "2026-07-21T09:00:04.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/relationship-between-program-process-and-thread.png",
+      "type": "blog"
+    },
+    {
+      "id": "a3a1dc42d691",
+      "title": "中断、异常与系统调用详解：从内核入口到缺页异常",
+      "description": "系统调用从用户态进入内核态，只是理解这条路径的起点。沿着一次 read() 往下看，还会遇到几个紧密相关的问题： read() 是怎么进入内核的？ 时钟中断为什么能让正在运行的线程停下来？ Page Fault 为什么有时是正常行为，有时又会变成 SIGSEGV？ 系统调用进了内核，是否一定会发生线程上下文切换？ 这些问题可借助一条 read(fd, buf, count) 调用串起来看。用户程序执行 read()，glibc 把系统调用号和参数放到约定寄存器里，CPU 执行 syscall 进内核。内核检查 fd、缓冲区地址、文件状态，再决定从 Page Cache、文件系统、socket 缓冲区或设备驱动里取数据。 如果数据已经准备好，内核把数据复制回用户缓冲区，read() 很快返回。数据没准备好时，当前线程可能睡眠；磁盘 I/O 完成或网卡收到数据后，硬件中断进入内核，内核再唤醒等待队列里的线程。线程再次被调度到 CPU 上，read() 才继续返回。 一次普通 I/O 跑起来后，系统调用、中断、异常、调度常连在一起。 进入内核的几类事件 CPU…",
+      "link": "https://javaguide.cn/cs-basics/operating-system/interrupt-exception-syscall.html",
+      "pubDate": "2026-07-21T09:00:04.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/cs-basics/operating-system/ecf-kernel-entry-map.webp",
+      "type": "blog"
+    },
+    {
+      "id": "af28294c7aff",
+      "title": "Java 金额用 long 还是 BigDecimal？",
+      "description": "我在一篇讨论金额字段类型的文章评论区里，看到几种完全不同的答案：有人坚持用 Long 存分，有人说利息、汇率这类场景要用 BigDecimal，还有人提到接口里直接传字符串。 这些说法讨论的不是同一件事。用 Long 存分，说的是金额如何保存；利息和汇率用 BigDecimal，说的是金额如何计算；接口传字符串，通常只是数据传输格式。 已经确定最小单位的金额可以用 long 保存。计算过程中需要保留小数，或者要明确指定舍入方式，则使用 BigDecimal。两种类型可以出现在同一个系统里。 下文提到的 Long 方案，都是指用整数保存最小货币单位。Java 代码参与运算时通常使用基本类型 long，需要表达空值时才使用包装类型 Long。 | 对比项 | long | BigDecimal | |",
+      "link": "https://javaguide.cn/java/basis/money-long-vs-bigdecimal.html",
+      "pubDate": "2026-07-21T09:00:04.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "203b488f8d08",
+      "title": "Kimi K3 实战：全栈项目、Java 项目改造与 3A 游戏 Demo",
+      "description": "你好，我是小 G。Kimi K3 上周五正式发布了！ 这两天被问得最多的，基本都是同一个问题：K3 能力到底怎么样？写代码体感如何？ 国内外已经有很多大佬把 K3 拿去和一线 Coding 模型对比，反馈都很不错。数据也不会骗人，这几天 K3 的订阅和使用量暴增，算力都快顶不住了。 我还是更想看它在真实项目里的表现，我觉得这才是最实际的。 所以，这次我准备了三个非常典型的案例：一个全栈项目、一个现有 Java 项目改造，再加一个从零做游戏 Demo。 K3 这次带来了：2.8T 参数、1M 上下文、原生多模态，以及面向长程 Agent 编程的架构优化。 可以看到，它要的核心就是让 Agent 在更长任务里持续读代码、看截图、跑工具、修问题。 这篇还是按我的老办法来：先看怎么接入，再看它在几个工程任务里的实际表现，最后回头聊 K3 这次更新的亮点。 接入 Kimi K3 K3 支持几乎所有主流的 Coding Agent 和通用 Agent 框架，例如 Claude Code、Roo Code、OpenCode、OMP、OpenClaw、Hermes。 这里先以 Kimi 官方的…",
+      "link": "https://javaguide.cn/ai-coding/cases/kimi-k3.html",
+      "pubDate": "2026-07-21T02:10:21.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/k3/k3-official-announcement.png",
+      "type": "blog"
+    },
+    {
+      "id": "b2b368a1d828",
+      "title": "JavaGuide 专属 draw.io 绘图 Skill 开源：用 Agent 自动生成可编辑的 draw.io 技术图",
+      "description": "你好，我是小 G。很多时候我感叹 AI 时代给我带来的冲击，是从一些小事引起的。 在过去，我写一篇技术文章最少需要花费一周，长一点的甚至要一个月。其中，有 1/3 的时间都花费在了枯燥的配图上。 熟悉我的读者朋友应该知道，JavaGuide 上的很多配图都是用 draw.io 手动绘制的。每一篇文章都有大量的图解，帮助理解。 但是到了 AI 时代就彻底变了，尤其是对于 draw.io 配图来说。 在去年 Skill 还没火的时候，我是用 AI 直接生成对应的 XML，然后导入到 draw.io 中。 到了今天，得益于 Skill 的诞生，生成 draw.io 配图变得更加自动化了。 这篇文章会分享我平时用的自定义 draw.io 绘图 Skill：drawio-chart，也会顺带聊聊为什么我没有完全转向图片生成模型，而是继续保留 .drawio 这种可编辑源文件。 为什么选择 draw.io？ 图不能只看生成时漂不漂亮，后面能不能改也很重要。 技术文章发出去以后，标题、节点、箭头、术语经常会调整。如果手里只剩一张 PNG，要么重新生成，要么硬改图片，最后风格还不一定能对上。…",
+      "link": "https://javaguide.cn/ai-coding/practices/drawio-chart-skill.html",
+      "pubDate": "2026-07-10T01:28:00.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/intro/java-basic-questions-01-overview.png",
+      "type": "blog"
+    },
+    {
+      "id": "3a180e4be06f",
+      "title": "Claude Code Hooks 详解：生命周期钩子与自动化工作流",
+      "description": "用 Claude Code 写代码到一定阶段之后，很多人会遇到同一个问题。 问题通常不在模型能力上。 恰恰相反，是它太能干了。它能改文件、跑命令、查项目结构、生成脚本，也能一口气处理一串很长的任务。于是你会很自然地开始把更多动作交给它。 然后问题就来了。 改完文件，它这次会不会忘了格式化？ 准备跑 Bash 命令时，它会不会不小心带上 rm -rf？ 它会不会顺手改到 .env、.git/ 或生产配置？ 它卡在权限弹窗时，我能不能不用一直盯着终端？ 上下文压缩之后，那些项目规矩能不能自动补回来？ 这些问题有个共同点，它们都不适合只靠提示词解决。 提示词解决的是“尽量记得”。Hooks 解决的是“到了这个时刻，就一定执行”。 这两者的差别，可以先用一张图概括： 我喜欢把 Hooks 理解成 Claude Code 工作流里的固定卡点：在会话开始、用户提交 Prompt、工具调用前、工具调用后、任务停止前、上下文压缩前后这些生命周期节点上，按配置执行你写好的动作。 这篇文章我不太想写太多，重点帮你搞清楚这些问题：Hooks 到底是什么、解决了什么问题；什么场景改用 Hooks；Hooks…",
+      "link": "https://javaguide.cn/ai-coding/principles/claude-code-hooks.html",
+      "pubDate": "2026-07-07T06:55:19.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/claudecode/hooks-vs-prompts-guarantee.webp",
+      "type": "blog"
+    },
+    {
+      "id": "29699aa73299",
+      "title": "Claude Code 记忆系统详解：Markdown、Auto Memory 与向量检索怎么选",
+      "description": "新开一个 Claude Code 会话，它居然知道这个项目怎么跑测试、代码风格是什么、哪些目录不要乱动，甚至还记得你之前纠正过一句：“集成测试别用 H2，要连真实 MySQL”。 难道说模型把上次聊天都记住了？ 大概率不是。LLM 每次推理看到的还是本轮输入。Claude Code 能跨会话接上，靠的是模型外面那套文件和加载逻辑：哪些规则常驻，哪些经验先放索引里，哪些内容等任务相关时再读进来。 本文和 《AI Agent 记忆系统》 这篇互为补充。那篇讲通用 Agent 记忆：短期记忆、长期记忆和记忆演化机制。放到 Claude Code 里，问题就更具体了：CLAUDE.md 到底放什么？Auto Memory 记下来的又是什么？.claude/rules/ 和第三方的 claude-mem、memsearch 该怎么分工？ LLM 自己不保存跨会话状态 先把这个点说清楚：模型本身不会在两次请求之间偷偷保存状态。 一次调用里，客户端把系统提示词、历史对话、工具返回、用户新问题拼到一起，模型根据这些内容生成下一段输出。下一轮还能想起来，只是应用层又把相关内容带回来了。…",
+      "link": "https://javaguide.cn/ai-coding/principles/claude-code-memory.html",
+      "pubDate": "2026-07-07T06:55:19.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/agent/agent-memory-arch.png",
+      "type": "blog"
+    },
+    {
+      "id": "9f14cb90bafb",
+      "title": "Claude Code Multi-Agent 机制详解：Subagent、Subtask、Fork 与 Agent Teams",
+      "description": "你好，我是小 G。最近有 G 友问我一个问题：Claude Code 里的 Subagent、Fork、Agent Teams 到底是不是一回事？如果面试里被问到 Claude Code Multi-Agent 机制，应该如何回答？ 这个问题我一开始也以为只是几个名字绕来绕去。真把官方文档、changelog 和社区源码分析放在一起看，才发现差别不小。 Claude Code 单 Agent 已经能干不少活，日常改代码、查问题、补测试，大部分时候都够用。 问题是，真实项目里的任务往往没那么干净。一个会话既要搜索、阅读、试错，又要最后产出修改，聊着聊着上下文就脏了。 比如排查一个接口性能问题，它可能先搜接口，再读 Mapper、看日志、查索引，中间还试几条 SQL。等真正要改代码时，聊天记录里已经塞满无关文件、旧猜测和被推翻的方案。 人看着都累，模型也容易被这些过程信息带偏。 Claude Code Multi-Agent 盯着的，正是这类上下文和任务拆分问题。 它不会把所有工作都塞给一个会话，而是按任务性质拆开： 一次性搜索交给 Subagent； 已经有上下文的支线探索交给…",
+      "link": "https://javaguide.cn/ai-coding/principles/claude-code-multi-agent.html",
+      "pubDate": "2026-07-07T06:55:19.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/context-engineering/sub-agent-task-splitting-context-isolation .png",
+      "type": "blog"
+    },
+    {
+      "id": "fd6f99755579",
+      "title": "Claude Code Skills 技术实现细节与运行方式",
+      "description": "不少读者反馈 Skills 在现在的面试中经常会碰到，于是在前面已经写过两篇的基础上，我又肝了一篇。 下面是正文。 还记得刚用 Claude Code 那会，我很容易把各种规则都往 CLAUDE.md 里塞。 代码风格，目录约定，测试命令，这些放进去没问题。可后来一些代码审查 checklist、PR 总结流程、UI 验收步骤，也开始往里面堆。 这时候问题就来了。 这些流程确实有用，但它们不是每一轮任务都要用。每次带上的话，会增加很多无用的信息，反而会干扰模型的判断。 这类内容就别继续塞进 CLAUDE.md 了。如果你总是在对话里复制同一段 instructions、checklist 或多步骤流程，或者 CLAUDE.md 的某一节已经像操作手册，就可以把它拆出来。 差别主要在加载方式上。CLAUDE.md 通常会在会话开始时作为持久上下文加载；Skill 平时只暴露名称和描述，真正命中时才加载完整内容。长参考材料、检查清单、脚本说明，不用一开始就挤进上下文。 这篇文章主要讲 Claude Code Skills…",
+      "link": "https://javaguide.cn/ai-coding/principles/claude-code-skills.html",
+      "pubDate": "2026-07-07T06:55:19.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/skills/skill-prompt-function-calling-mcp-comparison.webp",
+      "type": "blog"
+    },
+    {
+      "id": "23aab021c259",
+      "title": "比 iTerm2 更适合 Claude Code/Codex 的终端，我换成 Ghostty 了",
+      "description": "你好，我是小 G。我把终端从 iTerm2 换到 Ghostty 已经有三个月了。 整体体验还不错，这篇文章来分享一下。 Ghostty 不是 Claude Code 的官方指定终端，但确实被 Claude Code 带火了一把。Claude Code 创始人 Boris Cherny 在聊团队使用习惯时提到，他们的开发团队程序员非常喜欢 Ghostty。 我自己也是看了这个分享，后来被 iTerm2 搞烦了之后转去的。 用 Claude Code 或 Codex CLI 跑久了，终端会变成一个小工作台：一边看 Agent 输出，一边跑测试、看日志、处理 Git。iTerm2 当然也能做，但要调到顺手，通常得花不少时间配字体、主题、快捷键和分屏。Ghostty 的好处是下载下来就已经比较能用，后面只是按自己的习惯微调。 Ghostty 做的事情就是把终端模拟器这件事做好，没有什么花里花哨的。它没有内置 AI，也不是服务器管理器。 当然了，iTerm2、Warp、Kitty 等等，都是不错的，我希望看到这篇文章的朋友不要因为这些争论，你自己用着顺手才是最重要的！ 安装 macOS…",
+      "link": "https://javaguide.cn/ai-coding/practices/ghostty.html",
+      "pubDate": "2026-07-06T14:43:54.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/boris-ghostty-x.png",
+      "type": "blog"
+    },
+    {
+      "id": "4fd19b4e1215",
+      "title": "oh-my-pi 开源终端 AI 编码代理体验",
+      "description": "和阿里的朋友确认了一下，从 7 月 10 日起，阿里会把 Claude Code 列入高风险软件名单，并推荐内部员工使用 Qoder 作为替代。 这事就不展开讨论了。 虽然 A 社经常不干人事，但 Claude 模型和 Claude Code 确实做的好。和同类产品相比，依然是最稳的那一个。毕竟是商业化项目，团队都是大牛，产品发布节奏非常快。 同类型项目，知名一点的有 OpenCode、Codex CLI、Cline、Trae、Qoder，之前 DeepSeek TUI 后来还改名成了 CodeWhale。 前两天群里有朋友丢了一个 oh-my-pi 的 GitHub 链接，说最近用着还挺舒服。 我一开始也没太当回事，内心 OS：又一个终端 Agent？它和 Claude Code、OpenCode、Codex CLI 的区别在哪？ 用了几天之后，我的态度转变了。 它是什么 oh-my-pi 是一个开源的终端 AI 编码代理。 安装成功之后，你在项目目录里执行 omp 命令，然后就可以让它读代码、改代码、跑命令、解释报错、生成提交说明。 这和 Claude Code、Codex…",
+      "link": "https://javaguide.cn/ai-coding/practices/oh-my-pi.html",
+      "pubDate": "2026-07-06T14:43:54.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/oh-my-pi/oh-my-pi-hashline-doc.png",
       "type": "blog"
     }
   ]

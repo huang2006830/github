@@ -1,0 +1,171 @@
+{
+  "month": "2026-04",
+  "articles": [
+    {
+      "id": "acbb95a47c41",
+      "title": "写在Apache Paimon1.4版本发布后｜详解多模态数据湖的核心原理和设计",
+      "description": "这6种能力是一个自上而下依赖关系的技术栈，总结一下就是：Row Tracking是最底层的基座，Data Evolution是上层所有演化的\"控制面\",Blob/Vector/Variant是数据面的三种模态载体,索引与PyPaimon则分别覆盖检索侧和消费侧。这个能力让埋点/事件日志这类\"Schema不稳定\"的json数据被拆成\"Parquet列\"，查询的时候只查需要的列，不需要做json解析。Paimon多模态数据湖的能力并不是一个单点功能，上面的图是一个基本的依赖关系。",
+      "link": "https://blog.csdn.net/u013411339/article/details/160605570",
+      "pubDate": "2026-04-28T00:31:12.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "940d4893e630",
+      "title": "Flink Agents一些前瞻学习解读",
+      "description": "目前Flink Agents的Demo（如Flink作业智能运维）虽然概念上与Skills类似（利用LLM生成问题描述，检索SOP执行），但实现相对耦合。它接收事件，根据AgentPlan中的actions_by_event映射找到对应的Action，并创建具体的ActionTask来执行，负责协调调度。我们在很早的时候关注过Flink Agents这个项目，到2026年的今天，Flink Agents已经来到了0.3版本的前瞻。我们今天分享的是，截至目前Flink Agents的核心功能和未来计划。",
+      "link": "https://blog.csdn.net/u013411339/article/details/160484522",
+      "pubDate": "2026-04-24T00:30:47.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e75db11e4c71",
+      "title": "数据的行情跌到谷底了。。",
+      "description": "只有充分了解大模型的技术原理、AI产品结构，才能了解背后的数据链。详细讲解案例的思路、应用场景，以及背后的技术原理、核心技术！朋友陈硕入行5年，公司正好空出一个数据经理岗位，本想凭借之前积累的经验争取一下吧，结果却被新人“半路截胡”了！核心业务转AI方向，不了解大模型原理、应用技术、场景，毫无竞争能力……，都可以直接在自己的工作中使用，让自己的产品/项目有可借鉴的成功案例。本次课程，专门面向数据人群，解析当下最热门的AI产品应用的必备的！从薪资上看，同样的数据岗，AI方向薪资更高！",
+      "link": "https://blog.csdn.net/u013411339/article/details/160453310",
+      "pubDate": "2026-04-23T00:31:27.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "781db9b68ec1",
+      "title": "Claude Code 使用指南：配置、工作流与进阶技巧",
+      "description": "你好，我是小 G。前几天那篇 Vibe Coding 实用技巧总结，公众号阅读两天时间到了 6w+，评论区里问 Claude Code 的朋友不少。 这篇就来单独聊聊 Claude Code。 不知道大家和我是不是有同样的感觉，刚开始用的时候真挺别扭，甚至有点抵触：已经习惯了 Cursor、IDEA 里的侧边栏、文件树、diff 面板，再回到终端里跟 AI 协作，真心不顺手。 后来用多了，反而觉得 CLI 这层很适合长任务。它能在本地跑，也能搬到远程机器、临时环境、CI/CD 里跑；同一套命令、权限和验证方式可以复用，不用为了 GUI 再改一遍步骤。 现在我用 Claude Code，直接先把目录、目标和验收方式说清楚，让它自己去读代码、跑命令，最后我再看 diff 和测试结果。 麻烦也在这里。CLAUDE.md 写太满、权限放太宽、上下文塞爆、Sub-Agent 拆错边界，都会让它越跑越偏。 下面这些内容基本来自我这一年多的使用记录，偏实战，不追求把官方文档重新讲一遍。 PS：Claude Code 迭代非常快，本文按…",
+      "link": "https://javaguide.cn/ai-coding/practices/claudecode-tips.html",
+      "pubDate": "2026-04-21T07:50:52.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/claude-agents-md.png",
+      "type": "blog"
+    },
+    {
+      "id": "a65a74310c48",
+      "title": "Codex 使用指南：配置、AGENTS.md 与 Agentic 工作流",
+      "description": "你好，我是小 G。前面写过一篇 Claude Code 使用指南：配置、工作流与进阶技巧，发出去之后，有同学在后台问：Claude Code 讲了这么多，那 Codex 怎么用更稳？ 我最开始用 Codex 的时候，对它的预期其实不高。 毕竟从名字上看，很容易以为它就是一个更会写代码的命令行助手。真正用了一段时间之后，感受不太一样：Codex 更像一个能自己读仓库、改文件、跑命令、回来交差的工程助手。它不适合只拿来补几行代码，反而更适合处理那些有明确目标、能验证、边界也说得清的任务。 但这里面有个前提。 你得先把工作台摆好：任务边界、权限、项目规则和验收标准，都要提前说清楚。 任务描述太虚，它就会到处猜；权限给得太宽，它可能顺手做出你没授权的动作；AGENTS.md 写成项目宣传稿，它每轮还是得重新理解仓库；验收标准不给，它很容易停在“看起来已经改完了”。 这篇文章不打算按产品发布史来介绍…",
+      "link": "https://javaguide.cn/ai-coding/practices/codex-best-practices.html",
+      "pubDate": "2026-04-21T07:50:52.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/coding/claude-agents-md.png",
+      "type": "blog"
+    },
+    {
+      "id": "38052f3cf9fc",
+      "title": "Data Agent全景扫描：从NL2SQL到自主数据智能体，这条路走到哪了？",
+      "description": "Data Agent 的终极形态不是更好的 BI 工具，而是企业的\"数据大脑\"。火山引擎率先推出的 Data Agent 评测体系，代表了行业从\"技术指标\"向\"业务价值\"评测转型的方向。核心评测维度将从\"SQL 准确率\"扩展到\"分析意图完成率\"、\"事实一致性\"、\"响应效率\"等多维度。腾讯 2026 年犀牛鸟精英人才计划中，专门设置了\"Data Agent 前沿技术研究\"课题，核心方向就是 Multi-Agent 协作框架-模拟人类分析师团队完成任务规划、数据归因、洞察报告等全链路闭环。",
+      "link": "https://blog.csdn.net/u013411339/article/details/160262199",
+      "pubDate": "2026-04-17T00:31:21.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "4f3690d8a219",
+      "title": "AI 工作流中的 Workflow、Graph 与 Loop：从概念到实现",
+      "description": "Camunda、Temporal 等传统引擎同样支持事件、分支、重试和补偿。AI 工作流新增的麻烦在于，部分节点的输出由 LLM 生成，“结果是否达标”也可能需要模型或评分器在运行时判断。流程因此经常出现回边：生成、评估、修改，再回到评估。 Workflow 描述任务怎样完成，Graph 用 Node、Edge 和 State 表达执行结构，Loop 则是 Graph 上的回溯控制。下面沿着文章审核示例说明三者如何配合，并用 Spring AI Alibaba Graph 展示状态更新和条件边。 为什么 AI 系统需要工作流？ 单轮对话能回答问题，但很难稳定地交付结果。线上真实任务很少是“问一句答一句”就完事——检索信息、调用工具、输出结构化结果、校验格式、失败重试、不满意再来一轮，这些步骤串起来才叫交付。靠一段超长 Prompt 把所有逻辑塞进去，早晚会炸。你需要的是一种可分支、可循环、可观测的执行路径。 传统业务流程通常会预先定义候选步骤和分支规则，节点仍可能因为人工操作或外部 API 而产生不同结果。加入 LLM…",
+      "link": "https://javaguide.cn/ai/agent/workflow-graph-loop.html",
+      "pubDate": "2026-04-13T03:01:38.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/workflow/traditional-vs-ai-workflow.svg",
+      "type": "blog"
+    },
+    {
+      "id": "8c2c6e82b68f",
+      "title": "Agent + MCP + Skill：构建数仓全链路口径查询",
+      "description": "2025年下半年开始，Agent + MCP（Model Context Protocol）+ Skill 的组合逐渐成熟，让我们看到了一种全新的可能：把数仓的口径查询能力，从\"人工服务\"变成\"Agent 自助服务\"。它不是一个简单的\"查字典\"操作，而是一个涉及多数据源、多系统、多步推理的链路。回到开头，Agent + MCP + Skill 这套方案的核心价值，是把数仓团队多年积累的口径知识，散落在代码、文档、人脑中的隐性知识封装成一套可被Agent调用的标准化服务。这是 RAG 在数仓场景的典型应用。",
+      "link": "https://blog.csdn.net/u013411339/article/details/159999548",
+      "pubDate": "2026-04-09T00:30:21.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "1915d6541db0",
+      "title": "Harness Engineering：六层检查框架、上下文管理与工程实践",
+      "description": "Can.ac 的一次编码评测中，同一个模型仅替换文件编辑接口，得分就从 6.7% 升到 68.3%。模型参数没有变化，差别出在接口提供了什么操作、怎样返回结果，以及错误能否被下一步利用。 这类差异也解释了常见的 Agent 故障：重复调工具、忽略约束或在长任务中丢失状态，往往不能只靠换模型或补一句提示词解决。工具接口、执行环境、反馈和恢复机制同样决定任务能否继续。 Harness Engineering 讨论的就是这套模型外部系统。下文先拆开它的组件与分层，再对照 OpenAI、Anthropic、Stripe 和 Mitchell Hashimoto 的实现取舍。 Harness 基本概念 Harness 到底是什么？ 可以先记住一个工程上的划分：Agent = Model + Harness。模型负责推理和生成；Harness 管理系统提示词、工具调用、文件系统、沙箱、编排逻辑、钩子中间件、反馈回路和约束。 模型本身不会保存跨会话状态，也无法执行命令或读取测试结果。Harness 要把任务状态、操作入口、执行环境和安全边界接起来，使模型输出转成可验证的动作。 LangChain…",
+      "link": "https://javaguide.cn/ai/agent/harness-engineering.html",
+      "pubDate": "2026-04-08T16:06:36.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/github/javaguide/ai/harness/harness-agent-equals-model-harness-arch.png",
+      "type": "blog"
+    },
+    {
+      "id": "da9da11078a5",
+      "title": "Claude Code 接入第三方模型实战：JVM 智能诊断与慢查询治理",
+      "description": "大家好，我是小 G。前面分享过 IDEA 搭配 Qoder 插件的实战和 Trae 接入大模型的实战，分别覆盖了 JetBrains 体系和 VS Code 体系下的 AI 辅助编码。这篇换个角度，聊聊 Claude Code 接入第三方模型 的实战体验。 Claude Code 本身是 Anthropic 官方的 CLI 编码工具。部分服务商通过 Anthropic 兼容接口和环境变量提供第三方模型接入，但兼容程度、可用功能和数据处理方式由服务商决定，不能默认与 Claude 模型完全一致。本文记录的是 GLM-5.1 当时的使用过程。 目前，GLM-5.2 也发布了，后续还会发布更新的模型。不过，接入方法以及编码实战都是一致的，不受模型影响。 我选了两个比较有代表性的复杂场景来验证： 场景一：从零搭建一个基于 Arthas 的 JVM 智能诊断 Agent，涵盖技术选型、架构设计、编码落地的完整流程 场景二：在百万级数据量的既有订单系统中定位并治理慢查询，考验 AI 对现有代码库的理解和增量优化能力 一个是从零开始的工程交付，另一个是面对既有系统的性能治理，正好覆盖 AI…",
+      "link": "https://javaguide.cn/ai-coding/cases/cc-glm5.1.html",
+      "pubDate": "2026-04-08T15:41:57.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": "https://oss.javaguide.cn/ai/coding/glm5.1-cc/add-model-entry.png",
+      "type": "blog"
+    },
+    {
+      "id": "80d8cad21fc7",
+      "title": "Daft + Ray + Lance：构建下一代多模态数据流水线实践",
+      "description": "在 Daft + Ray + Lance 这套栈中，Ray 的角色是分布式调度后端——它不直接处理数据逻辑，而是负责把 Daft 的 Worker 调度到集群的多台机器上。需要指出的是，这个 Benchmark 来自 Daft 官方，Anyscale（Ray 的商业化公司）也做过自己的对比测试，在某些场景下 Ray Data 会优于 Daft，尤其是在大规格实例（更多 CPU/GPU）上。做数据的朋友，最近两年应该都有一个共同的感受-你的数据 Pipeline 里，\"正经\"的结构化数据占比越来越少了。",
+      "link": "https://blog.csdn.net/u013411339/article/details/159808261",
+      "pubDate": "2026-04-03T00:31:19.000Z",
+      "source": "CSDN 大数据",
+      "sourceUrl": "https://blog.csdn.net/u013411339/rss/list",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    }
+  ]
+}

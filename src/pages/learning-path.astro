@@ -1,0 +1,679 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/url';
+
+const toc = [
+  { id: 'overview', label: '路线总览' },
+  { id: 'programming', label: '编程基础：Java / Python' },
+  { id: 'database', label: '数据库：MySQL' },
+  { id: 'hadoop', label: 'Linux 与 Hadoop 生态' },
+  { id: 'spark', label: 'Spark 核心与进阶' },
+  { id: 'projects', label: '项目实战与作品集' },
+  { id: 'timeline', label: '12 个月时间表' },
+  { id: 'pitfalls', label: '常见坑与学习建议' },
+  { id: 'checklist', label: '出师自测清单' },
+];
+
+const roadmap = [
+  {
+    step: '01',
+    title: '编程基础',
+    period: '第 1-3 个月',
+    desc: '先用 Java 建立工程思维，再用 Python 补齐数据处理能力。',
+    tags: ['Java 语法与集合', 'Python 与 pandas', 'Git / Maven'],
+  },
+  {
+    step: '02',
+    title: '数据库与 Linux',
+    period: '第 3-5 个月',
+    desc: 'SQL 是数据工作的通用语言，Linux 是跑通大数据环境的前提。',
+    tags: ['MySQL / SQL', '索引与事务', 'Linux 命令与 Shell'],
+  },
+  {
+    step: '03',
+    title: 'Hadoop 生态',
+    period: '第 5-8 个月',
+    desc: '理解分布式存储与计算，能独立搭起一套伪分布式环境。',
+    tags: ['HDFS / YARN', 'MapReduce', 'Hive 数仓'],
+  },
+  {
+    step: '04',
+    title: 'Spark 与实战',
+    period: '第 8-12 个月',
+    desc: '用 Spark 完成离线与实时分析，做出能写进简历的完整项目。',
+    tags: ['Spark SQL', 'Structured Streaming', '项目与调优'],
+  },
+];
+
+const javaChecklist = [
+  '基础语法、数组、字符串与异常处理',
+  '面向对象：封装、继承、多态、接口',
+  '集合框架：List、Map、Set 的取舍',
+  'IO / NIO、序列化与文件读写',
+  '多线程基础：线程池、锁、并发容器',
+  'JVM 内存结构、垃圾回收与常见调优参数',
+  'Maven 依赖管理，Git 分支与提交规范',
+];
+
+const pythonChecklist = [
+  '基础语法、函数、类与模块',
+  '文件、JSON、CSV 的读写与异常处理',
+  'requests 调用 HTTP 接口，处理分页与限流',
+  'NumPy 数组运算与 pandas 数据清洗',
+  'Matplotlib / Seaborn 做基础可视化',
+  '虚拟环境、Jupyter Notebook、依赖管理',
+  '能独立写一个“采集—清洗—统计—导出”的脚本',
+];
+
+const mysqlWeeks = [
+  { week: '第 1 周', topic: 'SQL 基础', detail: 'DDL / DML、SELECT、WHERE、ORDER BY、LIMIT、聚合函数' },
+  { week: '第 2 周', topic: '多表与复杂查询', detail: 'INNER / LEFT JOIN、子查询、UNION、窗口函数、CTE' },
+  { week: '第 3 周', topic: '索引与事务', detail: 'B+ 树、联合索引与最左前缀、EXPLAIN、ACID、隔离级别、MVCC' },
+  { week: '第 4 周', topic: '建模与实战', detail: '三范式、星型模型、慢查询优化、备份恢复、权限管理' },
+];
+
+const hadoopParts = [
+  { name: 'HDFS', role: '分布式文件系统', key: 'NameNode、DataNode、Block、副本机制' },
+  { name: 'YARN', role: '集群资源调度', key: 'ResourceManager、NodeManager、Container' },
+  { name: 'MapReduce', role: '批处理计算模型', key: 'Map、Shuffle、Reduce、Combiner' },
+  { name: 'Hive', role: 'SQL on Hadoop', key: 'Metastore、分区表、分桶表、执行引擎' },
+  { name: 'HBase / ZooKeeper', role: '列式存储与协调服务（选学）', key: 'RowKey 设计、Region、选举与锁' },
+];
+
+const sparkWeeks = [
+  { week: '第 1 周', topic: '运行原理', detail: 'Driver / Executor、DAG、Stage、Task、窄依赖与宽依赖' },
+  { week: '第 2 周', topic: 'RDD 编程', detail: 'transformation / action、持久化、分区、广播变量' },
+  { week: '第 3 周', topic: 'DataFrame 与 SQL', detail: 'Schema、Column、 Catalyst 优化器、内置函数' },
+  { week: '第 4 周', topic: 'Shuffle 与调优', detail: '分区数、Join 策略、数据倾斜、AQE、内存管理' },
+  { week: '第 5 周', topic: '实时计算', detail: 'Structured Streaming、Watermark、Checkpoint、Exactly-once' },
+  { week: '第 6 周', topic: '综合练习', detail: '读取 Hive 表完成指标分析，对比不同 Join 与分区策略的性能' },
+];
+
+const projects = [
+  {
+    title: '离线日志分析平台',
+    stack: 'HDFS + Hive + Spark SQL',
+    desc: '把一份 Web 访问日志从本地上传到 HDFS，用 Hive 建分区表，再用 Spark SQL 统计 PV、UV、Top URL、状态码分布和每日趋势。',
+    deliverable: '数据流程图、建表语句、分析 SQL、结果截图、性能对比',
+  },
+  {
+    title: '电商数仓分层实践',
+    stack: 'Hive + Spark + 维度建模',
+    desc: '围绕订单、用户、商品三张核心表，按 ODS → DWD → DWS → ADS 分层，完成 GMV、复购率、客单价等指标。',
+    deliverable: '分层设计文档、维度模型图、指标口径说明、调度脚本',
+  },
+  {
+    title: '实时数据看板',
+    stack: 'Kafka + Spark Structured Streaming',
+    desc: '模拟订单流写入 Kafka，用 Spark Structured Streaming 做窗口聚合，把结果写入 MySQL 或 Redis，并做一个简单看板。',
+    deliverable: 'Producer / Consumer 代码、Watermark 设置、看板截图、压测记录',
+  },
+];
+
+const timeline = [
+  { period: '第 1-2 月', focus: 'Java 基础 + Git', goal: '能独立写命令行程序，理解面向对象与集合' },
+  { period: '第 3 月', focus: 'Python + pandas', goal: '能完成数据采集、清洗、统计的自动化脚本' },
+  { period: '第 4-5 月', focus: 'MySQL + Linux', goal: '能设计表结构、写复杂 SQL、在 Linux 上部署服务' },
+  { period: '第 6-8 月', focus: 'Hadoop + Hive', goal: '能搭伪分布式集群，完成 HDFS 与 Hive 数据分析' },
+  { period: '第 9-10 月', focus: 'Spark + 离线项目', goal: '能独立完成一个端到端的离线分析项目' },
+  { period: '第 11-12 月', focus: '实时项目 + 作品集', goal: '补齐实时链路，整理 GitHub 与简历项目描述' },
+];
+
+const pitfalls = [
+  {
+    title: '不要先啃源码',
+    desc: '零基础阶段先建立“能跑通、能解释”的全局观。源码阅读放在做完第一个项目之后，否则很容易在细节里迷路。',
+  },
+  {
+    title: '不要跳过 SQL 和 Linux',
+    desc: '大数据岗位的日常大量是 SQL、Shell 和排查环境问题。这两项基础不牢，后面学 Hive、Spark 会反复卡住。',
+  },
+  {
+    title: '不要只收藏不练习',
+    desc: '每学一个知识点，至少写 20 行代码或 5 条 SQL。收藏夹里的教程不会变成你的能力。',
+  },
+  {
+    title: '不要追新框架',
+    desc: 'Hadoop、Spark、Hive 仍然是理解分布式系统的最佳入口。Paimon、Iceberg、Flink 可以等基础扎实后再扩展。',
+  },
+  {
+    title: '不要做“教程式项目”',
+    desc: '项目要能讲清楚数据量、指标口径、遇到的坑和优化前后对比。只跟着视频敲一遍，面试时很难展开。',
+  },
+];
+
+const selfCheck = [
+  '能独立写出 Java 集合、多线程和文件 IO 的练习题',
+  '能用 pandas 完成一份脏数据的清洗与统计',
+  '能设计 3 张以上关联表，并写出含 JOIN、窗口函数的 SQL',
+  '能解释索引失效的常见场景，并用 EXPLAIN 验证',
+  '能在 Linux 上安装 JDK、配置 SSH、启动 Hadoop 伪分布式集群',
+  '能写出 MapReduce 或 Hive SQL 完成词频统计',
+  '能用 Spark DataFrame 完成分组、Join、窗口和 Top-N',
+  '能解释 Shuffle、数据倾斜和广播 Join 的原理',
+  '能独立完成一个从数据采集到结果展示的完整项目',
+  '能为自己的项目画出架构图，并说清每个组件的职责',
+];
+---
+
+<Layout
+  title="大数据专业学生零基础入门学习路线图"
+  description="面向大数据专业学生的零基础学习路线：Java/Python 编程基础、MySQL 数据库、Hadoop 与 Spark 核心框架、项目实战与 12 个月时间表。"
+>
+  <div class="fade-in-up max-w-5xl mx-auto">
+    <!-- Hero -->
+    <section class="relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-indigo-500/15 via-[var(--color-surface-1)] to-purple-500/10 p-6 sm:p-10 mb-10">
+      <div class="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
+      <div class="relative">
+        <div class="flex flex-wrap items-center gap-2 mb-5">
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">零基础</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">系统学习</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-amber-500/15 text-amber-300 border border-amber-500/30">项目驱动</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">
+          大数据专业学生<br class="hidden sm:block" />
+          零基础入门学习路线图
+        </h1>
+        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-3xl">
+          从 Java / Python 编程基础，到 MySQL、Linux、Hadoop、Hive、Spark，再到三个能写进简历的实战项目。
+          这是一条按“先跑通、再理解、后优化”设计的 12 个月路线，适合大一大二开始准备，也适合转专业补基础。
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-white">10-12</p>
+            <p class="text-xs text-zinc-500 mt-0.5">个月（可压缩到 6 个月）</p>
+          </div>
+          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-white">10-15h</p>
+            <p class="text-xs text-zinc-500 mt-0.5">每周建议投入</p>
+          </div>
+          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-white">4</p>
+            <p class="text-xs text-zinc-500 mt-0.5">个学习阶段</p>
+          </div>
+          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-white">3</p>
+            <p class="text-xs text-zinc-500 mt-0.5">个完整实战项目</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <nav aria-label="本页目录" class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 mb-10">
+      <p class="text-xs uppercase tracking-widest text-zinc-500 font-medium mb-3">本页目录</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2">
+        {toc.map((item, i) => (
+          <a href={`#${item.id}`} class="group flex items-center gap-2 text-sm text-zinc-400 hover:text-indigo-400 transition-colors py-1">
+            <span class="text-[11px] font-mono text-zinc-600 group-hover:text-indigo-500">{String(i + 1).padStart(2, '0')}</span>
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+
+    <!-- Overview -->
+    <section id="overview" class="scroll-mt-24 mb-12">
+      <div class="flex items-end justify-between gap-4 mb-5">
+        <div>
+          <p class="text-xs font-mono text-indigo-400 mb-1">01 / OVERVIEW</p>
+          <h2 class="text-xl sm:text-2xl font-bold">先看全局：四个阶段，一条主线</h2>
+        </div>
+        <span class="hidden sm:block text-xs text-zinc-600">建议按顺序推进</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {roadmap.map((phase) => (
+          <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 hover:border-zinc-700 transition-colors">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <span class="text-2xl font-bold text-zinc-700 font-mono leading-none">{phase.step}</span>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-zinc-800/80 text-zinc-400 border border-zinc-700/60">{phase.period}</span>
+            </div>
+            <h3 class="text-base font-semibold text-white mb-1.5">{phase.title}</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-3">{phase.desc}</p>
+            <div class="flex flex-wrap gap-1.5">
+              {phase.tags.map((tag) => (
+                <span class="text-[11px] px-2 py-0.5 rounded-md bg-zinc-800/60 text-zinc-500 border border-zinc-800">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-4 rounded-xl border border-indigo-500/20 bg-indigo-500/5 p-5">
+        <p class="text-sm text-zinc-300 leading-relaxed">
+          <strong class="text-indigo-300">学习原则：</strong>
+          每个阶段都以“能跑通的产物”结束，而不是以“看完视频”结束。阶段产出可以是脚本、SQL、集群截图或项目仓库；
+          没有产物，就说明还没有真正掌握。
+        </p>
+      </div>
+    </section>
+
+    <!-- Programming -->
+    <section id="programming" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">02 / PROGRAMMING</p>
+        <h2 class="text-xl sm:text-2xl font-bold">编程基础：Java 打底，Python 提速</h2>
+      </div>
+
+      <div class="text-sm text-zinc-400 leading-relaxed space-y-3 mb-5">
+        <p>
+          大数据生态的很多组件运行在 JVM 上：Hadoop、Hive、Spark、Flink 都与 Java 关系密切。
+          先学 Java，能帮你理解类型系统、面向对象和工程结构，也能在排查 Spark 报错时看懂堆栈。
+        </p>
+        <p>
+          Python 的优势在数据分析和脚本效率。pandas、NumPy、Matplotlib 能让你快速完成数据清洗与探索，
+          PySpark 也是 Spark 最常用的入门语言之一。建议 <strong class="text-zinc-200">Java 为主、Python 为辅</strong>，
+          不必等 Java 完全学完再开始 Python。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-base font-semibold text-white">Java：3 个月</h3>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-300 border border-orange-500/20">重点</span>
+          </div>
+          <ul class="space-y-2">
+            {javaChecklist.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-zinc-400 leading-relaxed">
+                <span class="mt-0.5 text-emerald-500 shrink-0">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-base font-semibold text-white">Python：1-2 个月</h3>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">数据处理</span>
+          </div>
+          <ul class="space-y-2">
+            {pythonChecklist.map((item) => (
+              <li class="flex items-start gap-2 text-sm text-zinc-400 leading-relaxed">
+                <span class="mt-0.5 text-emerald-500 shrink-0">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 mb-5">
+        <h3 class="text-sm font-semibold text-white mb-3">这一阶段必须做出的东西</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+          <div class="rounded-lg bg-zinc-950/40 border border-zinc-800/70 p-3">
+            <p class="text-zinc-200 font-medium mb-1">Java 命令行项目</p>
+            <p class="text-zinc-500 leading-relaxed">学生成绩管理或图书借阅系统，至少包含增删改查、文件持久化和异常处理。</p>
+          </div>
+          <div class="rounded-lg bg-zinc-950/40 border border-zinc-800/70 p-3">
+            <p class="text-zinc-200 font-medium mb-1">Python 数据脚本</p>
+            <p class="text-zinc-500 leading-relaxed">抓取一个公开数据源，清洗后输出 CSV，并画出至少 3 张统计图。</p>
+          </div>
+          <div class="rounded-lg bg-zinc-950/40 border border-zinc-800/70 p-3">
+            <p class="text-zinc-200 font-medium mb-1">Git 仓库</p>
+            <p class="text-zinc-500 leading-relaxed">把以上代码提交到 GitHub，写清 README：环境、运行方式、截图和踩坑记录。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-sm text-zinc-500 leading-relaxed">
+        <span class="text-zinc-300 font-medium">推荐资源：</span>
+        <a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">廖雪峰 Java 教程</a>、
+        <a href="https://javaguide.cn/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">JavaGuide</a>、
+        <a href="https://www.liaoxuefeng.com/wiki/1016959663602400" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">廖雪峰 Python 教程</a>、
+        <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">pandas 官方文档</a>。
+      </div>
+    </section>
+
+    <!-- Database -->
+    <section id="database" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">03 / DATABASE</p>
+        <h2 class="text-xl sm:text-2xl font-bold">数据库：MySQL 四周入门计划</h2>
+      </div>
+
+      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+        SQL 是大数据岗位最通用的技能。Hive、Spark SQL、Flink SQL 的语法都建立在 SQL 之上，
+        所以 MySQL 不是“传统数据库选修课”，而是后面所有计算引擎的地基。四周目标：能设计表、写复杂查询、看懂执行计划。
+      </p>
+
+      <div class="overflow-x-auto rounded-xl border border-zinc-800 mb-5">
+        <table class="w-full text-sm">
+          <thead class="bg-zinc-900/80 text-zinc-400">
+            <tr>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">周次</th>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">主题</th>
+              <th class="text-left font-medium px-4 py-3">要点</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/80">
+            {mysqlWeeks.map((row) => (
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-zinc-500 whitespace-nowrap">{row.week}</td>
+                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{row.topic}</td>
+                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{row.detail}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-white mb-3">必须理解的概念</h3>
+          <ul class="space-y-2 text-sm text-zinc-400">
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>为什么索引能加速查询，什么情况下会失效</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>联合索引的最左前缀原则与覆盖索引</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>事务 ACID、四种隔离级别与 MVCC</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>行锁、表锁、间隙锁的区别</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>EXPLAIN 中 type、key、rows、Extra 的含义</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-white mb-3">推荐练习</h3>
+          <ul class="space-y-2 text-sm text-zinc-400">
+            <li class="flex gap-2"><span class="text-emerald-500">1.</span>设计一个校园选课库：学生、课程、教师、选课记录</li>
+            <li class="flex gap-2"><span class="text-emerald-500">2.</span>写 20 条查询：排名、环比、Top-N、去重、分组筛选</li>
+            <li class="flex gap-2"><span class="text-emerald-500">3.</span>给高频查询建索引，用 EXPLAIN 对比优化前后</li>
+            <li class="flex gap-2"><span class="text-emerald-500">4.</span>用 Python 连接 MySQL，把查询结果导出成报表</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-sm text-zinc-500 leading-relaxed">
+        <span class="text-zinc-300 font-medium">推荐资源：</span>
+        <a href="https://dev.mysql.com/doc/refman/8.0/en/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">MySQL 8.0 官方手册</a>、
+        <a href="https://javaguide.cn/database/mysql/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">JavaGuide MySQL 专题</a>、
+        <a href="https://sqlzoo.net/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">SQLZoo 在线练习</a>。
+      </div>
+    </section>
+
+    <!-- Hadoop -->
+    <section id="hadoop" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">04 / HADOOP</p>
+        <h2 class="text-xl sm:text-2xl font-bold">Linux 与 Hadoop 生态：先跑通，再理解</h2>
+      </div>
+
+      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+        Hadoop 是理解“分布式存储 + 分布式计算”的最佳入口。这个阶段不要一上来读源码，
+        先在一台电脑或虚拟机上搭起伪分布式集群，把数据真正放进去、算出来，再回头理解每个组件的职责。
+      </p>
+
+      <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 mb-5">
+        <h3 class="text-sm font-semibold text-white mb-3">前置：Linux 两周清单</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+          {['文件与权限', '进程与端口', 'SSH 与免密登录', 'tar / grep / awk / sed', 'cron 定时任务', 'Shell 脚本', 'vim 基础操作', '环境变量与 PATH'].map((item) => (
+            <span class="rounded-md bg-zinc-950/40 border border-zinc-800/70 px-2.5 py-2 text-zinc-400 text-center">{item}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-zinc-800 mb-5">
+        <table class="w-full text-sm">
+          <thead class="bg-zinc-900/80 text-zinc-400">
+            <tr>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">组件</th>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">作用</th>
+              <th class="text-left font-medium px-4 py-3">核心概念</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/80">
+            {hadoopParts.map((part) => (
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{part.name}</td>
+                <td class="px-4 py-3 text-zinc-400 whitespace-nowrap">{part.role}</td>
+                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{part.key}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5 mb-5">
+        <h3 class="text-sm font-semibold text-emerald-300 mb-3">最小可行练习：一条日志的旅程</h3>
+        <ol class="space-y-2 text-sm text-zinc-400 leading-relaxed">
+          <li><span class="text-emerald-500 font-mono mr-2">01</span>生成或下载一份 100MB 以上的访问日志。</li>
+          <li><span class="text-emerald-500 font-mono mr-2">02</span>启动 HDFS，把日志上传到 <code class="px-1 rounded bg-zinc-800/80 text-indigo-300">/data/logs</code>，用 <code class="px-1 rounded bg-zinc-800/80 text-indigo-300">hdfs dfs -ls</code> 确认。</li>
+          <li><span class="text-emerald-500 font-mono mr-2">03</span>用 MapReduce 或 Hive SQL 统计每个 URL 的访问次数，按次数降序取 Top 20。</li>
+          <li><span class="text-emerald-500 font-mono mr-2">04</span>把结果导出到本地，用 Python 画一张柱状图。</li>
+          <li><span class="text-emerald-500 font-mono mr-2">05</span>在 README 里画清数据流：本地 → HDFS → Hive → 结果。</li>
+        </ol>
+      </div>
+
+      <div class="text-sm text-zinc-500 leading-relaxed">
+        <span class="text-zinc-300 font-medium">推荐资源：</span>
+        <a href="https://hadoop.apache.org/docs/stable/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Hadoop 官方文档</a>、
+        <a href="https://hive.apache.org/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Hive 官方文档</a>、
+        <a href="https://tech.meituan.com/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">美团技术团队博客</a>。
+      </div>
+    </section>
+
+    <!-- Spark -->
+    <section id="spark" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">05 / SPARK</p>
+        <h2 class="text-xl sm:text-2xl font-bold">Spark：从 RDD 到 Spark SQL 与实时计算</h2>
+      </div>
+
+      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+        Spark 是目前最主流的分布式计算引擎之一。学习重点不是背 API，而是理解
+        <strong class="text-zinc-200">数据如何分区、Shuffle 如何发生、任务如何调度</strong>。
+        先用 PySpark 把分析跑通，再逐步深入 Catalyst、Tungsten 和调优。
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-white mb-3">必须理解的四件事</h3>
+          <ul class="space-y-2 text-sm text-zinc-400">
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>Driver、Executor、Master、Worker 的分工</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>RDD、DataFrame、Dataset 的区别与选择</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>窄依赖、宽依赖、Stage 与 Shuffle</li>
+            <li class="flex gap-2"><span class="text-indigo-400">·</span>缓存、广播变量、分区数与数据倾斜</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-white mb-3">推荐练习</h3>
+          <ul class="space-y-2 text-sm text-zinc-400">
+            <li class="flex gap-2"><span class="text-emerald-500">1.</span>用 RDD 写 WordCount，再用 DataFrame 重写一遍</li>
+            <li class="flex gap-2"><span class="text-emerald-500">2.</span>读取 Hive 表，完成日活、留存、Top-N 指标</li>
+            <li class="flex gap-2"><span class="text-emerald-500">3.</span>对比 broadcast join 与 shuffle join 的执行时间</li>
+            <li class="flex gap-2"><span class="text-emerald-500">4.</span>模拟数据倾斜，观察任务耗时并尝试加盐</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-zinc-800 mb-5">
+        <table class="w-full text-sm">
+          <thead class="bg-zinc-900/80 text-zinc-400">
+            <tr>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">周次</th>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">主题</th>
+              <th class="text-left font-medium px-4 py-3">要点</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/80">
+            {sparkWeeks.map((row) => (
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-zinc-500 whitespace-nowrap">{row.week}</td>
+                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{row.topic}</td>
+                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{row.detail}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rounded-xl border border-zinc-800 bg-zinc-950/60 p-5 mb-5">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <h3 class="text-sm font-semibold text-white">最小示例：Top-N 活跃页面</h3>
+          <span class="text-[11px] font-mono text-zinc-600">PySpark</span>
+        </div>
+        <pre class="overflow-x-auto rounded-lg border border-zinc-800/80 bg-zinc-950/80 p-4 text-xs leading-relaxed text-zinc-300"><code>{`from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
+
+spark = SparkSession.builder.appName("top-pages").getOrCreate()
+
+logs = spark.read.json("hdfs:///data/logs/2026-10-26")
+
+top = (logs.filter(F.col("status") == 200)
+           .groupBy("url")
+           .count()
+           .orderBy(F.desc("count"))
+           .limit(10))
+
+top.show()`}</code></pre>
+      </div>
+
+      <div class="text-sm text-zinc-500 leading-relaxed">
+        <span class="text-zinc-300 font-medium">推荐资源：</span>
+        <a href="https://spark.apache.org/docs/latest/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Spark 官方文档</a>、
+        <a href="https://spark.apache.org/docs/latest/api/python/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">PySpark API</a>、
+        <a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Kafka 文档</a>。
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">06 / PROJECTS</p>
+        <h2 class="text-xl sm:text-2xl font-bold">项目实战：三个项目撑起一份简历</h2>
+      </div>
+
+      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+        项目不在多，而在“能讲清楚”。下面的三个项目覆盖离线、数仓、实时三条主线，
+        建议至少完成前两个，并把代码、文档和截图整理到 GitHub。每个项目都要记录数据量、指标口径和优化前后对比。
+      </p>
+
+      <div class="space-y-4 mb-5">
+        {projects.map((project, i) => (
+          <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <span class="w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-bold flex items-center justify-center shrink-0">{i + 1}</span>
+                <h3 class="text-base font-semibold text-white">{project.title}</h3>
+              </div>
+              <span class="text-[11px] font-mono text-zinc-500">{project.stack}</span>
+            </div>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-3">{project.desc}</p>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              <span class="text-zinc-300 font-medium">交付物：</span>{project.deliverable}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div class="rounded-xl border border-amber-500/20 bg-amber-500/5 p-5">
+        <h3 class="text-sm font-semibold text-amber-300 mb-2">作品集检查</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          GitHub 仓库至少包含：README（背景、架构图、数据流、运行步骤）、核心代码、示例数据或数据生成脚本、
+          结果截图、遇到的问题与解决方案。面试时能打开仓库讲 10 分钟，比堆十个半成品更有说服力。
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">07 / TIMELINE</p>
+        <h2 class="text-xl sm:text-2xl font-bold">12 个月时间表（可按学期压缩）</h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-zinc-800">
+        <table class="w-full text-sm">
+          <thead class="bg-zinc-900/80 text-zinc-400">
+            <tr>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">时间</th>
+              <th class="text-left font-medium px-4 py-3 whitespace-nowrap">重点</th>
+              <th class="text-left font-medium px-4 py-3">阶段目标</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/80">
+            {timeline.map((row) => (
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-zinc-500 whitespace-nowrap">{row.period}</td>
+                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{row.focus}</td>
+                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{row.goal}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-zinc-500 leading-relaxed mt-3">
+        如果每周只能投入 6-8 小时，把周期拉长到 18 个月；如果每天能投入 3 小时以上，可以在 6-8 个月内完成主线。
+        不要为了赶进度跳过 SQL、Linux 和项目复盘。
+      </p>
+    </section>
+
+    <!-- Pitfalls -->
+    <section id="pitfalls" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">08 / PITFALLS</p>
+        <h2 class="text-xl sm:text-2xl font-bold">常见坑与学习建议</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {pitfalls.map((item) => (
+          <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-4">
+            <h3 class="text-sm font-semibold text-zinc-200 mb-1.5">{item.title}</h3>
+            <p class="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-4 rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+        <h3 class="text-sm font-semibold text-white mb-3">每周节奏建议</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-zinc-400">
+          <div><span class="text-indigo-400 font-medium">输入 40%</span><p class="text-xs text-zinc-500 mt-1">看文档、教程、源码解析，做笔记</p></div>
+          <div><span class="text-emerald-400 font-medium">动手 50%</span><p class="text-xs text-zinc-500 mt-1">写代码、跑 SQL、搭环境、做项目</p></div>
+          <div><span class="text-amber-400 font-medium">输出 10%</span><p class="text-xs text-zinc-500 mt-1">写博客、画架构图、向别人讲清楚</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist -->
+    <section id="checklist" class="scroll-mt-24 mb-12">
+      <div class="mb-5">
+        <p class="text-xs font-mono text-indigo-400 mb-1">09 / CHECKLIST</p>
+        <h2 class="text-xl sm:text-2xl font-bold">出师自测清单</h2>
+      </div>
+
+      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+        下面 10 项中至少能独立完成 7 项，再开始投递大数据实习或初级岗位。做不到的项，回到对应阶段补练。
+      </p>
+
+      <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] divide-y divide-zinc-800/80">
+        {selfCheck.map((item, i) => (
+          <label class="flex items-start gap-3 p-3.5 text-sm text-zinc-400 hover:bg-white/[0.02] transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-zinc-700 bg-zinc-900 accent-indigo-500 shrink-0" />
+            <span><span class="text-zinc-600 font-mono text-xs mr-2">{String(i + 1).padStart(2, '0')}</span>{item}</span>
+          </label>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 p-6 sm:p-8 mb-4">
+      <h2 class="text-lg sm:text-xl font-bold mb-2">下一步：把路线变成每天的阅读</h2>
+      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+        本站持续聚合美团技术团队、CSDN 大数据、JavaGuide、涛思数据等教程与实践型来源。
+        建议按“本周主题”筛选文章，读完一篇就动手复现一次。
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href={withBase('/')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white text-sm font-medium transition-colors">
+          浏览最新文章
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={withBase('/sources')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-sm font-medium transition-colors">
+          查看全部来源
+        </a>
+        <a href={withBase('/categorie/big-data')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-sm font-medium transition-colors">
+          大数据分类
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

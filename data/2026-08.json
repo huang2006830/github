@@ -48,6 +48,34 @@
       ],
       "image": "https://p0.meituan.net/meituantechblog/9720828f0ff8f07f6ce01f56d9e3f820362245.png",
       "type": "blog"
+    },
+    {
+      "id": "4395164548a7",
+      "title": "AI 可观测性与 Trace：如何还原 Agent 的完整执行过程",
+      "description": "接口返回 200，耗时也正常，智能客服给出的退款规则却是错的。 打开监控面板，只能看到这次请求调用过大模型，并且正常生成了回答。再往下查就麻烦了：是知识库没有召回正确资料，Prompt 拼错了，模型忽略了上下文，还是某个工具返回了旧数据？普通接口日志通常回答不了这些问题。 一次 AI 请求可能会经过问题改写、知识库检索、重排、模型调用、工具调用和结果校验。Agent 还可能重复执行其中几步。每一步看起来都调用成功，错误结果却会继续传给下一步，最后得到一段格式正常、内容有问题的回答。 排查时需要顺着这条执行过程往回找：当时用了哪个模型和 Prompt，检索到了哪些文档，调用了什么工具，Agent 重试了几次，最终回答参考了哪些结果。 这些信息都落在同一条调用链里，才能继续定位问题。 为什么 AI 应用不能只看接口是否成功？ 传统后端监控主要看 QPS、错误率、P99 延迟、CPU、内存和数据库慢查询。这些指标可以反映服务有没有异常，却解释不了模型为什么生成了当前答案。 以 RAG 为例，问题改写偏了，后面的召回结果通常也会跟着偏；正确文档虽然被召回，却可能在重排时掉出…",
+      "link": "https://javaguide.cn/ai/system-design/ai-observability.html",
+      "pubDate": "2026-08-16T00:16:35.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "ac8c20b08bfc",
+      "title": "Agent 项目面试怎么讲？从系统架构、技术选型到 Badcase 复盘",
+      "description": "Agent/AI 应用方向的面试，基本不会停留在背概念，一般都是结合你的项目往深了问：为什么这样设计、线上出过什么问题、怎么定位和修复。 如果你在面试之前，只背 ReAct、RAG、Memory、MCP、Function Calling 等核心概念，通常应付不了面试追问： 你做的到底是不是 Agent，为什么不能用普通接口或固定工作流解决？ 一个请求进来后，经过了哪些组件，状态和数据怎么流转？ 关键方案是根据什么约束选出来的，代价是什么？ 项目失败过什么，你怎么定位、修复并防止它再次发生？ 为了方便大家更容易理解，我在文中会以一个智能售后工单 Agent 为例，来串起来这些问题。 不论你的项目是不是类似的，都没关系，文中分享的方法都是通用的。你在准备自己的项目时，业务背景、职责、数据规模和指标都要换成真实内容。 Agent 项目面试到底在考什么？ 先看面试官为什么这么问。Agent 项目不像 CRUD 项目有成熟的评价标准，面试官没法只凭“做过”两个字判断你的水平，只能靠追问来核实三件事： 项目是不是真的。…",
+      "link": "https://javaguide.cn/ai/interview-questions/agent-project-interview-guide.html",
+      "pubDate": "2026-08-15T07:02:21.000Z",
+      "source": "JavaGuide",
+      "sourceUrl": "https://javaguide.cn/atom.xml",
+      "categories": [
+        "Programmation"
+      ],
+      "image": null,
+      "type": "blog"
     }
   ]
 }
