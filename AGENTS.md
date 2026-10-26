@@ -9,7 +9,7 @@
 - 部署：GitHub Pages（零成本静态托管）
 
 ## 操作规则
-- 修改代码前先读 AGENTS.md 和 README
+- 修改代码前先读 `AGENTS.md` 和 `README.md`
 - 每次改动只做一件事，完成并验证后再进入下一步
 - 不引入未在技术栈中声明的新框架
 - 所有配置变更必须能通过本地 `npm run dev` 验证
