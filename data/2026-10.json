@@ -1,0 +1,615 @@
+{
+  "month": "2026-10",
+  "articles": [
+    {
+      "id": "0d96c8ba5fe8",
+      "title": "Agentic AI in Production: Why Your Agent Keeps Answering After Its Tools Fail",
+      "description": "When a tool breaks, an agent can keep going and write a confident answer from nothing while the dashboard stays green. The post Agentic AI in Production: Why Your Agent Keeps Answering After Its Tools Fail appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/agentic-ai-in-production-why-your-agent-keeps-answering-after-its-tools-fail/",
+      "pubDate": "2026-10-25T14:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "a72f55c35b9d",
+      "title": "Data Enablement for AI: A Practitioner's Guide to 6 Advanced Architectural Patterns",
+      "description": "Beyond naive chunk-and-embed: Six production architectures for turning enterprise lakehouses into governed AI platforms. The post Data Enablement for AI: A Practitioner's Guide to 6 Advanced Architectural Patterns appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/data-enablement-for-ai-a-practitioners-guide-to-6-advanced-architectural-patterns/",
+      "pubDate": "2026-10-25T12:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "b980f3812fe4",
+      "title": "How to Add Guardrails to a Local LLM Agent",
+      "description": "A hands-on guide with Gemma 4, Ollama, and the OpenAI Agents SDK The post How to Add Guardrails to a Local LLM Agent appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/how-to-add-guardrails-to-a-local-llm-agent/",
+      "pubDate": "2026-10-24T14:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "c50a4b1c2669",
+      "title": "Python 3.15 Has a New Profiler",
+      "description": "Here's what it finds that cProfile misses The post Python 3.15 Has a New Profiler appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/python-315-has-a-new-profiler/",
+      "pubDate": "2026-10-24T12:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "dba368836248",
+      "title": "Built for Agents: The Case for Spark Declarative Pipelines",
+      "description": "AI agents now write a growing share of production data pipelines (over 70% of SDP...",
+      "link": "https://www.databricks.com/blog/built-agents-case-spark-declarative-pipelines",
+      "pubDate": "2026-10-23T19:00:00.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "22f8035eb4da",
+      "title": "Real-time energy trading and analytics on Databricks",
+      "description": "Why does real-time energy trading need more than faster data?Energy trading desks...",
+      "link": "https://www.databricks.com/blog/real-time-energy-trading-and-analytics-databricks",
+      "pubDate": "2026-10-23T19:00:00.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "fb81b598af01",
+      "title": "Don’t Let Messy Data Bend Your Curves",
+      "description": "Robust Estimation Series: Building Accurate Curves with Polynomials and Splines With Spurious Data The post Don’t Let Messy Data Bend Your Curves appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/dont-let-messy-data-bend-your-curves/",
+      "pubDate": "2026-10-23T15:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "40e4e544282f",
+      "title": "Skewness and Kurtosis: From Moments to Machine Learning",
+      "description": "The mathematics, intuition, interpretation, and practical use of higher-order moments. The post Skewness and Kurtosis: From Moments to Machine Learning appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/skewness-and-kurtosis-from-moments-to-machine-learning/",
+      "pubDate": "2026-10-23T14:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "fd65da7b546b",
+      "title": "What Companies Actually Mean When They Say They Want “AI Experience”",
+      "description": "What employers actually mean when job postings list \"AI experience\" as a requirement.",
+      "link": "https://www.kdnuggets.com/what-companies-actually-mean-when-they-say-they-want-ai-experience",
+      "pubDate": "2026-10-23T14:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "164559d3db54",
+      "title": "Why Parameter Count Is Not Model Complexity: An Introduction to Effective Dimension",
+      "description": "What does effective dimension reveal about redundancy, generalization, and trainability that parameter count, loss, and accuracy do not? The post Why Parameter Count Is Not Model Complexity: An Introduction to Effective Dimension appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/why-parameter-count-is-not-model-complexity-an-introduction-to-effective-dimension/",
+      "pubDate": "2026-10-23T12:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "649bf7eb77ca",
+      "title": "5 Free AI Coding Agents You Should Try in 2026",
+      "description": "Access powerful open-source and proprietary models through OpenCode Zen, Gemini’s free quota, Kilo Gateway, Cline Provider, and Charm Hyper without paying for API access upfront.",
+      "link": "https://www.kdnuggets.com/5-free-ai-coding-agents-you-should-try-in-2026",
+      "pubDate": "2026-10-23T12:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e64b0b0e549b",
+      "title": "Your Six AI Models Are Really Two: The Math of Correlated Mistakes",
+      "description": "Ask several models the same question, take a vote, and you get fewer independent opinions than you paid for. One formula says how many, and I checked it on six open models and 1,500 exam questions. The post Your Six AI Models Are Really Two: The Math of Correlated Mistakes appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/your-six-ai-models-are-really-two-the-math-of-correlated-mistakes/",
+      "pubDate": "2026-10-23T11:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "9779462e79c7",
+      "title": "The new economics of AI cost management",
+      "description": "For the past two years, the story around enterprise AI adoption has mostly been about...",
+      "link": "https://www.databricks.com/blog/ai-cost-management",
+      "pubDate": "2026-10-22T19:14:24.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "7e20e83fa95e",
+      "title": "The Fraud Analyst AI Coworker: Detecting Telecom Fraud in Real-Time on One Platform",
+      "description": "BackgroundAccording to the Communications Fraud Control Association's 2025 survey...",
+      "link": "https://www.databricks.com/blog/fraud-analyst-ai-coworker-detecting-telecom-fraud-real-time-one-platform",
+      "pubDate": "2026-10-22T18:30:00.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "814f799aa1bf",
+      "title": "The AI Bill is coming",
+      "description": "In this conversation, Catherine Brown talks with Patrick about what happened when...",
+      "link": "https://www.databricks.com/blog/ai-bill-coming",
+      "pubDate": "2026-10-22T18:12:49.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "afc47d875203",
+      "title": "Does Agentic RAG Actually Retrieve Better Evidence? I Tested It on 298 Questions",
+      "description": "I let an AI agent search again whenever it chose. It found some papers plain search had missed, lost some plain search had found, and gained too little to trust. The post Does Agentic RAG Actually Retrieve Better Evidence? I Tested It on 298 Questions appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/does-agentic-rag-actually-retrieve-better-evidence-i-tested-it-on-298-questions/",
+      "pubDate": "2026-10-22T15:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "45e206bc546a",
+      "title": "Raman Spectra Preprocessing and Non-Negative Least Squares Modelling in Python: Monitoring Zeolite Crystallization",
+      "description": "A short, reproducible tutorial on spectral unmixing using real in situ interzeolite conversion data The post Raman Spectra Preprocessing and Non-Negative Least Squares Modelling in Python: Monitoring Zeolite Crystallization appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/raman-spectra-preprocessing-and-non-negative-least-squares-modelling-in-python-monitoring-zeolite-crystallization/",
+      "pubDate": "2026-10-22T14:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "20f20b129305",
+      "title": "How to Process Large JSON Files in Python With ijson",
+      "description": "I loaded a large JSON file in Python and watched memory jump from 43 MB to 808 MB. Here’s what happened and how streaming changed everything.",
+      "link": "https://www.kdnuggets.com/how-to-process-large-json-files-in-python-with-ijson",
+      "pubDate": "2026-10-22T14:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "9c0b04aecb72",
+      "title": "Same Answer, Different Reason: What a Reasoning Model Says When It Follows a Planted Hint",
+      "description": "I put wrong answers in front of 200 exam questions and read what a small model’s reasoning said when it fell for them. The post Same Answer, Different Reason: What a Reasoning Model Says When It Follows a Planted Hint appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/same-answer-different-reason-what-a-reasoning-model-says-when-it-follows-a-planted-hint/",
+      "pubDate": "2026-10-22T12:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "195af169efc8",
+      "title": "Google Open-Sources Harness²: Self-Improving AI Agents Without Retraining",
+      "description": "Google's Harness² lets AI agents improve their prompts, tools, memory, and scripts through two recursive loops without touching model weights. Learn more, including how to run the free demo yourself.",
+      "link": "https://www.kdnuggets.com/google-open-sources-harness-self-improving-ai-agents-without-retraining",
+      "pubDate": "2026-10-22T12:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "ce7d3262865b",
+      "title": "Could On-Policy Self-Distillation Revolutionize Post-Training?",
+      "description": "Teaching foundation models new skills without breaking them is hard. A new reinforcement learning-based approach might have the power to change that. The post Could On-Policy Self-Distillation Revolutionize Post-Training? appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/could-on-policy-self-distillation-revolutionize-post-training/",
+      "pubDate": "2026-10-22T11:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "51c531fffc41",
+      "title": "Decision Models in Action: Build a Hybrid LLM Workflow",
+      "description": "A hands-on guide to building browser automation by combining decision models with LLMs. The post Decision Models in Action: Build a Hybrid LLM Workflow appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/decision-models-in-action-build-a-hybrid-llm-workflow/",
+      "pubDate": "2026-10-21T15:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "26141ee58bb0",
+      "title": "How to Turn Long-Running Python Simulations Into a Self-Service Platform",
+      "description": "What I learned about queues, failure recovery, and reproducibility while building asynchronous workloads on AWS The post How to Turn Long-Running Python Simulations Into a Self-Service Platform appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/how-to-turn-long-running-python-simulations-into-a-self-service-platform/",
+      "pubDate": "2026-10-21T14:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "2ab736803d17",
+      "title": "Named Entity Recognition Using Scikit-LLM",
+      "description": "Build standardized custom NER pipelines in a few simple steps, powered by the reasoning capabilities of LLMs.",
+      "link": "https://www.kdnuggets.com/named-entity-recognition-using-scikit-llm",
+      "pubDate": "2026-10-21T14:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "7214cc384b7e",
+      "title": "Spatial Reasoning in AI Models, Taken Apart",
+      "description": "Grid puzzles that people solve almost perfectly show where language and vision models still break The post Spatial Reasoning in AI Models, Taken Apart appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/spatial-reasoning-in-ai-models-taken-apart/",
+      "pubDate": "2026-10-21T12:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "b8e35aa55d98",
+      "title": "5 Best GitHub Repositories for AI Agent Skills",
+      "description": "Explore five popular AI agent skill collections that help coding agents plan, test, debug, review, and build better software.",
+      "link": "https://www.kdnuggets.com/5-best-github-repositories-for-ai-agent-skills",
+      "pubDate": "2026-10-21T12:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "db154772ed8e",
+      "title": "Databricks AI Runtime and NVIDIA make it easier to customize open models with enterprise data",
+      "description": "GPUs power today's most advanced AI workloads, from cutting-edge language models...",
+      "link": "https://www.databricks.com/blog/databricks-ai-runtime-nvidia-train-fine-tune-models",
+      "pubDate": "2026-10-21T11:30:00.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e65783a05424",
+      "title": "AI Runtime is Generally Available",
+      "description": "Today, we’re excited to announce the General Availability of AI Runtime (AIR), bringing...",
+      "link": "https://www.databricks.com/blog/ai-runtime-generally-available",
+      "pubDate": "2026-10-21T11:20:00.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "4b0cb7bec4d2",
+      "title": "I Built a Pipeline to Track the Job Market I'm Trying to Break Into.",
+      "description": "Building an incremental pipeline with dbt snapshots, and the API that quietly lied to me along the way. The post I Built a Pipeline to Track the Job Market I'm Trying to Break Into. appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/i-built-a-pipeline-to-track-the-job-market-im-trying-to-break-into/",
+      "pubDate": "2026-10-21T11:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "48bef8124e9b",
+      "title": "Deploy RFD4-Proteina on Databricks",
+      "description": "Bring RFD4-Proteina to your research data with AI-assisted development and serverless NVIDIA GPU compute....",
+      "link": "https://www.databricks.com/blog/deploy-rfd4-proteina-model-databricks",
+      "pubDate": "2026-10-21T04:42:46.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "6d89e1e665db",
+      "title": "MemCurrent: Designing Persistent Memory for Production Agents",
+      "description": "AI tools have made it easy to vibe code agents. Building and maintaining an enterprise...",
+      "link": "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents",
+      "pubDate": "2026-10-20T18:15:47.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "71440eae5c3a",
+      "title": "Introducing Agent Memory on Databricks",
+      "description": "Today we're introducing agent memory on Agent Bricks, Databricks' agent developer...",
+      "link": "https://www.databricks.com/blog/introducing-agent-memory-databricks",
+      "pubDate": "2026-10-20T17:26:56.000Z",
+      "source": "Databricks Blog",
+      "sourceUrl": "https://www.databricks.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "420ad62593d2",
+      "title": "Synthetic-to-Real Transfer with Frozen DINOv3 Features",
+      "description": "Training models on procedurally generated datasets for card detection and segmentation The post Synthetic-to-Real Transfer with Frozen DINOv3 Features appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/synthetic-to-real-transfer-with-frozen-dinov3-features/",
+      "pubDate": "2026-10-20T15:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "b912681b7534",
+      "title": "Skill or MCP Server? Ask What Stops the LLM From Disobeying",
+      "description": "Towards Spec-Driven Test Automation, Part 4 The post Skill or MCP Server? Ask What Stops the LLM From Disobeying appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/skill-or-mcp-server-ask-what-stops-the-llm-from-disobeying/",
+      "pubDate": "2026-10-20T14:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "938e76240015",
+      "title": "The Roadmap to Becoming an AI Product Manager in 2026",
+      "description": "A structured four-phase roadmap for building the technical fluency, evaluation skills, and governance literacy needed to succeed as an AI product manager in 2026.",
+      "link": "https://www.kdnuggets.com/the-roadmap-to-becoming-an-ai-product-manager-in-2026",
+      "pubDate": "2026-10-20T14:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "02223501155e",
+      "title": "The Hidden Cost of LLM Routing: Why Switching Models Costs More",
+      "description": "I tested LLM routing to understand why switching models mid-session can erase the savings promised by cheaper inference The post The Hidden Cost of LLM Routing: Why Switching Models Costs More appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/the-hidden-cost-of-llm-routing-why-switching-models-costs-more/",
+      "pubDate": "2026-10-20T12:30:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "9bc52055b488",
+      "title": "5 Docker Containers for Devs",
+      "description": "Five self-hosted Docker containers replace the public utility sites where developer data quietly leaks. Learn which ones handle JWT decoding, data transformation, file conversion, API testing, and diagram rendering locally.",
+      "link": "https://www.kdnuggets.com/5-docker-containers-for-devs",
+      "pubDate": "2026-10-20T12:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "02dc374e0989",
+      "title": "What's in the Box? Distinguishing Acceptable Traces from Unacceptable Ones",
+      "description": "Turn scattered requirements into deployable agents The post What's in the Box? Distinguishing Acceptable Traces from Unacceptable Ones appeared first on Towards Data Science.",
+      "link": "https://towardsdatascience.com/whats-in-the-box-distinguishing-acceptable-traces-from-unacceptable-ones/",
+      "pubDate": "2026-10-20T11:00:00.000Z",
+      "source": "Towards Data Science",
+      "sourceUrl": "https://towardsdatascience.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "7f3594ced1b6",
+      "title": "Claude Haiku 5.5: What’s New and How to Use It for Fast, Cheap AI Workflows",
+      "description": "Claude Haiku 5.5 cuts list prices by 90% and adds adaptive thinking and a 1M token context window. Learn what broke from Haiku 4.5, and build classification, extraction, and sub-agent workflows in Python using the new API.",
+      "link": "https://www.kdnuggets.com/claude-haiku-5-5-whats-new-and-how-to-use-it-for-fast-cheap-ai-workflows",
+      "pubDate": "2026-10-19T16:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e859d142365e",
+      "title": "LangChain vs. LlamaIndex vs. Building From Scratch: Here’s What I Suggest",
+      "description": "Choosing the right framework for your large language model application comes down to one question: what are you actually optimizing for?",
+      "link": "https://www.kdnuggets.com/langchain-vs-llamaindex-vs-building-from-scratch-heres-what-i-suggest",
+      "pubDate": "2026-10-19T14:00:00.000Z",
+      "source": "KDnuggets",
+      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    }
+  ]
+}

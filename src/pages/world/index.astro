@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleListPage from '../../components/ArticleListPage.astro';
+import { loadWorldArticles, getAllCategories, getAllSources, getAllTypes } from '../../utils/articles';
+
+const PAGE_SIZE = 15;
+const allArticles = loadWorldArticles();
+const categories = getAllCategories(allArticles);
+const sources = getAllSources(allArticles);
+const types = getAllTypes(allArticles);
+const totalPages = Math.max(1, Math.ceil(allArticles.length / PAGE_SIZE));
+const articles = allArticles.slice(0, PAGE_SIZE);
+---
+
+<Layout title="国际视野" description={`来自 ${sources.length} 个国际来源的 ${allArticles.length} 篇大数据与数据科学文章。`}>
+  <ArticleListPage
+    articles={articles}
+    categories={categories}
+    sources={sources}
+    types={types}
+    currentPage={1}
+    totalPages={totalPages}
+    basePath="world"
+  />
+</Layout>

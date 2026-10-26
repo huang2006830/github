@@ -1,0 +1,14 @@
+feeds:
+  - url: https://towardsdatascience.com/feed
+    name: Towards Data Science
+    categories: [Big Data, Data Science]
+
+  - url: https://www.kdnuggets.com/feed
+    name: KDnuggets
+    categories: [Big Data, Data Science]
+
+  - url: https://www.databricks.com/feed
+    name: Databricks Blog
+    categories: [Big Data, Data Engineering, Cloud]
+
+feeds_world: []

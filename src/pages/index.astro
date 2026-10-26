@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArticleListPage from '../components/ArticleListPage.astro';
+import { loadAllArticles, getAllCategories, getAllSources, getAllTypes } from '../utils/articles';
+
+const PAGE_SIZE = 15;
+const allArticles = loadAllArticles();
+const categories = getAllCategories(allArticles);
+const sources = getAllSources(allArticles);
+const types = getAllTypes(allArticles);
+const totalPages = Math.max(1, Math.ceil(allArticles.length / PAGE_SIZE));
+const articles = allArticles.slice(0, PAGE_SIZE);
+---
+
+<Layout title="大数据技术学习站" description={`每日自动聚合大数据技术文章、行业动态与学习资源——当前收录 ${allArticles.length} 篇文章，来自 ${sources.length} 个 RSS 来源。`}>
+  <ArticleListPage
+    articles={articles}
+    categories={categories}
+    sources={sources}
+    types={types}
+    currentPage={1}
+    totalPages={totalPages}
+  />
+</Layout>

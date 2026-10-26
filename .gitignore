@@ -1,0 +1,33 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# local tooling and temp files
+.tools/
+.tmp/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# scripts de shorts (skill flux-daily-short, usage perso non versionné)
+# .history.json est versionné pour conserver la mémoire des articles déjà traités
+shorts/*
+!shorts/.history.json

@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const mainFeed = `${siteUrl}/rss.xml`;
+const worldFeed = `${siteUrl}/world/rss.xml`;
+---
+
+<Layout title="订阅" description="通过 RSS 订阅大数据技术学习站的每日更新。">
+  <div class="fade-in-up max-w-3xl mx-auto">
+    <div class="relative rounded-2xl border border-zinc-800 bg-gradient-to-br from-indigo-500/10 via-[var(--color-surface-1)] to-purple-500/10 p-8 sm:p-12 mb-10 overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="relative">
+        <p class="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">RSS · 每日更新</p>
+        <h1 class="text-2xl sm:text-4xl font-bold mb-4 leading-tight">订阅本站更新</h1>
+        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+          本站每天北京时间早上 6 点自动抓取新内容。你可以用任意 RSS 阅读器订阅，不需要注册账号，也不会收到邮件推送。
+        </p>
+      </div>
+    </div>
+
+    <section class="mb-10">
+      <h2 class="text-lg font-bold mb-5">订阅地址</h2>
+      <div class="flex flex-col gap-4">
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <p class="text-sm text-white font-medium mb-1">主站文章</p>
+          <p class="text-xs text-zinc-400 mb-3">大数据、数据科学与数据工程文章</p>
+          <code class="block text-xs font-mono text-indigo-300 bg-zinc-900 border border-zinc-800 px-3 py-2 rounded-lg select-all break-all">{mainFeed}</code>
+        </div>
+        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <p class="text-sm text-white font-medium mb-1">国际视野</p>
+          <p class="text-xs text-zinc-400 mb-3">国际来源的英文文章</p>
+          <code class="block text-xs font-mono text-indigo-300 bg-zinc-900 border border-zinc-800 px-3 py-2 rounded-lg select-all break-all">{worldFeed}</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10 rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-6">
+      <h2 class="text-lg font-bold mb-4">怎么使用？</h2>
+      <ol class="list-decimal list-inside text-sm text-zinc-300 space-y-2">
+        <li>选择一个 RSS 阅读器，例如 Feedly、Inoreader 或 NetNewsWire。</li>
+        <li>把上面的订阅地址粘贴到阅读器的“添加订阅”输入框。</li>
+        <li>之后每天的新文章会自动出现在你的阅读列表里。</li>
+      </ol>
+    </section>
+
+    <section class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-6 text-sm text-zinc-400 leading-relaxed">
+      <h2 class="text-base font-semibold text-white mb-3">为什么用 RSS？</h2>
+      <p>
+        RSS 不依赖平台推荐算法，也不会因为某个应用改版而丢失订阅关系。你决定关注哪些来源，按自己的节奏阅读。
+      </p>
+    </section>
+  </div>
+</Layout>
