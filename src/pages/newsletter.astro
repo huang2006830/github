@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/url';
 
-const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
-const mainFeed = `${siteUrl}/rss.xml`;
-const worldFeed = `${siteUrl}/world/rss.xml`;
+const mainFeed = new URL(withBase('/rss.xml'), Astro.site).toString();
+const worldFeed = new URL(withBase('/world/rss.xml'), Astro.site).toString();
 ---
 
 <Layout title="订阅" description="通过 RSS 订阅大数据技术学习站的每日更新。">

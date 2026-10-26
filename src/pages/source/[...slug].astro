@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { loadAllArticles, loadWorldArticles, getAllSources, getCategoryColor, getCategoryLabel, getMetaDescription } from '../../utils/articles';
+import { withBase } from '../../utils/url';
 
 export function getStaticPaths() {
   const PAGE_SIZE = 15;
@@ -34,10 +35,10 @@ export function getStaticPaths() {
 }
 
 const { source, articles, currentPage, totalPages, totalArticles, recentTopics } = Astro.props;
-const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const siteUrl = new URL(withBase('/'), Astro.site).toString().replace(/\/$/, '');
 
 function pageUrl(page: number): string {
-  return page === 1 ? `/source/${source.slug}` : `/source/${source.slug}/${page}`;
+  return page === 1 ? withBase(`/source/${source.slug}`) : withBase(`/source/${source.slug}/${page}`);
 }
 
 const pages: (number | string)[] = [];
@@ -75,14 +76,14 @@ for (let i = 1; i <= totalPages; i++) {
       <!-- Breadcrumb -->
       <nav aria-label="面包屑" class="mb-3">
         <ol class="flex items-center gap-1.5 text-xs text-zinc-500">
-          <li><a href="/" class="hover:text-indigo-400 transition-colors">首页</a></li>
+          <li><a href={withBase('/')} class="hover:text-indigo-400 transition-colors">首页</a></li>
           <li class="text-zinc-700">/</li>
-          <li><a href="/sources" class="hover:text-indigo-400 transition-colors">来源</a></li>
+          <li><a href={withBase('/sources')} class="hover:text-indigo-400 transition-colors">来源</a></li>
           <li class="text-zinc-700">/</li>
           <li class="text-zinc-400">{source.name}</li>
         </ol>
       </nav>
-      <a href="/sources" class="text-xs text-zinc-500 hover:text-indigo-400 transition-colors mb-3 inline-flex items-center gap-1">
+      <a href={withBase('/sources')} class="text-xs text-zinc-500 hover:text-indigo-400 transition-colors mb-3 inline-flex items-center gap-1">
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
         </svg>

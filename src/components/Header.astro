@@ -1,5 +1,6 @@
 ---
 import { loadAllArticles, loadWorldArticles, getAllSources } from '../utils/articles';
+import { withBase } from '../utils/url';
 
 let articleCount = 0;
 let sourceCount = 0;
@@ -21,12 +22,12 @@ const buildDate = new Intl.DateTimeFormat('zh-CN', {
 }).format(new Date());
 
 const navItems = [
-  { label: '文章', href: '/' },
-  { label: '国际视野', href: '/world' },
-  { label: '来源', href: '/sources' },
-  { label: '分类', href: '/categories' },
-  { label: '统计', href: '/stats' },
-  { label: '关于', href: '/a-propos' },
+  { label: '文章', href: withBase('/') },
+  { label: '国际视野', href: withBase('/world') },
+  { label: '来源', href: withBase('/sources') },
+  { label: '分类', href: withBase('/categories') },
+  { label: '统计', href: withBase('/stats') },
+  { label: '关于', href: withBase('/a-propos') },
 ];
 ---
 
@@ -34,7 +35,7 @@ const navItems = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group shrink-0">
+      <a href={withBase('/')} class="flex items-center gap-3 group shrink-0">
         <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-shadow">
           <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/></svg>
         </div>

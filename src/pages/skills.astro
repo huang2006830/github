@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/url';
 
-const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
-const indexUrl = `${siteUrl}/search-index.json`;
-const feedUrl = `${siteUrl}/rss.xml`;
+const indexUrl = new URL(withBase('/search-index.json'), Astro.site).toString();
+const feedUrl = new URL(withBase('/rss.xml'), Astro.site).toString();
 ---
 
 <Layout title="数据接口" description="本站提供的公开 RSS 与 JSON 数据接口。">

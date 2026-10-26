@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { loadAllArticles, loadWorldArticles, getAllSources, getCategoryColor, getCategoryLabel } from '../utils/articles';
+import { withBase } from '../utils/url';
 
 const allArticles = [...loadAllArticles(), ...loadWorldArticles()];
 const sources = getAllSources(allArticles);
@@ -17,7 +18,7 @@ const sources = getAllSources(allArticles);
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {sources.map((source) => (
-        <a href={`/source/${source.slug}`} class="card-hover rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 flex flex-col gap-3 hover:border-zinc-600 transition-all">
+        <a href={withBase(`/source/${source.slug}`)} class="card-hover rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 flex flex-col gap-3 hover:border-zinc-600 transition-all">
           <div class="flex items-start justify-between">
             <h3 class="font-semibold text-sm">{source.name}</h3>
             <span class="text-xs text-zinc-500 bg-[var(--color-surface-2)] px-2 py-0.5 rounded-full">

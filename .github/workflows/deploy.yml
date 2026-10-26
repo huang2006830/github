@@ -24,18 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check GitHub Pages target
-        env:
-          REPO_NAME: ${{ github.event.repository.name }}
-          OWNER: ${{ github.repository_owner }}
-        run: |
-          REPO_LC=$(echo "$REPO_NAME" | tr '[:upper:]' '[:lower:]')
-          OWNER_LC=$(echo "$OWNER" | tr '[:upper:]' '[:lower:]')
-          if [ "$REPO_LC" != "$OWNER_LC.github.io" ]; then
-            echo "::error::当前仓库名为 $REPO_NAME。本站的站内链接使用根路径，请将仓库命名为 $OWNER.github.io 后再部署。"
-            exit 1
-          fi
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { loadAllArticles, loadWorldArticles, getAllCategories, getAllSources, getCategoryColor, getCategoryLabel, slugify } from '../utils/articles';
+import { withBase } from '../utils/url';
 
 const allArticles = [...loadAllArticles(), ...loadWorldArticles()];
 const categories = getAllCategories(allArticles);
@@ -191,7 +192,7 @@ const medals = ['text-amber-400', 'text-zinc-400', 'text-amber-700'];
           {catStats.map((cat) => {
             const pct = Math.round((cat.count / maxCatCount) * 100);
             return (
-              <a href={`/categorie/${cat.slug}`} class="block group">
+              <a href={withBase(`/categorie/${cat.slug}`)} class="block group">
                 <div class="flex items-center justify-between mb-1.5">
                   <span class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat.name)} transition-all group-hover:scale-105`}>{cat.label}</span>
                   <span class="text-xs text-zinc-500 tabular-nums">{cat.count}</span>
@@ -219,7 +220,7 @@ const medals = ['text-amber-400', 'text-zinc-400', 'text-amber-700'];
             {topSources.map((source, i) => {
               const pct = Math.round((source.count / maxSourceCount) * 100);
               return (
-                <a href={`/source/${source.slug}`} class="flex items-center gap-3 group py-2.5 px-2 -mx-2 rounded-lg hover:bg-white/[0.03] transition-colors">
+                <a href={withBase(`/source/${source.slug}`)} class="flex items-center gap-3 group py-2.5 px-2 -mx-2 rounded-lg hover:bg-white/[0.03] transition-colors">
                   <span class={`w-6 text-center text-xs font-bold tabular-nums ${i < 3 ? medals[i] : 'text-zinc-600'}`}>
                     {i + 1}
                   </span>

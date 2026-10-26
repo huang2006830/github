@@ -3,6 +3,7 @@ import ArticleCard from './ArticleCard.astro';
 import SearchBar from './SearchBar.astro';
 import CategoryFilter from './CategoryFilter.astro';
 import type { Article, FeedType } from '../types/index';
+import { withBase } from '../utils/url';
 
 interface Props {
   articles: Article[];
@@ -18,12 +19,12 @@ const { articles, categories, sources, types, currentPage, totalPages, basePath 
 
 function pageUrl(page: number): string {
   if (basePath) {
-    return page === 1 ? `/${basePath}` : `/${basePath}/page/${page}`;
+    return page === 1 ? withBase(`/${basePath}`) : withBase(`/${basePath}/page/${page}`);
   }
-  return page === 1 ? '/' : `/page/${page}`;
+  return page === 1 ? withBase('/') : withBase(`/page/${page}`);
 }
 
-const searchIndexUrl = basePath ? `/${basePath}/search-index.json` : '/search-index.json';
+const searchIndexUrl = withBase(basePath ? `/${basePath}/search-index.json` : '/search-index.json');
 
 const pages: (number | string)[] = [];
 for (let i = 1; i <= totalPages; i++) {
@@ -147,6 +148,7 @@ for (let i = 1; i <= totalPages; i++) {
 
 <script>
   import Fuse from 'fuse.js';
+  import { withBase } from '../utils/url';
 
   const PAGE_SIZE = 15;
 
@@ -170,7 +172,7 @@ for (let i = 1; i <= totalPages; i++) {
 
   async function loadSearchIndex(): Promise<SearchArticle[]> {
     if (searchIndex) return searchIndex;
-    const res = await fetch((window as any).__searchIndexUrl || '/search-index.json');
+    const res = await fetch((window as any).__searchIndexUrl || withBase('/search-index.json'));
     searchIndex = await res.json();
     return searchIndex!;
   }
@@ -269,7 +271,7 @@ for (let i = 1; i <= totalPages; i++) {
       : '';
 
     return `<article class="card-hover group rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] overflow-hidden fade-in-up flex flex-col">
-      <a href="/article/${escapeHtml(a.id)}" class="block relative aspect-[16/9] overflow-hidden">
+      <a href="${withBase(`/article/${a.id}`)}" class="block relative aspect-[16/9] overflow-hidden">
         ${imageHtml}
         ${badgeHtml}
         ${typeBadgeHtml}
@@ -277,7 +279,7 @@ for (let i = 1; i <= totalPages; i++) {
       <div class="p-4 flex flex-col gap-3 flex-1">
         <div class="flex flex-wrap gap-1.5">${catsHtml}</div>
         <h3 class="font-semibold text-sm leading-snug line-clamp-2">
-          <a href="/article/${escapeHtml(a.id)}" class="hover:text-indigo-400 transition-colors">${escapeHtml(a.title)}</a>
+          <a href="${withBase(`/article/${a.id}`)}" class="hover:text-indigo-400 transition-colors">${escapeHtml(a.title)}</a>
         </h3>
         <p class="text-xs text-zinc-400 line-clamp-3 leading-relaxed">${escapeHtml(a.description)}</p>
         <div class="flex items-center justify-between text-xs text-zinc-400 pt-1">

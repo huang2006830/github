@@ -1,6 +1,7 @@
 ---
 import type { Article } from '../types/index';
 import { getFreshnessBadge, formatDate, getCategoryGradient, getCategoryColor, getCategoryLabel, getTypeLabel, getTypeColor, slugify } from '../utils/articles';
+import { withBase } from '../utils/url';
 
 interface Props {
   article: Article;
@@ -20,7 +21,7 @@ const badge = getFreshnessBadge(article.pubDate);
   data-description={article.description}
 >
   <!-- Image -->
-  <a href={`/article/${article.id}`} class="block relative aspect-[16/9] overflow-hidden">
+  <a href={withBase(`/article/${article.id}`)} class="block relative aspect-[16/9] overflow-hidden">
     {article.image ? (
       <img
         src={article.image}
@@ -56,7 +57,7 @@ const badge = getFreshnessBadge(article.pubDate);
     <!-- Categories -->
     <div class="flex flex-wrap gap-1.5">
       {article.categories.map((cat) => (
-        <a href={`/categorie/${slugify(cat)}`} class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat)} hover:opacity-80 transition-opacity`}>
+        <a href={withBase(`/categorie/${slugify(cat)}`)} class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat)} hover:opacity-80 transition-opacity`}>
           {getCategoryLabel(cat)}
         </a>
       ))}
@@ -64,7 +65,7 @@ const badge = getFreshnessBadge(article.pubDate);
 
     <!-- Title -->
     <h3 class="font-semibold text-sm leading-snug line-clamp-2">
-      <a href={`/article/${article.id}`} class="hover:text-indigo-400 transition-colors">
+      <a href={withBase(`/article/${article.id}`)} class="hover:text-indigo-400 transition-colors">
         {article.title}
       </a>
     </h3>
