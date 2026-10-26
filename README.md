@@ -24,7 +24,7 @@
 ```bash
 npm install
 npm run fetch-feeds   # 抓取 RSS，生成本地数据
-npm run dev           # 启动开发服务器，默认 http://localhost:4321/GitHub
+npm run dev           # 启动开发服务器，默认 http://localhost:4321/github
 ```
 
 其他命令：
@@ -51,7 +51,7 @@ feeds:
 
 推送到 `main` 分支后，GitHub Actions 会自动抓取最新内容、构建并部署到 GitHub Pages。也可以在 Actions 页面手动触发 `Deploy to GitHub Pages`。
 
-部署地址：<https://huang2006830.github.io/GitHub/>
+部署地址：<https://huang2006830.github.io/github/>
 
 定时任务使用 UTC 时间 `0 22 * * *`，即北京时间每天 06:00。
 
