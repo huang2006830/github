@@ -1,0 +1,69 @@
+{
+  "month": "2026-09",
+  "articles": [
+    {
+      "id": "9be80dfe1c4d",
+      "title": "MTFM：美团统一推荐基座大模型在外卖多业务场景的落地实践",
+      "description": "美团在 MTGR 基础上提出统一推荐基座大模型 MTFM，首次实现外卖多个主要业务的统一精排模型。围绕规模可扩展性、场景可延展性与架构高效性三大挑战，MTFM以异构 Tokenizer 与动态掩码实现多场景特征免对齐，通过混合注意力与 Target Scale-Up 提升模型 Scaling 能力，借鉴 LLM 优化实践提升深层网络训练效果，并以 User-Level 训练范式与定制算子保证系统开销可控。美团外卖多个业务订单量提升 2.06%~6.68% 不等，推理成本降低 24%，相关工作已被 KDD 2026 收录。 1. 引言 我们去年提出了 MTGR[1] —— 一种新的生成式精排框架，在美团外卖推荐场景验证了 Scaling Law 的有效性，并取得显著业务收益。然而，推荐领域的 Scaling Law 探索往往局限于单场景内部，模型被限制在单场景孤岛中，跨场景的数据、算力和架构无法充分复用。在美团这一问题尤为突出，推荐覆盖外卖首页、拼好饭等多个业务场景，各场景长期独立建模。与此同时，大语言模型（LLM）已验证一条清晰路径：基座模型（Foundation…",
+      "link": "https://tech.meituan.com/2026/09/22/Meituan-Foundation-Model-for-Recommendation.html",
+      "pubDate": "2026-09-22T06:50:57.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/5dcc2af83b5b9da04717c9fcff76b69a1943722.png",
+      "type": "blog"
+    },
+    {
+      "id": "4e5a10869cab",
+      "title": "Agent评测漫谈 —— 由浅入深讲解Agent评测",
+      "description": "本篇博客是一篇科普文章，由浅入深的介绍Agent评测。其中前两章系统介绍了评测是什么，以及如何建立评测体系；其中第二章是美团图灵Agent评测团队深入美团各业务团队BP总结出的实践经验，是我们在两年实践过程中逐步打磨出来的认知。第三章重点介绍了龙虾/爱马仕这类长程Agent框架的出现对评测带来的变化。 本篇博客在美团内部发表之后获得了较多的关注，我们发现大家对Agent评测的热情非常高，因此我们决定将内部博客进行公开，想把这些经验分享给更多的同学，希望对大家有所启发或帮助。 一、Agent评测是什么 1.1 评测的核心目的 评测的核心目的是为了回答 Agent 的好不好？以及到底哪里好，哪里不好？ 从而为下一轮迭代指明方向。评测是Agent效果的“精密量具”。 这也是为什么 Agent 评测不能只停留在离线打榜，更不能只看某次 Demo 的表现。它必须服务于真实业务中的研发、上线、回归、优化和规模化落地。 而Agent评测的基石是观测，因此我们得出了Agent研发公式 —— 观测 + 评测 = 持续迭代 1.2 Agent评测与传统模型评测的不同 评测方法会随着 AI…",
+      "link": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html",
+      "pubDate": "2026-09-15T08:08:28.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/5a8954c2e7b681ee8fb8d2c8a73868cd157865.png",
+      "type": "blog"
+    },
+    {
+      "id": "33c025967da7",
+      "title": "《Agent 评测白皮书》系列01：Agent 评测全览",
+      "description": "综述 搭一个 Agent 正在变得越来越容易 过去三年，有两条趋势在同时发生。 一是基座模型的能力持续进化，它带来的结果是对使用者的要求在往下降。早期要让模型稳定地按格式输出、正确地选中一个工具，需要反复打磨 Prompt、设计各种兜底。现在这些能力越来越多地由模型本身承担，长上下文、原生工具调用、更强的指令遵循和多步推理，把大量原本需要工程去补的地方补上了。 二是 Agent 框架的功能持续丰富。从早期需要自己实现规划、记忆、工具注册和状态管理，到现在框架和协议层把这些抽象成标准组件，接一个工具、加一个 Skill，工作量都在显著下降。 两条曲线叠加，结论很直接：搭建 Agent 门槛正在逐年降低。这带来的直接变化是 Agent 落地场景越来越多，越来越发散。 评测认知的稀缺 自 2022 年底 ChatGPT（基于 GPT-3.5）发布以来，市场上出现了一波又一波 Agent 项目。但是那些真正走过冷启动、完成灰度扩量、推到全量的项目数量屈指可数。这导致掌握 Agent 评测方法的人非常稀缺。 过去三年绝大部分 Agent 项目都死掉了。它们消失的原因有一些共性： 停在…",
+      "link": "https://tech.meituan.com/2026/09/10/Agent-Evaluation-White-Paper-01.html",
+      "pubDate": "2026-09-10T03:08:29.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/714ba0bf48f2186bd418d3778da7e214293923.png",
+      "type": "blog"
+    },
+    {
+      "id": "e4d625395690",
+      "title": "美团智播——数字人直播技术创新与实践",
+      "description": "引言 随着大语言模型、生成式AI与多模态交互技术的快速发展，数字人直播已突破早期形象僵硬、交互单一的瓶颈，在本地生活、电商、文娱等领域展现出巨大的商业潜力。美团智播，是面向本地生活场景的AI数字人直播解决方案，融合大模型、数字人与多模态交互技术，提供丰富的行业专属数字人形象，支持真人1:1复刻与门店实景定制，30秒生成直播素材，3分钟完成开播配置，7×24小时稳定上播。过去一年，依托生成式AI技术，数字人直播月日均GTV同比增长82.12%，月日均观看人次同比增长163.44%，开播场次提升11倍，充分验证了AI数字人直播在本地生活商业闭环中的实际价值。 2026年7月8日至10日，美团智播在中国互联网大会上完成行业首秀，以“实时交互数字人+直播带货数字人”为主题亮相科技互动展区。展区中，实时交互数字人通过秒级语音问答与观众自然对话，数字人直播间则让参会者发出“完全看不出是数字人”的感叹——这一亮相标志着美团智播正式从内部打磨走向行业舞台。…",
+      "link": "https://tech.meituan.com/2026/09/03/meituan-Digital-Human-practice.html",
+      "pubDate": "2026-09-03T05:50:40.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/a7c5a936998959a941d145ac3eebe7334801382.png",
+      "type": "blog"
+    }
+  ]
+}

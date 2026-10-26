@@ -2,73 +2,88 @@
   "month": "2026-10",
   "articles": [
     {
-      "id": "0d96c8ba5fe8",
-      "title": "Agentic AI in Production: Why Your Agent Keeps Answering After Its Tools Fail",
-      "description": "When a tool breaks, an agent can keep going and write a confident answer from nothing while the dashboard stays green. The post Agentic AI in Production: Why Your Agent Keeps Answering After Its Tools Fail appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/agentic-ai-in-production-why-your-agent-keeps-answering-after-its-tools-fail/",
+      "id": "3c07febc89c6",
+      "title": "IEA：2026年能源进展报告",
+      "description": "IEA发布了“2026年能源进展报告”。在能源安全和可负担性已升至发展议程首位的当下，全球仍有6.55亿人缺乏电力供应，20亿人使用污染性燃料和技术进行烹饪，使其健康和安全面临风险。撒哈拉以南非洲地区在这些差距中占据了不成比例的巨大份额，超过5.6亿人无电可用，9.7亿人缺乏清洁烹饪手段。",
+      "link": "http://www.199it.com/archives/1839983.html",
+      "pubDate": "2026-10-25T22:00:26.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/07/0001-40.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "7009ebb04590",
+      "title": "2026年生成式人工智能市场格局：AI搜索的演进",
+      "description": "2025年6月至2026年5月期间，全球生成式AI网站平均月访问量达到95亿次，同比增长70%；月活跃独立访客达到6.55亿，同比增长57%；移动端AI应用下载量达到44亿次，同比增长58%。数据表明，AI已经从少数科技用户使用的新兴工具，转变为覆盖搜索、办公、购物、社交等场景的日常数字入口。",
+      "link": "http://www.199it.com/archives/1845107.html",
+      "pubDate": "2026-10-25T21:30:19.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/08/Page1-15.png",
+      "type": "blog"
+    },
+    {
+      "id": "95366caae42d",
+      "title": "Brand Finance：2026年房地产品牌25强",
+      "description": "Brand Finance发布了报告“2026年房地产品牌25强”。房地产行业仍面临压力，前十强品牌中有七个品牌价值在今年出现下降。值得注意的是，前十名中所有五个中国品牌均下跌，反映出中国房地产市场乃至整个行业面临的持续逆风。",
+      "link": "http://www.199it.com/archives/1840016.html",
+      "pubDate": "2026-10-25T21:00:14.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/07/0001-41.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "ba3eb9577bbf",
+      "title": "联合国旅游组织：2026年第一季度全球旅游晴雨表",
+      "description": "2026年第一季度，全球国际旅游市场仍在增长，但增长的含金量正在发生变化。联合国旅游组织数据显示，全球国际游客人数同比增长2%，达到约3.07亿人次，比2025年同期增加约600万人。1月和2月累计增幅一度达到2.5%，但3月增速骤降至0.4%，显示旅游需求并未消失，却对地缘风险和出行成本更加敏感。",
+      "link": "http://www.199it.com/archives/1843649.html",
+      "pubDate": "2026-10-25T20:00:28.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/08/0001-3.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "74562dc9c3a9",
+      "title": "Crunchbase：2026上半年北美风险投资总额高达3920亿美元",
+      "description": "根据Crunchbase的数据，2026年上半年北美风险投资创下历史新高，主要得益于人工智能行业领军企业完成的后期大规模融资。",
+      "link": "http://www.199it.com/archives/1838496.html",
+      "pubDate": "2026-10-25T18:00:01.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/07/1001.png",
+      "type": "blog"
+    },
+    {
+      "id": "7c06a1d7f526",
+      "title": "Cloudflare 的 OHTTP 网关拒绝解密通过 Cloudflare 传入的请求",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/4647jBOxmf3Ut0i1aVbx?utm_source=rss&utm_medium=article",
       "pubDate": "2026-10-25T14:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "a72f55c35b9d",
-      "title": "Data Enablement for AI: A Practitioner's Guide to 6 Advanced Architectural Patterns",
-      "description": "Beyond naive chunk-and-embed: Six production architectures for turning enterprise lakehouses into governed AI platforms. The post Data Enablement for AI: A Practitioner's Guide to 6 Advanced Architectural Patterns appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/data-enablement-for-ai-a-practitioners-guide-to-6-advanced-architectural-patterns/",
-      "pubDate": "2026-10-25T12:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "b980f3812fe4",
-      "title": "How to Add Guardrails to a Local LLM Agent",
-      "description": "A hands-on guide with Gemma 4, Ollama, and the OpenAI Agents SDK The post How to Add Guardrails to a Local LLM Agent appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/how-to-add-guardrails-to-a-local-llm-agent/",
-      "pubDate": "2026-10-24T14:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "c50a4b1c2669",
-      "title": "Python 3.15 Has a New Profiler",
-      "description": "Here's what it finds that cProfile misses The post Python 3.15 Has a New Profiler appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/python-315-has-a-new-profiler/",
-      "pubDate": "2026-10-24T12:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "dba368836248",
-      "title": "Built for Agents: The Case for Spark Declarative Pipelines",
-      "description": "AI agents now write a growing share of production data pipelines (over 70% of SDP...",
-      "link": "https://www.databricks.com/blog/built-agents-case-spark-declarative-pipelines",
-      "pubDate": "2026-10-23T19:00:00.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -78,13 +93,13 @@
       "type": "blog"
     },
     {
-      "id": "22f8035eb4da",
-      "title": "Real-time energy trading and analytics on Databricks",
-      "description": "Why does real-time energy trading need more than faster data?Energy trading desks...",
-      "link": "https://www.databricks.com/blog/real-time-energy-trading-and-analytics-databricks",
-      "pubDate": "2026-10-23T19:00:00.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "808935c79b5e",
+      "title": "四分之一PR是“AI垃圾”！Linux基金会发布新报告：AI写代码快了52%，开源维护者却更累了",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/9TSuUDxrUSGS26XTA2yB?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-25T10:30:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -94,13 +109,13 @@
       "type": "blog"
     },
     {
-      "id": "fb81b598af01",
-      "title": "Don’t Let Messy Data Bend Your Curves",
-      "description": "Robust Estimation Series: Building Accurate Curves with Polynomials and Splines With Spurious Data The post Don’t Let Messy Data Bend Your Curves appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/dont-let-messy-data-bend-your-curves/",
-      "pubDate": "2026-10-23T15:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "585fa22791d5",
+      "title": "研究显示全球每年蛇毒中毒死亡人数或为2.5万至51.3万人",
+      "description": "研究团队审查截至2025年3月31日研究，收集79国数据并建模估算。全球每年可能发生180万至700万例蛇毒中毒，死亡2.5万至51.3万人；撒哈拉以南非洲负担最重，抗蛇毒血清和医疗资源不足。世卫组织提出2030年将蛇咬伤死亡和残疾减少50%。",
+      "link": "http://www.199it.com/archives/1859672.html",
+      "pubDate": "2026-10-25T09:39:54.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -109,13 +124,13 @@
       "type": "blog"
     },
     {
-      "id": "40e4e544282f",
-      "title": "Skewness and Kurtosis: From Moments to Machine Learning",
-      "description": "The mathematics, intuition, interpretation, and practical use of higher-order moments. The post Skewness and Kurtosis: From Moments to Machine Learning appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/skewness-and-kurtosis-from-moments-to-machine-learning/",
-      "pubDate": "2026-10-23T14:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "f552f2e03db2",
+      "title": "亚马逊AWS：2026年约50亿美元英伟达GB300机架部分因缺电闲置",
+      "description": "据报道，AWS预计接收约50亿美元英伟达GB300服务器机架，部分因数据中心缺电暂存仓库，被称为“暗GPU”。亚马逊2026年计划约2200亿美元AI和云计算资本支出，自由现金流近年首次转负。分析称，AI竞赛正从芯片转向电力与基础设施。",
+      "link": "http://www.199it.com/archives/1859666.html",
+      "pubDate": "2026-10-25T09:39:40.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -124,13 +139,13 @@
       "type": "blog"
     },
     {
-      "id": "fd65da7b546b",
-      "title": "What Companies Actually Mean When They Say They Want “AI Experience”",
-      "description": "What employers actually mean when job postings list \"AI experience\" as a requirement.",
-      "link": "https://www.kdnuggets.com/what-companies-actually-mean-when-they-say-they-want-ai-experience",
-      "pubDate": "2026-10-23T14:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "id": "ac2a0b543423",
+      "title": "2026年1至9月全国城乡居民生活用电量同比下降0.3%，近十年首次转负",
+      "description": "厦门大学林伯强解读，2026年1至9月城乡居民生活用电量同比下降0.3%，近十年首次转负；8月同比下降4.0%，台风、强降雨和低温致空调用电减少。9月第三产业用电量1852亿千瓦时、同比增长4.9%，电动汽车渗透率提升利好居民用电增长。",
+      "link": "http://www.199it.com/archives/1859668.html",
+      "pubDate": "2026-10-25T09:39:27.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -139,13 +154,13 @@
       "type": "blog"
     },
     {
-      "id": "164559d3db54",
-      "title": "Why Parameter Count Is Not Model Complexity: An Introduction to Effective Dimension",
-      "description": "What does effective dimension reveal about redundancy, generalization, and trainability that parameter count, loss, and accuracy do not? The post Why Parameter Count Is Not Model Complexity: An Introduction to Effective Dimension appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/why-parameter-count-is-not-model-complexity-an-introduction-to-effective-dimension/",
-      "pubDate": "2026-10-23T12:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "c6fbb6efd634",
+      "title": "IDC：2026年Q3全球智能手机出货量2.553亿台，同比下降22%",
+      "description": "IDC、Counterpoint、Omdia报告显示，2026年第三季度全球智能手机出货量同比下滑。IDC称出货2.553亿台，同比减少近7000万台，下降22%，创最大单季同比跌幅；另两家均降20%。存储芯片涨价推高成本，换机周期拉长。",
+      "link": "http://www.199it.com/archives/1859670.html",
+      "pubDate": "2026-10-25T09:39:19.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -154,13 +169,13 @@
       "type": "blog"
     },
     {
-      "id": "649bf7eb77ca",
-      "title": "5 Free AI Coding Agents You Should Try in 2026",
-      "description": "Access powerful open-source and proprietary models through OpenCode Zen, Gemini’s free quota, Kilo Gateway, Cline Provider, and Charm Hyper without paying for API access upfront.",
-      "link": "https://www.kdnuggets.com/5-free-ai-coding-agents-you-should-try-in-2026",
-      "pubDate": "2026-10-23T12:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "id": "c300ddd4d9d9",
+      "title": "IDC：2026年Q3全球智能手机出货量2.553亿台，同比下降22%",
+      "description": "IDC等三家机构报告显示，2026年第三季度全球智能手机出货量同比分别降22%、20%和20%，IDC统计2.553亿台。存储芯片涨价推高成本，手机内存和闪存两年涨至少3倍，部分机型提价1000元仍难覆盖成本；分析师预计趋势或持续两至三年。",
+      "link": "http://www.199it.com/archives/1859674.html",
+      "pubDate": "2026-10-25T09:39:13.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -169,13 +184,28 @@
       "type": "blog"
     },
     {
-      "id": "e64b0b0e549b",
-      "title": "Your Six AI Models Are Really Two: The Math of Correlated Mistakes",
-      "description": "Ask several models the same question, take a vote, and you get fewer independent opinions than you paid for. One formula says how many, and I checked it on six open models and 1,500 exam questions. The post Your Six AI Models Are Really Two: The Math of Correlated Mistakes appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/your-six-ai-models-are-really-two-the-math-of-correlated-mistakes/",
-      "pubDate": "2026-10-23T11:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "1cca9d176498",
+      "title": "whatmodel.sh：2026年10月中美AI大模型性能差距缩短至1个月",
+      "description": "据whatmodel.sh统计，2026年中美AI大模型性能与发布时间差距已从三四个月缩至10月约1个月。美国AI多转闭源，中国公司主导开源，DeepSeek、Kimi等新模型推动差距收窄，后续GLM-5.5、Qwen4等有望继续提升。",
+      "link": "http://www.199it.com/archives/1859677.html",
+      "pubDate": "2026-10-25T09:39:08.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792844071690-zo9vag.png",
+      "type": "blog"
+    },
+    {
+      "id": "1915bd052c6f",
+      "title": "IDC：2026年Q3全球智能手机出货量2.553亿台，同比下降22%",
+      "description": "IDC等机构报告显示，2026年第三季度全球智能手机出货量同比下降20%至22%；IDC数据为2.553亿台，同比少近7000万台。AI数据中心推高HBM、DRAM需求，消费级存储供应趋紧、成本上涨，厂商与消费者承压，换机周期或拉长。",
+      "link": "http://www.199it.com/archives/1859679.html",
+      "pubDate": "2026-10-25T09:39:01.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -184,13 +214,193 @@
       "type": "blog"
     },
     {
-      "id": "9779462e79c7",
-      "title": "The new economics of AI cost management",
-      "description": "For the past two years, the story around enterprise AI adoption has mostly been about...",
-      "link": "https://www.databricks.com/blog/ai-cost-management",
-      "pubDate": "2026-10-22T19:14:24.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "2fbbe9ec3ea9",
+      "title": "微软：2026财年Xbox内容与服务收入未达4.28%增长目标同比下降6.03%",
+      "description": "微软代理声明显示，2026财年Xbox内容与服务收入按薪酬汇率口径下降6.03%，未达4.28%增长目标，为六年来第五次未达标；该指标占高管绩效股票奖励权重15%，单项系数50.58%。年度业务摘要口径同比下降5%，第四财季下降10%。",
+      "link": "http://www.199it.com/archives/1859681.html",
+      "pubDate": "2026-10-25T09:38:56.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "269f0f70408d",
+      "title": "寒武纪：2026年Q3归母净利润14.04亿元，同比增长147.74%",
+      "description": "寒武纪2026年第三季度财报显示，Q3营收35.31亿元、同比增长104.47%，归母净利润14.04亿元、同比增长147.74%。前三季度营收95.26亿元、归母净利润37.15亿元，研发投入12.25亿元、同比增长45.35%。",
+      "link": "http://www.199it.com/archives/1859683.html",
+      "pubDate": "2026-10-25T09:38:54.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "da59ec4251b1",
+      "title": "乘联分会：2026年10月狭义乘用车零售预计160万辆，同比下降28.9%",
+      "description": "乘联分会：2026年10月狭义乘用车零售预计160万辆，同比下降28.9%；新能源车预估销量107万辆，燃油车约53万辆，渗透率预计66.9%。月内第二周日均零售因订单集中交付升至5.8万辆，第三周优惠到期后回落，月末车企冲量或再走高。",
+      "link": "http://www.199it.com/archives/1859685.html",
+      "pubDate": "2026-10-25T09:38:45.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "0ece69f1a79c",
+      "title": "沃尔沃：2026年Q3大中华区销量20284辆，同比下降40.6%",
+      "description": "沃尔沃CEO表示，中国车市变化远超预期，欧洲研发的全球车型已难打动消费者。三季度大中华区销量同比下降40.6%至20284辆，全球销量同比下降10.7%至141609辆，中国营收同比下滑近50%。公司撤回全年指引，推进本土化。",
+      "link": "http://www.199it.com/archives/1859687.html",
+      "pubDate": "2026-10-25T09:38:40.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "eb7f911fc825",
+      "title": "Trendforce：2027年PC DRAM供应下降，年底涨幅15%至20%",
+      "description": "Trendforce报告预测，2027年PC内存供应收缩，消费端内存更贵难买。2026年AI数据中心采购推高闪存和DRAM价格，三大厂产能拉满仍涨价，2029年前晶圆厂新增产能有限。内存年底涨幅15%至20%，延迟需求或在2027至2028年释放。",
+      "link": "http://www.199it.com/archives/1859689.html",
+      "pubDate": "2026-10-25T09:38:34.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "a98a4765814e",
+      "title": "爱玛科技：2026年Q3归母净利润4.39亿元，同比下降36.86%",
+      "description": "爱玛科技2026年三季报显示，Q3营收69.49亿元，同比下降13.81%；归母净利润4.39亿元，同比下降36.86%。前三季度归母净利润11.04亿元，同比下降42.13%。新国标推高成本，行业承压。",
+      "link": "http://www.199it.com/archives/1859692.html",
+      "pubDate": "2026-10-25T09:38:27.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792755380789-d4xaur.png",
+      "type": "blog"
+    },
+    {
+      "id": "2bb64460a794",
+      "title": "ICMR：2026年Q3俄罗斯显卡销量约21万块同比下降约20%，销售额104.7亿卢布同比增长4.7%",
+      "description": "ICMR研究显示，2026年第三季度俄罗斯显卡销量约21万块，同比下降约20%；销售额104.7亿卢布，同比增长4.7%、环比增长15.3%；均价4.98万卢布，同比上涨30.6%。RTX 50系列涨价明显，主流中端涨幅高于旗舰卡。",
+      "link": "http://www.199it.com/archives/1859695.html",
+      "pubDate": "2026-10-25T09:38:15.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "e9ef9dc3f65b",
+      "title": "洛图科技：2026年Q3中国学习平板全渠道销量125万台，销售额45亿元，分别同比下降30.8%和17.1%",
+      "description": "洛图科技数据显示，2026年第三季度中国学习平板全渠道销量125万台，同比下降30.8%；销售额45亿元，同比下降17.1%。上半年销量228.7万台，同比下降14.2%。预测全年销量497万台，同比下降21.3%。",
+      "link": "http://www.199it.com/archives/1859698.html",
+      "pubDate": "2026-10-25T09:38:00.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792744550719-q36bkr.png",
+      "type": "blog"
+    },
+    {
+      "id": "6bcd47fd8d6d",
+      "title": "西部数据：2027财年Q1营收同比增长55%，2026年HDD产能售罄",
+      "description": "据Digitimes报道，西部数据称AI工作负载生成海量数据，前七大客户订单可见度至2030-2031年。2026年HDD产能售罄，长期协议至2028年；2027财年Q1营收同比增长55%。单台AI服务器存储1.7TB，传统仅0.5TB。",
+      "link": "http://www.199it.com/archives/1859703.html",
+      "pubDate": "2026-10-25T09:37:36.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "fcb70b3e9f92",
+      "title": "中汽数研：2026年1-9月比亚迪134.41万辆夺冠，零跑同比增长45.9%",
+      "description": "中汽数研公布2026年1-9月国内新能源汽车品牌销量排名：比亚迪134.41万辆夺冠，份额超16%；零跑50.70万辆同比增长45.9%，特斯拉38.11万辆同比下降12.2%。BBA中奥迪、奔驰同比分别下降25.25%、31.72%。",
+      "link": "http://www.199it.com/archives/1859708.html",
+      "pubDate": "2026-10-25T09:30:52.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792729807489-tjhv5i.jpeg",
+      "type": "blog"
+    },
+    {
+      "id": "199f0d090efc",
+      "title": "世界气象组织：2026年11月至2027年1月厄尔尼诺海表温度或较均值高3.8℃",
+      "description": "世界气象组织发布《全球季节气候最新通报》警告，当前厄尔尼诺强度或超过去40年监测范围，预计2026年底前后达峰。2026年11月至2027年1月热带太平洋海表温度可能较长期均值高3.8摄氏度，将改变全球降水和温度分布。",
+      "link": "http://www.199it.com/archives/1859710.html",
+      "pubDate": "2026-10-25T09:30:44.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "0d6d174152ec",
+      "title": "TrendForce：2026/2027服务器CPU出货同比增长31%和超40%",
+      "description": "TrendForce预测，代理式AI提升CPU与加速器需求比例，2026、2027年服务器CPU出货分别同比增长31%和超40%，Arm等非x86阵营市占将达23%和30%。AMD CEO苏姿丰预计2030年该市场达2200亿美元。",
+      "link": "http://www.199it.com/archives/1859712.html",
+      "pubDate": "2026-10-25T09:30:37.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "c034d909fc9d",
+      "title": "Java 近期新闻：Grails 8、Open Liberty、GlassFish、Infinispan、LangChain4j、Spock",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/BHWP4JJDeExZZWsifFlg?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-25T09:06:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -200,13 +410,148 @@
       "type": "blog"
     },
     {
-      "id": "7e20e83fa95e",
-      "title": "The Fraud Analyst AI Coworker: Detecting Telecom Fraud in Real-Time on One Platform",
-      "description": "BackgroundAccording to the Communications Fraud Control Association's 2025 survey...",
-      "link": "https://www.databricks.com/blog/fraud-analyst-ai-coworker-detecting-telecom-fraud-real-time-one-platform",
-      "pubDate": "2026-10-22T18:30:00.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "f526e4c348a2",
+      "title": "2026年西班牙主要足球俱乐部品牌价值（附原数据表） ​​​",
+      "description": "2026年西班牙主要足球俱乐部品牌价值（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859660.html",
+      "pubDate": "2026-10-25T07:23:44.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792913012-2374-1e07ly1iic5hs5gy5j20u01h1jub.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "e21778e787ff",
+      "title": "2026年Q2主要应用类别iOS和谷歌Play应用下载量同比（附原数据表） ​​​",
+      "description": "2026年Q2主要应用类别iOS和谷歌Play应用下载量同比（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859657.html",
+      "pubDate": "2026-10-25T07:17:59.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912667-9139-1e07ly1iic5hikkgyj20u01hkadb.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "dd28794a63b8",
+      "title": "2026年7月美国受众参与生成式AI创建社交图片或视频意愿（附原数据表） ​​​",
+      "description": "2026年7月美国受众参与生成式AI创建社交图片或视频意愿（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859654.html",
+      "pubDate": "2026-10-25T07:16:57.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912602-1804-1e07ly1iibygjffs8j20u01guadg.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "a2947b5ef1a7",
+      "title": "2026年1-8月全球早期风险投资额（附原数据表） ​​​",
+      "description": "2026年1-8月全球早期风险投资额（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859651.html",
+      "pubDate": "2026-10-25T07:16:29.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912557-5215-1e07ly1iibyg8hg0lj20u01gq0vj.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "f75c7f5e76fe",
+      "title": "2025财年Q2-2026财年Q2台积电净利润率（附原数据表） ​​​",
+      "description": "2025财年Q2-2026财年Q2台积电净利润率（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859648.html",
+      "pubDate": "2026-10-25T07:15:34.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912522-5419-1e07ly1iibyfsx63fj20u01gq41l.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "b68528519bee",
+      "title": "2022年12月-2025年12月中国网站数量（附原数据表） ​​​",
+      "description": "2022年12月-2025年12月中国网站数量（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859645.html",
+      "pubDate": "2026-10-25T07:14:53.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912479-5884-1e07ly1iibyfh1dj3j20u01gw76z.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "df73f5c8f5fa",
+      "title": "2020年-2025年全球纯电动汽车销量（附原数据表） ​​​",
+      "description": "2020年-2025年全球纯电动汽车销量（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859642.html",
+      "pubDate": "2026-10-25T07:14:11.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912436-5868-1e07ly1iibyf1vdi1j20u01gqwh7.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "12fe0047abc1",
+      "title": "26年Q2主要应用类别iOS和谷歌Play应用内购买收入同比（附原数据表） ​​​",
+      "description": "26年Q2主要应用类别iOS和谷歌Play应用内购买收入同比（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859639.html",
+      "pubDate": "2026-10-25T07:07:45.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912048-9203-1e07ly1iiazb7u6gkj20u01gugow.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "a0a927da2411",
+      "title": "2027年全球人工智能市场支出同比预测（附原数据表） ​​​",
+      "description": "2027年全球人工智能市场支出同比预测（附原数据表） ​​​",
+      "link": "http://www.199it.com/archives/1859636.html",
+      "pubDate": "2026-10-25T07:07:13.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792912018-1310-1e07ly1iiazamaa8dj20u01gzad2.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "e82eb1474364",
+      "title": "React 19.3 新增 browser() API，使“仅客户端渲染”成为一等公民",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/jNX6EAzqP34xRjqUMU1N?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-24T13:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -216,13 +561,13 @@
       "type": "blog"
     },
     {
-      "id": "814f799aa1bf",
-      "title": "The AI Bill is coming",
-      "description": "In this conversation, Catherine Brown talks with Patrick about what happened when...",
-      "link": "https://www.databricks.com/blog/ai-bill-coming",
-      "pubDate": "2026-10-22T18:12:49.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "e0989f565744",
+      "title": "何时应使用 Liquid Clustering？湖仓布局策略基准测试",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/lkefSu7SjjIHL1Fmk0Pv?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-24T10:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -232,178 +577,13 @@
       "type": "blog"
     },
     {
-      "id": "afc47d875203",
-      "title": "Does Agentic RAG Actually Retrieve Better Evidence? I Tested It on 298 Questions",
-      "description": "I let an AI agent search again whenever it chose. It found some papers plain search had missed, lost some plain search had found, and gained too little to trust. The post Does Agentic RAG Actually Retrieve Better Evidence? I Tested It on 298 Questions appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/does-agentic-rag-actually-retrieve-better-evidence-i-tested-it-on-298-questions/",
-      "pubDate": "2026-10-22T15:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "45e206bc546a",
-      "title": "Raman Spectra Preprocessing and Non-Negative Least Squares Modelling in Python: Monitoring Zeolite Crystallization",
-      "description": "A short, reproducible tutorial on spectral unmixing using real in situ interzeolite conversion data The post Raman Spectra Preprocessing and Non-Negative Least Squares Modelling in Python: Monitoring Zeolite Crystallization appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/raman-spectra-preprocessing-and-non-negative-least-squares-modelling-in-python-monitoring-zeolite-crystallization/",
-      "pubDate": "2026-10-22T14:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "20f20b129305",
-      "title": "How to Process Large JSON Files in Python With ijson",
-      "description": "I loaded a large JSON file in Python and watched memory jump from 43 MB to 808 MB. Here’s what happened and how streaming changed everything.",
-      "link": "https://www.kdnuggets.com/how-to-process-large-json-files-in-python-with-ijson",
-      "pubDate": "2026-10-22T14:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "9c0b04aecb72",
-      "title": "Same Answer, Different Reason: What a Reasoning Model Says When It Follows a Planted Hint",
-      "description": "I put wrong answers in front of 200 exam questions and read what a small model’s reasoning said when it fell for them. The post Same Answer, Different Reason: What a Reasoning Model Says When It Follows a Planted Hint appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/same-answer-different-reason-what-a-reasoning-model-says-when-it-follows-a-planted-hint/",
-      "pubDate": "2026-10-22T12:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "195af169efc8",
-      "title": "Google Open-Sources Harness²: Self-Improving AI Agents Without Retraining",
-      "description": "Google's Harness² lets AI agents improve their prompts, tools, memory, and scripts through two recursive loops without touching model weights. Learn more, including how to run the free demo yourself.",
-      "link": "https://www.kdnuggets.com/google-open-sources-harness-self-improving-ai-agents-without-retraining",
-      "pubDate": "2026-10-22T12:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "ce7d3262865b",
-      "title": "Could On-Policy Self-Distillation Revolutionize Post-Training?",
-      "description": "Teaching foundation models new skills without breaking them is hard. A new reinforcement learning-based approach might have the power to change that. The post Could On-Policy Self-Distillation Revolutionize Post-Training? appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/could-on-policy-self-distillation-revolutionize-post-training/",
-      "pubDate": "2026-10-22T11:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "51c531fffc41",
-      "title": "Decision Models in Action: Build a Hybrid LLM Workflow",
-      "description": "A hands-on guide to building browser automation by combining decision models with LLMs. The post Decision Models in Action: Build a Hybrid LLM Workflow appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/decision-models-in-action-build-a-hybrid-llm-workflow/",
-      "pubDate": "2026-10-21T15:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "26141ee58bb0",
-      "title": "How to Turn Long-Running Python Simulations Into a Self-Service Platform",
-      "description": "What I learned about queues, failure recovery, and reproducibility while building asynchronous workloads on AWS The post How to Turn Long-Running Python Simulations Into a Self-Service Platform appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/how-to-turn-long-running-python-simulations-into-a-self-service-platform/",
-      "pubDate": "2026-10-21T14:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "2ab736803d17",
-      "title": "Named Entity Recognition Using Scikit-LLM",
-      "description": "Build standardized custom NER pipelines in a few simple steps, powered by the reasoning capabilities of LLMs.",
-      "link": "https://www.kdnuggets.com/named-entity-recognition-using-scikit-llm",
-      "pubDate": "2026-10-21T14:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "7214cc384b7e",
-      "title": "Spatial Reasoning in AI Models, Taken Apart",
-      "description": "Grid puzzles that people solve almost perfectly show where language and vision models still break The post Spatial Reasoning in AI Models, Taken Apart appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/spatial-reasoning-in-ai-models-taken-apart/",
-      "pubDate": "2026-10-21T12:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "b8e35aa55d98",
-      "title": "5 Best GitHub Repositories for AI Agent Skills",
-      "description": "Explore five popular AI agent skill collections that help coding agents plan, test, debug, review, and build better software.",
-      "link": "https://www.kdnuggets.com/5-best-github-repositories-for-ai-agent-skills",
-      "pubDate": "2026-10-21T12:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "db154772ed8e",
-      "title": "Databricks AI Runtime and NVIDIA make it easier to customize open models with enterprise data",
-      "description": "GPUs power today's most advanced AI workloads, from cutting-edge language models...",
-      "link": "https://www.databricks.com/blog/databricks-ai-runtime-nvidia-train-fine-tune-models",
-      "pubDate": "2026-10-21T11:30:00.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "ebceb9ba9c97",
+      "title": "智源众智 FlagOS 2.2 让前沿模型与多元算力协同演进",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/mhdJwMMzYFedMFHKfHWs?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T19:40:29.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -413,13 +593,13 @@
       "type": "blog"
     },
     {
-      "id": "e65783a05424",
-      "title": "AI Runtime is Generally Available",
-      "description": "Today, we’re excited to announce the General Availability of AI Runtime (AIR), bringing...",
-      "link": "https://www.databricks.com/blog/ai-runtime-generally-available",
-      "pubDate": "2026-10-21T11:20:00.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "b09d0b4720ed",
+      "title": "刘铁岩、诺奖、图灵奖得主等嘉宾共话AI的下一个十年：Transformer一统天下之后，AI的下一张王牌是什么？",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/UmD4aAerZEts8sZ5t791?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:54:19.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -429,28 +609,13 @@
       "type": "blog"
     },
     {
-      "id": "4b0cb7bec4d2",
-      "title": "I Built a Pipeline to Track the Job Market I'm Trying to Break Into.",
-      "description": "Building an incremental pipeline with dbt snapshots, and the API that quietly lied to me along the way. The post I Built a Pipeline to Track the Job Market I'm Trying to Break Into. appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/i-built-a-pipeline-to-track-the-job-market-im-trying-to-break-into/",
-      "pubDate": "2026-10-21T11:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
-      "categories": [
-        "Big Data",
-        "Data Science"
-      ],
-      "image": null,
-      "type": "blog"
-    },
-    {
-      "id": "48bef8124e9b",
-      "title": "Deploy RFD4-Proteina on Databricks",
-      "description": "Bring RFD4-Proteina to your research data with AI-assisted development and serverless NVIDIA GPU compute....",
-      "link": "https://www.databricks.com/blog/deploy-rfd4-proteina-model-databricks",
-      "pubDate": "2026-10-21T04:42:46.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "82d96e749fc5",
+      "title": "AI Agent 正在改写 CPU 的价值：当 Token 变成行动，算力竞争不再只是拼 GPU",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/AkDgwN6h72cqUOJ35Zok?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:53:09.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -460,13 +625,13 @@
       "type": "blog"
     },
     {
-      "id": "6d89e1e665db",
-      "title": "MemCurrent: Designing Persistent Memory for Production Agents",
-      "description": "AI tools have made it easy to vibe code agents. Building and maintaining an enterprise...",
-      "link": "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents",
-      "pubDate": "2026-10-20T18:15:47.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "3ebd8968ff16",
+      "title": "PostgreSQL 19 发不出来？AI“找茬”太快，人类修Bug的速度跟不上了",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/Q6mgHWCSqV6KeZzee3NT?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:48:25.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -476,13 +641,13 @@
       "type": "blog"
     },
     {
-      "id": "71440eae5c3a",
-      "title": "Introducing Agent Memory on Databricks",
-      "description": "Today we're introducing agent memory on Agent Bricks, Databricks' agent developer...",
-      "link": "https://www.databricks.com/blog/introducing-agent-memory-databricks",
-      "pubDate": "2026-10-20T17:26:56.000Z",
-      "source": "Databricks Blog",
-      "sourceUrl": "https://www.databricks.com/feed",
+      "id": "f54daf4de532",
+      "title": "“让Token不空转”，讯飞如何把Agent推进企业核心流程",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/Lo9TLlRdvy4II38yaex0?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:40:09.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
       "categories": [
         "Big Data",
         "Data Engineering",
@@ -492,13 +657,365 @@
       "type": "blog"
     },
     {
-      "id": "420ad62593d2",
-      "title": "Synthetic-to-Real Transfer with Frozen DINOv3 Features",
-      "description": "Training models on procedurally generated datasets for card detection and segmentation The post Synthetic-to-Real Transfer with Frozen DINOv3 Features appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/synthetic-to-real-transfer-with-frozen-dinov3-features/",
-      "pubDate": "2026-10-20T15:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "604028c8682f",
+      "title": "奥特曼最新 45 分钟访谈：一年不写代码、压力大到不想起床，还嫌 ChatGPT 太谄媚",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/sI3z2UMCrB5PPVDWTsLo?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:35:04.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "5d8ec27eb681",
+      "title": "全球学术期刊评价迎来新变化：从单一指标走向多元标准，中国评价体系加入国际版图",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/9m3Pkeggp2BPUKiF1fmE?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T17:13:58.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "f1ede77cd934",
+      "title": "AI 赋能开发，Spotify 月代码变更量翻倍",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/rVqEbaXeaJ91UWlQF4F9?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T16:27:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "44216e0a14fa",
+      "title": "千问蒋冠军：Personal Agent技术框架，需要模型、记忆与生态协同推进",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/6EJRFIef67xr3x6vyCJa?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T15:45:32.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "baa2a06fa724",
+      "title": "GitLab 19.4 发布，新增目标驱动型智能体，强化成本控制",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/c6KGCCmGuad5wbAcCG61?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T15:11:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "d638d414f6ea",
+      "title": "Xcode 27.2 推出对智能体友好、有效减少合并冲突的 JSON 项目配置格式",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/7ResdjAZYy8yltOh6drM?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T13:00:00.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "03be95ebc181",
+      "title": "实测小艺 Work：从全媒体运营到深度研究的完整体验",
+      "description": "点击查看原文>",
+      "link": "https://www.infoq.cn/article/pF59m5h9647ySCb9Afqr?utm_source=rss&utm_medium=article",
+      "pubDate": "2026-10-23T12:12:40.000Z",
+      "source": "InfoQ 中文",
+      "sourceUrl": "https://www.infoq.cn/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Cloud"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "4e696c487549",
+      "title": "工业互联网数据交易市场：企业间数据价值流通的技术与信任体系",
+      "description": "工业数据流通的核心障碍不是技术而是信任与合规，数据所有者担心滥用泄露、使用者担心质量时效，监管关注数据安全法与GDPR的合规红线，构建数据交易市场需解决三方痛点。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39959.html",
+      "pubDate": "2026-10-23T08:16:37.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "7ade4e2cc768",
+      "title": "工业互联网平台 API 设计指南：从 RESTful 到 gRPC 的接口工程",
+      "description": "工业数据平台API体系直接决定MES、SCADA、AI平台的开发效率，工业场景对实时性、带宽效率、生态兼容性的特殊要求让API选型比通用互联网更复杂。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39958.html",
+      "pubDate": "2026-10-23T08:15:59.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "d9a4eb441a3e",
+      "title": "工业互联网化工过程 APC 先进过程控制：MPC 模型预测控制的数据驱动实现",
+      "description": "化工过程多变量耦合、非线性、时变特性让单回路PID难以理想，MPC模型预测控制是当前解决多变量耦合最有效的方法，数据驱动模型识别让MPC从机理建模转向更灵活的方式。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39957.html",
+      "pubDate": "2026-10-23T08:15:32.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "a1986fda44cd",
+      "title": "工业互联网实时算法引擎：规则引擎、CEP 与 AI 推理的统一架构",
+      "description": "工业实时数据处理有三类需求：简单条件判断、复杂事件模式识别、AI模型推理，分别对应规则引擎、CEP、AI推理，统一架构目标是在一个引擎中同时支持三类算法。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39956.html",
+      "pubDate": "2026-10-23T08:15:06.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "8260bfa864a4",
+      "title": "工业互联网产品全生命周期追溯：批次级数据关联的工程实现",
+      "description": "追溯是工业数据平台核心应用，监管合规、质量改进、供应链协同都依赖可靠体系，需覆盖原材料入厂到退役回收五个维度，每个环节数据来源、标识方式、关联逻辑不同，工程复杂度远高于单点系统。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39953.html",
+      "pubDate": "2026-10-23T08:09:25.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": "https://s.w.org/images/core/emoji/17.0.2/72x72/2194.png",
+      "type": "blog"
+    },
+    {
+      "id": "d9720a519296",
+      "title": "工业互联网 ISO 27001 与 IEC 62443：信息安全管理体系双标准落地",
+      "description": "通用ISO 27001提供管理框架但缺乏工业技术控制，IEC 62443定义工业控制系统安全要求但管理框架需自行补充，企业需构建双标准融合的落地路径。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39955.html",
+      "pubDate": "2026-10-23T08:08:52.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "6a43a1f69c18",
+      "title": "工业互联网边缘网关选型：CPU、接口与软件栈的系统考量",
+      "description": "边缘网关是工业数据链路第一站，负责将PLC、CNC、传感器的多种协议转换成OPC UA、MQTT统一格式，选型不是简单硬件参数对比而是硬件算力、接口能力、软件栈等五维协同评估。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39954.html",
+      "pubDate": "2026-10-23T08:06:27.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "44b1dd799dec",
+      "title": "工业互联网 AI 质检：从视觉检测到缺陷根因追溯的数据闭环",
+      "description": "AI视觉检测在汽车、电子、光伏等行业普及速度快，显著降低漏检率和人工成本，但质检数据与上游CNC参数、注塑工艺的关联链路没有打通，数据价值未充分释放。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39952.html",
+      "pubDate": "2026-10-23T08:04:11.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "1d736b27082a",
+      "title": "工业互联网现场网络架构：Profinet/EtherCAT/TSN 的协议选择",
+      "description": "工业现场网络从现场总线演进到实时以太网，Profinet、EtherCAT、Ethernet/IP多种协议共存，技术特性差异明显，需根据具体场景选择合适的协议组合。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39951.html",
+      "pubDate": "2026-10-23T08:03:42.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "5c8541ee8675",
+      "title": "工业互联网设备模型管理：从 CAD/BIM 到数字孪生的对象注册",
+      "description": "数字孪生由物理实体、虚拟模型、数据管道三部分组成，当前CAD/BIM设计文档与运维状态数据存放在两套系统，缺乏统一的对象注册机制。",
+      "link": "https://www.taosdata.com/iiot-knowledge/39950.html",
+      "pubDate": "2026-10-23T08:03:19.000Z",
+      "source": "涛思数据",
+      "sourceUrl": "https://www.taosdata.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Engineering"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "074d17f6797d",
+      "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+      "description": "10月21日，百度官方公众号发文披露了百度世界2026分论坛的更多议程信息。",
+      "link": "https://www.qbitai.com/2026/10/504901.html",
+      "pubDate": "2026-10-23T07:35:51.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "a868413a4877",
+      "title": "AI走进个人财务：从信息工具到决策伙伴",
+      "description": "2025年，经合组织国家中超过1/3的个人报告使用了AI工具。这些工具正越来越多地被用于支持财务决策和了解个人理财知识。消费者借助AI来选择和理解金融产品、进行预算管理、信用管理、投资以及退休规划。他们还依赖AI获取个性化的金融教育，有时会提出一些他们可能不愿向人类顾问提出的问题。",
+      "link": "http://www.199it.com/archives/1842752.html",
+      "pubDate": "2026-10-22T22:00:04.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/07/0001-65.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "d1bae1f5dfef",
+      "title": "Muck Rack：2026年公关行业现状报告",
+      "description": "媒体关系仍占据绝对核心，84%受访者表示其工作中至少四分之一与媒体关系有关；与此同时，思想领导力占比升至51%，较上年提高6个百分点，媒体测量与报告、内容创作分别达到45%和41%。",
+      "link": "http://www.199it.com/archives/1842784.html",
+      "pubDate": "2026-10-22T21:30:08.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/07/0001-66-scaled.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "72b69e8ef1f5",
+      "title": "WunderKind：2026年美国黑色星期五与网络星期一消费趋势报告",
+      "description": "美国消费者发现，46%的受访者预计黑五网购支出高于去年，60%计划消费至少250美元，35%预计支出达到500美元以上。然而，通胀与价格上涨仍影响41%的消费者，表明消费意愿增强并不意味着价格敏感度下降。",
+      "link": "http://www.199it.com/archives/1856875.html",
+      "pubDate": "2026-10-22T21:15:11.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/Page1-31.png",
+      "type": "blog"
+    },
+    {
+      "id": "0c5bea496186",
+      "title": "CEO开始从AI中看到价值：现在考验执行力",
+      "description": "56%的CEO认为，AI项目与具体财务结果之间缺乏清晰联系，是规模化创造财务价值的最大障碍；55%认为人员、工作流程和激励机制尚未针对AI重新设计；49%提及技术或数据能力不足。",
+      "link": "http://www.199it.com/archives/1842692.html",
+      "pubDate": "2026-10-22T21:00:08.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/07/0001-62.jpg",
+      "type": "blog"
+    },
+    {
+      "id": "b8d214ee6044",
+      "title": "欧盟委员会：2026年第一季度欧盟就业率为76.3%",
+      "description": "在欧盟各国中，西班牙失业率最高，达到10.5%；其次是芬兰（9.7%）和希腊（8.9%）。最低的失业率出现在捷克（2.8%）、波兰和马耳他（均为3.1%）。",
+      "link": "http://www.199it.com/archives/1834082.html",
+      "pubDate": "2026-10-22T18:00:55.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/06/2101.png",
+      "type": "blog"
+    },
+    {
+      "id": "2a708fb372e4",
+      "title": "特斯拉：2026年Q3资本支出47.3亿美元，低于预期并下调目标至200亿美元",
+      "description": "特斯拉财报显示，2026年第三季度资本支出47.3亿美元，低于分析师预期79.5亿美元；CFO将2026年资本支出目标从逾250亿美元下调至200亿美元。调整后每股收益48美分高于预期，营收略低；盘后跌幅扩大至2.5%，年内股价跌14%。",
+      "link": "http://www.199it.com/archives/1858980.html",
+      "pubDate": "2026-10-22T13:49:29.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -507,13 +1024,13 @@
       "type": "blog"
     },
     {
-      "id": "b912681b7534",
-      "title": "Skill or MCP Server? Ask What Stops the LLM From Disobeying",
-      "description": "Towards Spec-Driven Test Automation, Part 4 The post Skill or MCP Server? Ask What Stops the LLM From Disobeying appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/skill-or-mcp-server-ask-what-stops-the-llm-from-disobeying/",
-      "pubDate": "2026-10-20T14:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "3eaa7e9b2924",
+      "title": "微软：84%英国高管看好英国五年内成全球AI领先经济体，员工仅41%",
+      "description": "微软基于5000名英国员工和1000名高管调查及《英国AI扩散报告》显示，84%高管认为英国五年内将成全球AI领先，员工仅41%；90%高管称有AI战略；49%员工与90%高管看好AI积极影响；58%员工和62%企业领导者呼吁加强技能培训。",
+      "link": "http://www.199it.com/archives/1858780.html",
+      "pubDate": "2026-10-22T13:48:49.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -522,13 +1039,13 @@
       "type": "blog"
     },
     {
-      "id": "938e76240015",
-      "title": "The Roadmap to Becoming an AI Product Manager in 2026",
-      "description": "A structured four-phase roadmap for building the technical fluency, evaluation skills, and governance literacy needed to succeed as an AI product manager in 2026.",
-      "link": "https://www.kdnuggets.com/the-roadmap-to-becoming-an-ai-product-manager-in-2026",
-      "pubDate": "2026-10-20T14:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "id": "8932a46bcc03",
+      "title": "哥德堡大学等：2022—2024年汽车软件漏洞413个，外部漏洞占比近三倍",
+      "description": "哥德堡大学等团队分析2022—2024年413个汽车软件漏洞，发现攻击目标从车辆内部转向应用、网站和云服务，外部系统漏洞占比接近此前三倍。2024年12月大众约80万辆汽车数据可被互联网访问，含GPS位置。研究呼吁加强云平台防护。",
+      "link": "http://www.199it.com/archives/1858782.html",
+      "pubDate": "2026-10-22T13:48:43.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -537,13 +1054,13 @@
       "type": "blog"
     },
     {
-      "id": "02223501155e",
-      "title": "The Hidden Cost of LLM Routing: Why Switching Models Costs More",
-      "description": "I tested LLM routing to understand why switching models mid-session can erase the savings promised by cheaper inference The post The Hidden Cost of LLM Routing: Why Switching Models Costs More appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/the-hidden-cost-of-llm-routing-why-switching-models-costs-more/",
-      "pubDate": "2026-10-20T12:30:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "f4c8c773019d",
+      "title": "戴尔科技：约950亿美元AI服务器订单积压，内存供应紧张预计2027年恶化",
+      "description": "戴尔科技CEO迈克尔·戴尔表示，内存供应紧张远未结束，2027年或进一步恶化。戴尔约950亿美元AI服务器订单未交付，创历史最高积压纪录，受DRAM和HBM供应不足制约；新厂约需四年建设，新增产能难在2029至2030年前释放。",
+      "link": "http://www.199it.com/archives/1858785.html",
+      "pubDate": "2026-10-22T13:48:34.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -552,13 +1069,13 @@
       "type": "blog"
     },
     {
-      "id": "9bc52055b488",
-      "title": "5 Docker Containers for Devs",
-      "description": "Five self-hosted Docker containers replace the public utility sites where developer data quietly leaks. Learn which ones handle JWT decoding, data transformation, file conversion, API testing, and diagram rendering locally.",
-      "link": "https://www.kdnuggets.com/5-docker-containers-for-devs",
-      "pubDate": "2026-10-20T12:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "id": "0a4961cc1da3",
+      "title": "经济学家：GTA6在2026/11/19发售或致美国150万人缺勤，潜在损失10亿美元",
+      "description": "经济学家José García Montalvo估算，2026年11月19日《GTA6》发售当天或有多达150万名美国员工缺勤，潜在生产力损失约10亿美元，影响集中于18至30岁男性和科技行业；相关数字为事前推算。",
+      "link": "http://www.199it.com/archives/1858792.html",
+      "pubDate": "2026-10-22T13:47:06.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -567,13 +1084,13 @@
       "type": "blog"
     },
     {
-      "id": "02dc374e0989",
-      "title": "What's in the Box? Distinguishing Acceptable Traces from Unacceptable Ones",
-      "description": "Turn scattered requirements into deployable agents The post What's in the Box? Distinguishing Acceptable Traces from Unacceptable Ones appeared first on Towards Data Science.",
-      "link": "https://towardsdatascience.com/whats-in-the-box-distinguishing-acceptable-traces-from-unacceptable-ones/",
-      "pubDate": "2026-10-20T11:00:00.000Z",
-      "source": "Towards Data Science",
-      "sourceUrl": "https://towardsdatascience.com/feed",
+      "id": "7a6e484b1c19",
+      "title": "CMA：英国非接触支付占比39%，拟要求苹果开放iPhone钱包接入",
+      "description": "英国竞争与市场管理局（CMA）提出公开征询方案，拟要求苹果支持安全元件和HCE两种NFC接入方式，并设定低于现行水平的收费原则。CMA称非接触支付已占英国全部支付交易39%，超六成成年人使用数字钱包，咨询至2026年11月17日结束。",
+      "link": "http://www.199it.com/archives/1858778.html",
+      "pubDate": "2026-10-22T13:46:57.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -582,13 +1099,28 @@
       "type": "blog"
     },
     {
-      "id": "7f3594ced1b6",
-      "title": "Claude Haiku 5.5: What’s New and How to Use It for Fast, Cheap AI Workflows",
-      "description": "Claude Haiku 5.5 cuts list prices by 90% and adds adaptive thinking and a 1M token context window. Learn what broke from Haiku 4.5, and build classification, extraction, and sub-agent workflows in Python using the new API.",
-      "link": "https://www.kdnuggets.com/claude-haiku-5-5-whats-new-and-how-to-use-it-for-fast-cheap-ai-workflows",
-      "pubDate": "2026-10-19T16:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "id": "d499bf6161c6",
+      "title": "宁德时代：A股跌12.03%报227.90元/股，前三季营收4421.37亿元同比增长56.19%",
+      "description": "宁德时代前三季度营收4421.37亿元，同比增长56.19%；净利润645.30亿元，同比增长31.60%。第三季度净利润同比增长14.54%、环比下滑5.8%。当日A股跌12.03%报227.90元/股，公司称2027年需求仍可期待。",
+      "link": "http://www.199it.com/archives/1858986.html",
+      "pubDate": "2026-10-22T13:44:55.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792601309957-3yelo.png",
+      "type": "blog"
+    },
+    {
+      "id": "bc586486c465",
+      "title": "DigiTimes：iPhone Duo出货目标提至1400万台，增幅约44%",
+      "description": "DigiTimes援引供应链消息称，苹果首款折叠屏iPhone Duo未来12个月出货目标由970万台上调至1400万台，增幅约44%，苹果未确认。10月16日开放预订后美国交付时间推迟至2027年1月25日，产品10月23日上市。",
+      "link": "http://www.199it.com/archives/1858996.html",
+      "pubDate": "2026-10-22T13:44:22.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
@@ -597,18 +1129,230 @@
       "type": "blog"
     },
     {
-      "id": "e859d142365e",
-      "title": "LangChain vs. LlamaIndex vs. Building From Scratch: Here’s What I Suggest",
-      "description": "Choosing the right framework for your large language model application comes down to one question: what are you actually optimizing for?",
-      "link": "https://www.kdnuggets.com/langchain-vs-llamaindex-vs-building-from-scratch-heres-what-i-suggest",
-      "pubDate": "2026-10-19T14:00:00.000Z",
-      "source": "KDnuggets",
-      "sourceUrl": "https://www.kdnuggets.com/feed",
+      "id": "fc1539341254",
+      "title": "特斯拉：2026年Q3营业利润7.18亿美元，同比下降56%",
+      "description": "特斯拉公布2026年第三季度财报：营收280.46亿美元同比基本持平，净利润7.87亿美元同比下降43%，营业利润7.18亿美元同比下降56%；自由现金流15.31亿美元。马斯克表示，目标2030年前后年产约500万辆汽车。",
+      "link": "http://www.199it.com/archives/1858999.html",
+      "pubDate": "2026-10-22T13:44:15.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792631988249-vzluk3.png",
+      "type": "blog"
+    },
+    {
+      "id": "6b9353ce302a",
+      "title": "2026年全球折叠手机AMOLED屏出货量2900万片，同比增长44%",
+      "description": "行业分析机构预测，2026年全球可折叠手机AMOLED屏出货量达2900万片，同比增长44%。三星显示份额有望升至66%；华为Pura X Max总销量破100万台，iPhone Duo发布后一周该机销量环比增长76%。",
+      "link": "http://www.199it.com/archives/1859006.html",
+      "pubDate": "2026-10-22T13:43:52.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792634068567-0v5fg.png",
+      "type": "blog"
+    },
+    {
+      "id": "5ec2363483db",
+      "title": "集邦咨询：2027年PC内存供应或趋紧，2026年Q4初价格上涨约15%",
+      "description": "集邦咨询称，存储厂商将产能向AI及数据中心倾斜，2027年PC内存供应或进一步收缩。三星PC内存产出70%以上已由长期协议预定，美光称整体内存供应增长25%但价格仍涨。2026年第四季度初内存价格已上涨约15%，年底涨幅或达15%至20%。",
+      "link": "http://www.199it.com/archives/1859009.html",
+      "pubDate": "2026-10-22T13:43:44.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
       "categories": [
         "Big Data",
         "Data Science"
       ],
       "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "1c274d4b7559",
+      "title": "特斯拉：2026Q3净利润7.87亿美元同比下降43%，营收280.46亿美元同比基本持平",
+      "description": "特斯拉2026年Q3财报电话会议显示，营收280.46亿美元同比基本持平，净利润7.87亿美元同比下降43%。马斯克称将推进FSD审批、Cybercab、Robotaxi和Optimus量产，目标2030年前后年产约500万辆汽车。",
+      "link": "http://www.199it.com/archives/1859018.html",
+      "pubDate": "2026-10-22T13:43:06.000Z",
+      "source": "199IT",
+      "sourceUrl": "http://www.199it.com/feed",
+      "categories": [
+        "Big Data",
+        "Data Science"
+      ],
+      "image": "http://www.199it.com/wp-content/uploads/2026/10/1792641143523-g0unhb.png",
+      "type": "blog"
+    },
+    {
+      "id": "dfd02e8c1094",
+      "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+      "description": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+      "link": "https://www.qbitai.com/2026/10/504879.html",
+      "pubDate": "2026-10-22T09:07:05.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "56e6627035f3",
+      "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+      "description": "FSD一年增长70万付费用户",
+      "link": "https://www.qbitai.com/2026/10/504841.html",
+      "pubDate": "2026-10-22T07:14:48.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "de46add13730",
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "description": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "link": "https://www.qbitai.com/2026/10/504832.html",
+      "pubDate": "2026-10-22T07:11:14.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "40eaab266e06",
+      "title": "谁在给OpenAI供应具身数据？",
+      "description": "挤进全球Physical AI核心供应链",
+      "link": "https://www.qbitai.com/2026/10/504800.html",
+      "pubDate": "2026-10-22T07:05:59.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "accd18e6c76e",
+      "title": "从 LOOP 到图探索 —— 算法模型的 AutoResearch 自进化系统架构演进之路",
+      "description": "算法工程师的一天是“改代码—提交训练—等待—看日志—决定下一步”，过程中还经常被打断。我们团队从 Karpathy 的 AutoResearch 出发，经过三次架构重构，搭建出一套可在企业云端训练平台使用的算法研究自进化系统：系统从单线程 LOOP 探索升级为 CyclicGraph Engine 图探索架构，用状态机保证长周期运行的稳定性，并通过“业务知识库 + 真实大闭环 + 经验自动沉淀”实现系统自进化、越用越好用。 在结构、目标与场景均不相同的两个业务建模项目中，单任务完成耗时较人工基线分别减少约 85% 与 83%，其中一个算法模型已将系统自主推导的方案推全上线，并取得线上收益；另一个多目标项目中，系统产出的方案在全部 12 个预估目标上同时超过人工基线。两个项目唯一的共同点是同一套系统架构，说明增益来自架构本身。本文分享这套系统的设计理念、架构演进与可信度设计，希望对大家有所帮助或启发。 1 背景：算法工程师的时间都去哪了？…",
+      "link": "https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html",
+      "pubDate": "2026-10-22T06:49:36.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/f96887d93b880574e0fb9ebad114faba529816.png",
+      "type": "blog"
+    },
+    {
+      "id": "b9dc1a91e45b",
+      "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+      "description": "医疗AI质变时刻",
+      "link": "https://www.qbitai.com/2026/10/504734.html",
+      "pubDate": "2026-10-21T11:30:59.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "cd2dfd00bf87",
+      "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+      "description": "10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播",
+      "link": "https://www.qbitai.com/2026/10/504730.html",
+      "pubDate": "2026-10-21T09:45:22.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "6a161c5da62b",
+      "title": "LeCun押注的世界模型，中国一家清华系公司已经做进了机器人",
+      "description": "世界模型赛道新看点：千诀隐变量可辨识性方向的研究，比LeCun相近工作早一年，不堆画面预测，主打物理规律与跨本体复用。",
+      "link": "https://www.qbitai.com/2026/10/504653.html",
+      "pubDate": "2026-10-21T07:15:05.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "f9dd91c60f7c",
+      "title": "量智齐飞！4个月9款车落地，轻舟城市NOA击穿10-20万体验天花板",
+      "description": "百万台搭载打底，智驾普及与安全并重",
+      "link": "https://www.qbitai.com/2026/10/504638.html",
+      "pubDate": "2026-10-21T06:40:46.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "ad6983f68063",
+      "title": "实探宁德时代总部：“去宁化”是喊太大声了",
+      "description": "电池开发，分工远比想象复杂",
+      "link": "https://www.qbitai.com/2026/10/504618.html",
+      "pubDate": "2026-10-21T04:35:56.000Z",
+      "source": "量子位",
+      "sourceUrl": "https://www.qbitai.com/feed",
+      "categories": [
+        "Data Science",
+        "IA"
+      ],
+      "image": null,
+      "type": "blog"
+    },
+    {
+      "id": "13db02a3c9d5",
+      "title": "SLM 生成式高并发推理引擎：延迟约束下的有效吞吐优化",
+      "description": "搜索和推荐场景中想要使用语言模型提高在线效果，往往面临着在线极低延迟的约束，现有通用大模型推理引擎并非在这一延迟约束下设计，因此本文从「具有确定 decode 次数上界的请求」这一工作负载出发，重新设计在线执行路径：以静态 DAG 组织完整业务请求，结合 AOTInductor 编译、Packed Prefill、请求内 K/V 共享及选择性 FP8，系统性压缩调度与计算开销。在平均端到端时延低于 20ms 的约束下，Prefill-only 有效 MFU 达到 67%，吞吐较 SGLang 提升 10 倍，为 SLM 在搜推场景的大规模落地提供了一套高性能、可复用的工程实践。 摘要 搜推场景下业界逐渐使用 SLM（Small Language Model， 小参数量语言模型0.5~1B），用于意图理解，相关性判断，生成式推荐等任务，这些模型保留 Decoder-only Transformer 和 Next-Token Prediction 的基本结构，但在线执行形态与开放式文本生成存在明显差异： Prefill-Only 模式：仅执行一次 prefill，根据每条序列最后一个有效…",
+      "link": "https://tech.meituan.com/2026/10/15/Small-Language-Model-in-meituan.html",
+      "pubDate": "2026-10-15T07:00:40.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/449102302ea0d472417c6fff369dd63882001.png",
       "type": "blog"
     }
   ]

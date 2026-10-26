@@ -1,0 +1,53 @@
+{
+  "month": "2026-08",
+  "articles": [
+    {
+      "id": "eeecf86336c6",
+      "title": "GeoRA: 为RLVR设计的LoRA——ACL 2026杰出论文解析",
+      "description": "ACL（Annual Meeting of the Association for Computational Linguistics）是计算语言学和自然语言处理（NLP）领域的国际顶级学术会议，是CCF-A类会议，也是中国计算机学会推荐的自然语言处理方向最高等级国际学术会议。ACL 2026杰出论文奖（Outstanding Paper）在圣地亚哥揭晓，全球共 18 篇入选，美团履约技术团队的《GeoRA:Geometry-Aware Low-Rank Adaptation for RLVR》 就是其中之一。 论文下载：GeoRA：Geometry-Aware Low-Rank Adaptation for RLVR 讲解视频：ACL2026 杰出论文分享（受智源社区邀请） RLVR已经成为提升大模型推理能力的关键范式，但它的训练开销较高，于是一个自然的技术就是用 LoRA 这类参数高效微调方法来做 RLVR。但是，LoRA 及其变体几乎都是在 SFT 场景下建立并验证的。而近期一系列机制研究表明，RLVR 与 SFT 的优化几何存在本质差异：RLVR…",
+      "link": "https://tech.meituan.com/2026/08/27/ACL-Outstanding-Paper-GeoRA.html",
+      "pubDate": "2026-08-27T06:44:16.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/97ea31d07a6d2933012521da83d6af45614059.png",
+      "type": "blog"
+    },
+    {
+      "id": "a174fe26e705",
+      "title": "美团搜索3.0：LLM 语义表征在排序模型的探索与应用",
+      "description": "在大语言模型（LLM）技术的深刻影响下，搜索引擎正经历第三次范式跃迁：从 1.0 时代的“关键词文本匹配”，到 2.0 时代的“行为统计与个性化搜索”，再到 3.0 时代向“复杂意图理解与认知决策”的全面进化。 美团搜索团队正依托团垂融合新架构与生成式大模型新技术，全面重构本地生活搜索底座。本系列技术博客将持续介绍美团搜索 3.0 的技术探索，本文聚焦 LLM 语义表征在服务零售排序场景上的三期实践——从单点特征验证到系统性表征体系构建，再到跨场景迁移复用，探索语义匹配信号在搜索排序中的应用路径。 一、背景与动机 服务零售是将服务销售给最终消费者的商业活动，与之对应的概念为商品零售。服务零售和商品零售是美团零售业务的两个主要组成部分。 在美团搜索场景下，相较于到家和其他到店业务，服务零售具有以下显著特点： 品类丰富：覆盖丽人、休闲娱乐、家政、进场零售等众多细分行业。 搜索需求类型丰富：交易型、信息型、留资型并存。 供给非标准化程度高：交易内容的多维组合性（e.g. 券、时间、位次、场次、空间、技师等）以及基于\"人\"和\"场所\"进行履约，共同促使供给的个性化和非标准化。…",
+      "link": "https://tech.meituan.com/2026/08/20/01-meituan-Query-3.0.html",
+      "pubDate": "2026-08-20T06:40:30.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p1.meituan.net/meituantechblog/8f6d0d2a1b53e0fbe26ec7f5426bd45a302269.png",
+      "type": "blog"
+    },
+    {
+      "id": "2dab9b1dedd2",
+      "title": "KDD&apos;26美团学术论文精选及KDD Cup&apos;26 DataAgents赛道冠军思路解读",
+      "description": "KDD（ACM SIGKDD Conference on Knowledge Discovery and Data Mining）是数据挖掘与知识发现领域最具影响力的国际顶级学术会议。KDD 以其严格的论文录用标准和深厚的学术影响力著称，是推动数据驱动研究与应用创新的重要平台。大会为学术界和工业界提供了交流前沿成果的高水平论坛，论文录用率通常在 15%-20% 左右，属于计算机领域的 CCF-A 类顶级会议。 本文精选了美团技术团队被 KDD 2026 收录的 8 篇论文进行分享，这些论文覆盖了推荐大模型、生成与奖励建模框架、智能体搜索、Transformer 框架、元泛化框架等技术领域。 🏆 此外，大众点评技术部还荣获了 2026 KDD Cup 复杂数据分析 Data Agents 国际竞赛的冠军、季军，本文介绍了团队比赛思路和解题策略。希望以上这些内容能够对大家有所帮助或启发。 01 MTFM: A Scalable and Alignment-free Foundation Model for Industrial Recommendation in Meituan…",
+      "link": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html",
+      "pubDate": "2026-08-17T01:58:32.000Z",
+      "source": "美团技术团队",
+      "sourceUrl": "https://tech.meituan.com/atom.xml",
+      "categories": [
+        "Big Data",
+        "Data Engineering",
+        "Data Science"
+      ],
+      "image": "https://p0.meituan.net/meituantechblog/9720828f0ff8f07f6ce01f56d9e3f820362245.png",
+      "type": "blog"
+    }
+  ]
+}

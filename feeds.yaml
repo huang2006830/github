@@ -1,14 +1,22 @@
 feeds:
-  - url: https://towardsdatascience.com/feed
-    name: Towards Data Science
-    categories: [Big Data, Data Science]
+  - url: https://tech.meituan.com/atom.xml
+    name: 美团技术团队
+    categories: [Big Data, Data Engineering, Data Science]
 
-  - url: https://www.kdnuggets.com/feed
-    name: KDnuggets
-    categories: [Big Data, Data Science]
-
-  - url: https://www.databricks.com/feed
-    name: Databricks Blog
+  - url: https://www.infoq.cn/feed
+    name: InfoQ 中文
     categories: [Big Data, Data Engineering, Cloud]
+
+  - url: https://www.qbitai.com/feed
+    name: 量子位
+    categories: [Data Science, IA]
+
+  - url: https://www.taosdata.com/feed
+    name: 涛思数据
+    categories: [Big Data, Data Engineering]
+
+  - url: http://www.199it.com/feed
+    name: 199IT
+    categories: [Big Data, Data Science]
 
 feeds_world: []
