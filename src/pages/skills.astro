@@ -9,26 +9,26 @@ const feedUrl = new URL(withBase('/rss.xml'), Astro.site).toString();
 <Layout title="数据接口" description="本站提供的公开 RSS 与 JSON 数据接口。">
   <div class="fade-in-up max-w-2xl mx-auto">
     <h1 class="text-2xl sm:text-3xl font-bold mb-3">数据接口</h1>
-    <p class="text-sm text-zinc-400 mb-8">
+    <p class="text-sm text-slate-500 dark:text-slate-400 mb-8">
       本站的数据都是构建时生成的静态文件，可以直接用于脚本、阅读器或个人项目。
     </p>
 
-    <div class="flex flex-col gap-6 text-sm text-zinc-300 leading-relaxed">
-      <section class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-6 flex flex-col gap-3">
-        <h2 class="text-base font-semibold text-white">JSON 索引</h2>
+    <div class="flex flex-col gap-6 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+      <section class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-6 flex flex-col gap-3">
+        <h2 class="text-base font-semibold text-slate-900 dark:text-slate-100">JSON 索引</h2>
         <p>包含全部文章的标题、摘要、来源、分类、发布时间和原文链接。</p>
-        <code class="block text-xs font-mono text-indigo-300 bg-zinc-900 border border-zinc-800 px-3 py-2 rounded-lg select-all break-all">{indexUrl}</code>
+        <code class="block text-xs font-mono text-emerald-800 dark:text-emerald-300 bg-slate-100 dark:bg-slate-900 border border-slate-200/90 dark:border-slate-700/60 px-3 py-2 rounded-lg select-all break-all">{indexUrl}</code>
       </section>
 
-      <section class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-6 flex flex-col gap-3">
-        <h2 class="text-base font-semibold text-white">RSS 订阅</h2>
+      <section class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-6 flex flex-col gap-3">
+        <h2 class="text-base font-semibold text-slate-900 dark:text-slate-100">RSS 订阅</h2>
         <p>标准 RSS 2.0 输出，适合直接添加到阅读器。</p>
-        <code class="block text-xs font-mono text-indigo-300 bg-zinc-900 border border-zinc-800 px-3 py-2 rounded-lg select-all break-all">{feedUrl}</code>
+        <code class="block text-xs font-mono text-emerald-800 dark:text-emerald-300 bg-slate-100 dark:bg-slate-900 border border-slate-200/90 dark:border-slate-700/60 px-3 py-2 rounded-lg select-all break-all">{feedUrl}</code>
       </section>
 
-      <section class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-6 flex flex-col gap-3">
-        <h2 class="text-base font-semibold text-white">使用说明</h2>
-        <ul class="list-disc list-inside space-y-1 text-zinc-400">
+      <section class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-6 flex flex-col gap-3">
+        <h2 class="text-base font-semibold text-slate-900 dark:text-slate-100">使用说明</h2>
+        <ul class="list-disc list-inside space-y-1 text-slate-500 dark:text-slate-400">
           <li>数据每日更新一次，更新时间约为北京时间早上 6 点。</li>
           <li>文章摘要和标题的版权归原作者所有，使用时请保留原文链接。</li>
           <li>请勿高频请求静态文件，建议在本地缓存后再使用。</li>

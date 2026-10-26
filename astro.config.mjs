@@ -26,5 +26,13 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      watch: {
+        // .tmp 用来放截图、浏览器 profile、日志等临时产物。
+        // 不排除的话，Vite 会去 watch Chrome 锁定的缓存文件，
+        // 触发 EBUSY unhandled rejection 并弹出错误覆盖层。
+        ignored: ['**/.tmp/**', '**/dist/**'],
+      },
+    },
   },
 });

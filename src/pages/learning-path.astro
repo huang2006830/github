@@ -162,11 +162,11 @@ const selfCheck = [
 >
   <div class="fade-in-up max-w-5xl mx-auto">
     <!-- Hero -->
-    <section class="relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-indigo-500/15 via-[var(--color-surface-1)] to-purple-500/10 p-6 sm:p-10 mb-10">
-      <div class="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
+    <section class="relative overflow-hidden rounded-2xl border border-slate-200/90 dark:border-slate-700/60 bg-gradient-to-br from-emerald-500/15 via-[var(--color-surface-1)] to-teal-500/10 p-6 sm:p-10 mb-10">
+      <div class="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-emerald-600/10 blur-3xl pointer-events-none"></div>
       <div class="relative">
         <div class="flex flex-wrap items-center gap-2 mb-5">
-          <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">零基础</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-600/10 text-emerald-800 dark:text-emerald-300 border border-emerald-600/30 dark:border-emerald-400/30">零基础</span>
           <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">系统学习</span>
           <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-amber-500/15 text-amber-300 border border-amber-500/30">项目驱动</span>
         </div>
@@ -174,38 +174,38 @@ const selfCheck = [
           大数据专业学生<br class="hidden sm:block" />
           零基础入门学习路线图
         </h1>
-        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-3xl">
+        <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl">
           从 Java / Python 编程基础，到 MySQL、Linux、Hadoop、Hive、Spark，再到三个能写进简历的实战项目。
           这是一条按“先跑通、再理解、后优化”设计的 12 个月路线，适合大一大二开始准备，也适合转专业补基础。
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
-          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
-            <p class="text-lg sm:text-xl font-bold text-white">10-12</p>
-            <p class="text-xs text-zinc-500 mt-0.5">个月（可压缩到 6 个月）</p>
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/80 bg-slate-100/70 dark:bg-slate-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">10-12</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">个月（可压缩到 6 个月）</p>
           </div>
-          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
-            <p class="text-lg sm:text-xl font-bold text-white">10-15h</p>
-            <p class="text-xs text-zinc-500 mt-0.5">每周建议投入</p>
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/80 bg-slate-100/70 dark:bg-slate-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">10-15h</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">每周建议投入</p>
           </div>
-          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
-            <p class="text-lg sm:text-xl font-bold text-white">4</p>
-            <p class="text-xs text-zinc-500 mt-0.5">个学习阶段</p>
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/80 bg-slate-100/70 dark:bg-slate-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">4</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">个学习阶段</p>
           </div>
-          <div class="rounded-xl border border-zinc-800/80 bg-zinc-950/30 p-3.5">
-            <p class="text-lg sm:text-xl font-bold text-white">3</p>
-            <p class="text-xs text-zinc-500 mt-0.5">个完整实战项目</p>
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/80 bg-slate-100/70 dark:bg-slate-950/30 p-3.5">
+            <p class="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100">3</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">个完整实战项目</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- TOC -->
-    <nav aria-label="本页目录" class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 mb-10">
-      <p class="text-xs uppercase tracking-widest text-zinc-500 font-medium mb-3">本页目录</p>
+    <nav aria-label="本页目录" class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5 mb-10">
+      <p class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-medium mb-3">本页目录</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2">
         {toc.map((item, i) => (
-          <a href={`#${item.id}`} class="group flex items-center gap-2 text-sm text-zinc-400 hover:text-indigo-400 transition-colors py-1">
-            <span class="text-[11px] font-mono text-zinc-600 group-hover:text-indigo-500">{String(i + 1).padStart(2, '0')}</span>
+          <a href={`#${item.id}`} class="group flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors py-1">
+            <span class="text-[11px] font-mono text-slate-400 dark:text-slate-500 group-hover:text-emerald-600">{String(i + 1).padStart(2, '0')}</span>
             {item.label}
           </a>
         ))}
@@ -216,33 +216,33 @@ const selfCheck = [
     <section id="overview" class="scroll-mt-24 mb-12">
       <div class="flex items-end justify-between gap-4 mb-5">
         <div>
-          <p class="text-xs font-mono text-indigo-400 mb-1">01 / OVERVIEW</p>
+          <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">01 / OVERVIEW</p>
           <h2 class="text-xl sm:text-2xl font-bold">先看全局：四个阶段，一条主线</h2>
         </div>
-        <span class="hidden sm:block text-xs text-zinc-600">建议按顺序推进</span>
+        <span class="hidden sm:block text-xs text-slate-400 dark:text-slate-500">建议按顺序推进</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {roadmap.map((phase) => (
-          <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 hover:border-zinc-700 transition-colors">
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5 hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
             <div class="flex items-start justify-between gap-3 mb-3">
-              <span class="text-2xl font-bold text-zinc-700 font-mono leading-none">{phase.step}</span>
-              <span class="text-[11px] px-2 py-0.5 rounded-full bg-zinc-800/80 text-zinc-400 border border-zinc-700/60">{phase.period}</span>
+              <span class="text-2xl font-bold text-slate-300 dark:text-slate-600 font-mono leading-none">{phase.step}</span>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-200/80 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 border border-slate-200/90 dark:border-slate-700/60">{phase.period}</span>
             </div>
-            <h3 class="text-base font-semibold text-white mb-1.5">{phase.title}</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-3">{phase.desc}</p>
+            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100 mb-1.5">{phase.title}</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-3">{phase.desc}</p>
             <div class="flex flex-wrap gap-1.5">
               {phase.tags.map((tag) => (
-                <span class="text-[11px] px-2 py-0.5 rounded-md bg-zinc-800/60 text-zinc-500 border border-zinc-800">{tag}</span>
+                <span class="text-[11px] px-2 py-0.5 rounded-md bg-slate-200/60 dark:bg-slate-800/60 text-slate-500 dark:text-slate-400 border border-slate-200/90 dark:border-slate-700/60">{tag}</span>
               ))}
             </div>
           </div>
         ))}
       </div>
 
-      <div class="mt-4 rounded-xl border border-indigo-500/20 bg-indigo-500/5 p-5">
-        <p class="text-sm text-zinc-300 leading-relaxed">
-          <strong class="text-indigo-300">学习原则：</strong>
+      <div class="mt-4 rounded-xl border border-emerald-600/20 dark:border-emerald-400/20 bg-emerald-500/5 p-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <strong class="text-emerald-800 dark:text-emerald-300">学习原则：</strong>
           每个阶段都以“能跑通的产物”结束，而不是以“看完视频”结束。阶段产出可以是脚本、SQL、集群截图或项目仓库；
           没有产物，就说明还没有真正掌握。
         </p>
@@ -252,31 +252,31 @@ const selfCheck = [
     <!-- Programming -->
     <section id="programming" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">02 / PROGRAMMING</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">02 / PROGRAMMING</p>
         <h2 class="text-xl sm:text-2xl font-bold">编程基础：Java 打底，Python 提速</h2>
       </div>
 
-      <div class="text-sm text-zinc-400 leading-relaxed space-y-3 mb-5">
+      <div class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed space-y-3 mb-5">
         <p>
           大数据生态的很多组件运行在 JVM 上：Hadoop、Hive、Spark、Flink 都与 Java 关系密切。
           先学 Java，能帮你理解类型系统、面向对象和工程结构，也能在排查 Spark 报错时看懂堆栈。
         </p>
         <p>
           Python 的优势在数据分析和脚本效率。pandas、NumPy、Matplotlib 能让你快速完成数据清洗与探索，
-          PySpark 也是 Spark 最常用的入门语言之一。建议 <strong class="text-zinc-200">Java 为主、Python 为辅</strong>，
+          PySpark 也是 Spark 最常用的入门语言之一。建议 <strong class="text-slate-800 dark:text-slate-200">Java 为主、Python 为辅</strong>，
           不必等 Java 完全学完再开始 Python。
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5">
-        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+        <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
           <div class="flex items-center justify-between mb-3">
-            <h3 class="text-base font-semibold text-white">Java：3 个月</h3>
+            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Java：3 个月</h3>
             <span class="text-[11px] px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-300 border border-orange-500/20">重点</span>
           </div>
           <ul class="space-y-2">
             {javaChecklist.map((item) => (
-              <li class="flex items-start gap-2 text-sm text-zinc-400 leading-relaxed">
+              <li class="flex items-start gap-2 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 <span class="mt-0.5 text-emerald-500 shrink-0">✓</span>
                 <span>{item}</span>
               </li>
@@ -284,14 +284,14 @@ const selfCheck = [
           </ul>
         </div>
 
-        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+        <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
           <div class="flex items-center justify-between mb-3">
-            <h3 class="text-base font-semibold text-white">Python：1-2 个月</h3>
+            <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Python：1-2 个月</h3>
             <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">数据处理</span>
           </div>
           <ul class="space-y-2">
             {pythonChecklist.map((item) => (
-              <li class="flex items-start gap-2 text-sm text-zinc-400 leading-relaxed">
+              <li class="flex items-start gap-2 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 <span class="mt-0.5 text-emerald-500 shrink-0">✓</span>
                 <span>{item}</span>
               </li>
@@ -300,60 +300,60 @@ const selfCheck = [
         </div>
       </div>
 
-      <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 mb-5">
-        <h3 class="text-sm font-semibold text-white mb-3">这一阶段必须做出的东西</h3>
+      <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5 mb-5">
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">这一阶段必须做出的东西</h3>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-          <div class="rounded-lg bg-zinc-950/40 border border-zinc-800/70 p-3">
-            <p class="text-zinc-200 font-medium mb-1">Java 命令行项目</p>
-            <p class="text-zinc-500 leading-relaxed">学生成绩管理或图书借阅系统，至少包含增删改查、文件持久化和异常处理。</p>
+          <div class="rounded-lg bg-slate-100/70 dark:bg-slate-950/40 border border-slate-200/90 dark:border-slate-700/70 p-3">
+            <p class="text-slate-800 dark:text-slate-200 font-medium mb-1">Java 命令行项目</p>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">学生成绩管理或图书借阅系统，至少包含增删改查、文件持久化和异常处理。</p>
           </div>
-          <div class="rounded-lg bg-zinc-950/40 border border-zinc-800/70 p-3">
-            <p class="text-zinc-200 font-medium mb-1">Python 数据脚本</p>
-            <p class="text-zinc-500 leading-relaxed">抓取一个公开数据源，清洗后输出 CSV，并画出至少 3 张统计图。</p>
+          <div class="rounded-lg bg-slate-100/70 dark:bg-slate-950/40 border border-slate-200/90 dark:border-slate-700/70 p-3">
+            <p class="text-slate-800 dark:text-slate-200 font-medium mb-1">Python 数据脚本</p>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">抓取一个公开数据源，清洗后输出 CSV，并画出至少 3 张统计图。</p>
           </div>
-          <div class="rounded-lg bg-zinc-950/40 border border-zinc-800/70 p-3">
-            <p class="text-zinc-200 font-medium mb-1">Git 仓库</p>
-            <p class="text-zinc-500 leading-relaxed">把以上代码提交到 GitHub，写清 README：环境、运行方式、截图和踩坑记录。</p>
+          <div class="rounded-lg bg-slate-100/70 dark:bg-slate-950/40 border border-slate-200/90 dark:border-slate-700/70 p-3">
+            <p class="text-slate-800 dark:text-slate-200 font-medium mb-1">Git 仓库</p>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">把以上代码提交到 GitHub，写清 README：环境、运行方式、截图和踩坑记录。</p>
           </div>
         </div>
       </div>
 
-      <div class="text-sm text-zinc-500 leading-relaxed">
-        <span class="text-zinc-300 font-medium">推荐资源：</span>
-        <a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">廖雪峰 Java 教程</a>、
-        <a href="https://javaguide.cn/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">JavaGuide</a>、
-        <a href="https://www.liaoxuefeng.com/wiki/1016959663602400" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">廖雪峰 Python 教程</a>、
-        <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">pandas 官方文档</a>。
+      <div class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+        <span class="text-slate-700 dark:text-slate-300 font-medium">推荐资源：</span>
+        <a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">廖雪峰 Java 教程</a>、
+        <a href="https://javaguide.cn/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">JavaGuide</a>、
+        <a href="https://www.liaoxuefeng.com/wiki/1016959663602400" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">廖雪峰 Python 教程</a>、
+        <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">pandas 官方文档</a>。
       </div>
     </section>
 
     <!-- Database -->
     <section id="database" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">03 / DATABASE</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">03 / DATABASE</p>
         <h2 class="text-xl sm:text-2xl font-bold">数据库：MySQL 四周入门计划</h2>
       </div>
 
-      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
         SQL 是大数据岗位最通用的技能。Hive、Spark SQL、Flink SQL 的语法都建立在 SQL 之上，
         所以 MySQL 不是“传统数据库选修课”，而是后面所有计算引擎的地基。四周目标：能设计表、写复杂查询、看懂执行计划。
       </p>
 
-      <div class="overflow-x-auto rounded-xl border border-zinc-800 mb-5">
+      <div class="overflow-x-auto rounded-xl border border-slate-200/90 dark:border-slate-700/60 mb-5">
         <table class="w-full text-sm">
-          <thead class="bg-zinc-900/80 text-zinc-400">
+          <thead class="bg-slate-100 dark:bg-slate-900/80 text-slate-500 dark:text-slate-400">
             <tr>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">周次</th>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">主题</th>
               <th class="text-left font-medium px-4 py-3">要点</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-zinc-800/80">
+          <tbody class="divide-y divide-slate-200/80 dark:divide-slate-700/80">
             {mysqlWeeks.map((row) => (
-              <tr class="hover:bg-white/[0.02] transition-colors">
-                <td class="px-4 py-3 text-zinc-500 whitespace-nowrap">{row.week}</td>
-                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{row.topic}</td>
-                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{row.detail}</td>
+              <tr class="hover:bg-slate-900/[0.03] dark:hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 whitespace-nowrap">{row.week}</td>
+                <td class="px-4 py-3 text-slate-800 dark:text-slate-200 font-medium whitespace-nowrap">{row.topic}</td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 leading-relaxed">{row.detail}</td>
               </tr>
             ))}
           </tbody>
@@ -361,19 +361,19 @@ const selfCheck = [
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
-          <h3 class="text-sm font-semibold text-white mb-3">必须理解的概念</h3>
-          <ul class="space-y-2 text-sm text-zinc-400">
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>为什么索引能加速查询，什么情况下会失效</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>联合索引的最左前缀原则与覆盖索引</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>事务 ACID、四种隔离级别与 MVCC</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>行锁、表锁、间隙锁的区别</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>EXPLAIN 中 type、key、rows、Extra 的含义</li>
+        <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">必须理解的概念</h3>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>为什么索引能加速查询，什么情况下会失效</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>联合索引的最左前缀原则与覆盖索引</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>事务 ACID、四种隔离级别与 MVCC</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>行锁、表锁、间隙锁的区别</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>EXPLAIN 中 type、key、rows、Extra 的含义</li>
           </ul>
         </div>
-        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
-          <h3 class="text-sm font-semibold text-white mb-3">推荐练习</h3>
-          <ul class="space-y-2 text-sm text-zinc-400">
+        <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">推荐练习</h3>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
             <li class="flex gap-2"><span class="text-emerald-500">1.</span>设计一个校园选课库：学生、课程、教师、选课记录</li>
             <li class="flex gap-2"><span class="text-emerald-500">2.</span>写 20 条查询：排名、环比、Top-N、去重、分组筛选</li>
             <li class="flex gap-2"><span class="text-emerald-500">3.</span>给高频查询建索引，用 EXPLAIN 对比优化前后</li>
@@ -382,50 +382,50 @@ const selfCheck = [
         </div>
       </div>
 
-      <div class="text-sm text-zinc-500 leading-relaxed">
-        <span class="text-zinc-300 font-medium">推荐资源：</span>
-        <a href="https://dev.mysql.com/doc/refman/8.0/en/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">MySQL 8.0 官方手册</a>、
-        <a href="https://javaguide.cn/database/mysql/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">JavaGuide MySQL 专题</a>、
-        <a href="https://sqlzoo.net/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">SQLZoo 在线练习</a>。
+      <div class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+        <span class="text-slate-700 dark:text-slate-300 font-medium">推荐资源：</span>
+        <a href="https://dev.mysql.com/doc/refman/8.0/en/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">MySQL 8.0 官方手册</a>、
+        <a href="https://javaguide.cn/database/mysql/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">JavaGuide MySQL 专题</a>、
+        <a href="https://sqlzoo.net/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">SQLZoo 在线练习</a>。
       </div>
     </section>
 
     <!-- Hadoop -->
     <section id="hadoop" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">04 / HADOOP</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">04 / HADOOP</p>
         <h2 class="text-xl sm:text-2xl font-bold">Linux 与 Hadoop 生态：先跑通，再理解</h2>
       </div>
 
-      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
         Hadoop 是理解“分布式存储 + 分布式计算”的最佳入口。这个阶段不要一上来读源码，
         先在一台电脑或虚拟机上搭起伪分布式集群，把数据真正放进去、算出来，再回头理解每个组件的职责。
       </p>
 
-      <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 mb-5">
-        <h3 class="text-sm font-semibold text-white mb-3">前置：Linux 两周清单</h3>
+      <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5 mb-5">
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">前置：Linux 两周清单</h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
           {['文件与权限', '进程与端口', 'SSH 与免密登录', 'tar / grep / awk / sed', 'cron 定时任务', 'Shell 脚本', 'vim 基础操作', '环境变量与 PATH'].map((item) => (
-            <span class="rounded-md bg-zinc-950/40 border border-zinc-800/70 px-2.5 py-2 text-zinc-400 text-center">{item}</span>
+            <span class="rounded-md bg-slate-100/70 dark:bg-slate-950/40 border border-slate-200/90 dark:border-slate-700/70 px-2.5 py-2 text-slate-500 dark:text-slate-400 text-center">{item}</span>
           ))}
         </div>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-zinc-800 mb-5">
+      <div class="overflow-x-auto rounded-xl border border-slate-200/90 dark:border-slate-700/60 mb-5">
         <table class="w-full text-sm">
-          <thead class="bg-zinc-900/80 text-zinc-400">
+          <thead class="bg-slate-100 dark:bg-slate-900/80 text-slate-500 dark:text-slate-400">
             <tr>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">组件</th>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">作用</th>
               <th class="text-left font-medium px-4 py-3">核心概念</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-zinc-800/80">
+          <tbody class="divide-y divide-slate-200/80 dark:divide-slate-700/80">
             {hadoopParts.map((part) => (
-              <tr class="hover:bg-white/[0.02] transition-colors">
-                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{part.name}</td>
-                <td class="px-4 py-3 text-zinc-400 whitespace-nowrap">{part.role}</td>
-                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{part.key}</td>
+              <tr class="hover:bg-slate-900/[0.03] dark:hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-slate-800 dark:text-slate-200 font-medium whitespace-nowrap">{part.name}</td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 whitespace-nowrap">{part.role}</td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 leading-relaxed">{part.key}</td>
               </tr>
             ))}
           </tbody>
@@ -434,49 +434,49 @@ const selfCheck = [
 
       <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5 mb-5">
         <h3 class="text-sm font-semibold text-emerald-300 mb-3">最小可行练习：一条日志的旅程</h3>
-        <ol class="space-y-2 text-sm text-zinc-400 leading-relaxed">
+        <ol class="space-y-2 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
           <li><span class="text-emerald-500 font-mono mr-2">01</span>生成或下载一份 100MB 以上的访问日志。</li>
-          <li><span class="text-emerald-500 font-mono mr-2">02</span>启动 HDFS，把日志上传到 <code class="px-1 rounded bg-zinc-800/80 text-indigo-300">/data/logs</code>，用 <code class="px-1 rounded bg-zinc-800/80 text-indigo-300">hdfs dfs -ls</code> 确认。</li>
+          <li><span class="text-emerald-500 font-mono mr-2">02</span>启动 HDFS，把日志上传到 <code class="px-1 rounded bg-slate-200/80 dark:bg-slate-800/80 text-emerald-800 dark:text-emerald-300">/data/logs</code>，用 <code class="px-1 rounded bg-slate-200/80 dark:bg-slate-800/80 text-emerald-800 dark:text-emerald-300">hdfs dfs -ls</code> 确认。</li>
           <li><span class="text-emerald-500 font-mono mr-2">03</span>用 MapReduce 或 Hive SQL 统计每个 URL 的访问次数，按次数降序取 Top 20。</li>
           <li><span class="text-emerald-500 font-mono mr-2">04</span>把结果导出到本地，用 Python 画一张柱状图。</li>
           <li><span class="text-emerald-500 font-mono mr-2">05</span>在 README 里画清数据流：本地 → HDFS → Hive → 结果。</li>
         </ol>
       </div>
 
-      <div class="text-sm text-zinc-500 leading-relaxed">
-        <span class="text-zinc-300 font-medium">推荐资源：</span>
-        <a href="https://hadoop.apache.org/docs/stable/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Hadoop 官方文档</a>、
-        <a href="https://hive.apache.org/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Hive 官方文档</a>、
-        <a href="https://tech.meituan.com/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">美团技术团队博客</a>。
+      <div class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+        <span class="text-slate-700 dark:text-slate-300 font-medium">推荐资源：</span>
+        <a href="https://hadoop.apache.org/docs/stable/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">Hadoop 官方文档</a>、
+        <a href="https://hive.apache.org/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">Hive 官方文档</a>、
+        <a href="https://tech.meituan.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">美团技术团队博客</a>。
       </div>
     </section>
 
     <!-- Spark -->
     <section id="spark" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">05 / SPARK</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">05 / SPARK</p>
         <h2 class="text-xl sm:text-2xl font-bold">Spark：从 RDD 到 Spark SQL 与实时计算</h2>
       </div>
 
-      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
         Spark 是目前最主流的分布式计算引擎之一。学习重点不是背 API，而是理解
-        <strong class="text-zinc-200">数据如何分区、Shuffle 如何发生、任务如何调度</strong>。
+        <strong class="text-slate-800 dark:text-slate-200">数据如何分区、Shuffle 如何发生、任务如何调度</strong>。
         先用 PySpark 把分析跑通，再逐步深入 Catalyst、Tungsten 和调优。
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
-          <h3 class="text-sm font-semibold text-white mb-3">必须理解的四件事</h3>
-          <ul class="space-y-2 text-sm text-zinc-400">
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>Driver、Executor、Master、Worker 的分工</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>RDD、DataFrame、Dataset 的区别与选择</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>窄依赖、宽依赖、Stage 与 Shuffle</li>
-            <li class="flex gap-2"><span class="text-indigo-400">·</span>缓存、广播变量、分区数与数据倾斜</li>
+        <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">必须理解的四件事</h3>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>Driver、Executor、Master、Worker 的分工</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>RDD、DataFrame、Dataset 的区别与选择</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>窄依赖、宽依赖、Stage 与 Shuffle</li>
+            <li class="flex gap-2"><span class="text-emerald-700 dark:text-emerald-400">·</span>缓存、广播变量、分区数与数据倾斜</li>
           </ul>
         </div>
-        <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
-          <h3 class="text-sm font-semibold text-white mb-3">推荐练习</h3>
-          <ul class="space-y-2 text-sm text-zinc-400">
+        <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">推荐练习</h3>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
             <li class="flex gap-2"><span class="text-emerald-500">1.</span>用 RDD 写 WordCount，再用 DataFrame 重写一遍</li>
             <li class="flex gap-2"><span class="text-emerald-500">2.</span>读取 Hive 表，完成日活、留存、Top-N 指标</li>
             <li class="flex gap-2"><span class="text-emerald-500">3.</span>对比 broadcast join 与 shuffle join 的执行时间</li>
@@ -485,33 +485,33 @@ const selfCheck = [
         </div>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-zinc-800 mb-5">
+      <div class="overflow-x-auto rounded-xl border border-slate-200/90 dark:border-slate-700/60 mb-5">
         <table class="w-full text-sm">
-          <thead class="bg-zinc-900/80 text-zinc-400">
+          <thead class="bg-slate-100 dark:bg-slate-900/80 text-slate-500 dark:text-slate-400">
             <tr>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">周次</th>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">主题</th>
               <th class="text-left font-medium px-4 py-3">要点</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-zinc-800/80">
+          <tbody class="divide-y divide-slate-200/80 dark:divide-slate-700/80">
             {sparkWeeks.map((row) => (
-              <tr class="hover:bg-white/[0.02] transition-colors">
-                <td class="px-4 py-3 text-zinc-500 whitespace-nowrap">{row.week}</td>
-                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{row.topic}</td>
-                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{row.detail}</td>
+              <tr class="hover:bg-slate-900/[0.03] dark:hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 whitespace-nowrap">{row.week}</td>
+                <td class="px-4 py-3 text-slate-800 dark:text-slate-200 font-medium whitespace-nowrap">{row.topic}</td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 leading-relaxed">{row.detail}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <div class="rounded-xl border border-zinc-800 bg-zinc-950/60 p-5 mb-5">
+      <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-slate-100 dark:bg-slate-950/60 p-5 mb-5">
         <div class="flex items-center justify-between gap-3 mb-3">
-          <h3 class="text-sm font-semibold text-white">最小示例：Top-N 活跃页面</h3>
-          <span class="text-[11px] font-mono text-zinc-600">PySpark</span>
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100">最小示例：Top-N 活跃页面</h3>
+          <span class="text-[11px] font-mono text-slate-400 dark:text-slate-500">PySpark</span>
         </div>
-        <pre class="overflow-x-auto rounded-lg border border-zinc-800/80 bg-zinc-950/80 p-4 text-xs leading-relaxed text-zinc-300"><code>{`from pyspark.sql import SparkSession
+        <pre class="overflow-x-auto rounded-lg border border-slate-200/90 dark:border-slate-700/80 bg-slate-100 dark:bg-slate-950/80 p-4 text-xs leading-relaxed text-slate-700 dark:text-slate-300"><code>{`from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 
 spark = SparkSession.builder.appName("top-pages").getOrCreate()
@@ -527,39 +527,39 @@ top = (logs.filter(F.col("status") == 200)
 top.show()`}</code></pre>
       </div>
 
-      <div class="text-sm text-zinc-500 leading-relaxed">
-        <span class="text-zinc-300 font-medium">推荐资源：</span>
-        <a href="https://spark.apache.org/docs/latest/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Spark 官方文档</a>、
-        <a href="https://spark.apache.org/docs/latest/api/python/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">PySpark API</a>、
-        <a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Kafka 文档</a>。
+      <div class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+        <span class="text-slate-700 dark:text-slate-300 font-medium">推荐资源：</span>
+        <a href="https://spark.apache.org/docs/latest/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">Spark 官方文档</a>、
+        <a href="https://spark.apache.org/docs/latest/api/python/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">PySpark API</a>、
+        <a href="https://kafka.apache.org/documentation/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2">Kafka 文档</a>。
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">06 / PROJECTS</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">06 / PROJECTS</p>
         <h2 class="text-xl sm:text-2xl font-bold">项目实战：三个项目撑起一份简历</h2>
       </div>
 
-      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
         项目不在多，而在“能讲清楚”。下面的三个项目覆盖离线、数仓、实时三条主线，
         建议至少完成前两个，并把代码、文档和截图整理到 GitHub。每个项目都要记录数据量、指标口径和优化前后对比。
       </p>
 
       <div class="space-y-4 mb-5">
         {projects.map((project, i) => (
-          <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
               <div class="flex items-center gap-3">
-                <span class="w-7 h-7 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-bold flex items-center justify-center shrink-0">{i + 1}</span>
-                <h3 class="text-base font-semibold text-white">{project.title}</h3>
+                <span class="w-7 h-7 rounded-lg bg-emerald-600/10 border border-emerald-600/30 dark:border-emerald-400/30 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center justify-center shrink-0">{i + 1}</span>
+                <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">{project.title}</h3>
               </div>
-              <span class="text-[11px] font-mono text-zinc-500">{project.stack}</span>
+              <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">{project.stack}</span>
             </div>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-3">{project.desc}</p>
-            <p class="text-xs text-zinc-500 leading-relaxed">
-              <span class="text-zinc-300 font-medium">交付物：</span>{project.deliverable}
+            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-3">{project.desc}</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <span class="text-slate-700 dark:text-slate-300 font-medium">交付物：</span>{project.deliverable}
             </p>
           </div>
         ))}
@@ -567,7 +567,7 @@ top.show()`}</code></pre>
 
       <div class="rounded-xl border border-amber-500/20 bg-amber-500/5 p-5">
         <h3 class="text-sm font-semibold text-amber-300 mb-2">作品集检查</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
           GitHub 仓库至少包含：README（背景、架构图、数据流、运行步骤）、核心代码、示例数据或数据生成脚本、
           结果截图、遇到的问题与解决方案。面试时能打开仓库讲 10 分钟，比堆十个半成品更有说服力。
         </p>
@@ -577,32 +577,32 @@ top.show()`}</code></pre>
     <!-- Timeline -->
     <section id="timeline" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">07 / TIMELINE</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">07 / TIMELINE</p>
         <h2 class="text-xl sm:text-2xl font-bold">12 个月时间表（可按学期压缩）</h2>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-zinc-800">
+      <div class="overflow-x-auto rounded-xl border border-slate-200/90 dark:border-slate-700/60">
         <table class="w-full text-sm">
-          <thead class="bg-zinc-900/80 text-zinc-400">
+          <thead class="bg-slate-100 dark:bg-slate-900/80 text-slate-500 dark:text-slate-400">
             <tr>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">时间</th>
               <th class="text-left font-medium px-4 py-3 whitespace-nowrap">重点</th>
               <th class="text-left font-medium px-4 py-3">阶段目标</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-zinc-800/80">
+          <tbody class="divide-y divide-slate-200/80 dark:divide-slate-700/80">
             {timeline.map((row) => (
-              <tr class="hover:bg-white/[0.02] transition-colors">
-                <td class="px-4 py-3 text-zinc-500 whitespace-nowrap">{row.period}</td>
-                <td class="px-4 py-3 text-zinc-200 font-medium whitespace-nowrap">{row.focus}</td>
-                <td class="px-4 py-3 text-zinc-400 leading-relaxed">{row.goal}</td>
+              <tr class="hover:bg-slate-900/[0.03] dark:hover:bg-white/[0.02] transition-colors">
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 whitespace-nowrap">{row.period}</td>
+                <td class="px-4 py-3 text-slate-800 dark:text-slate-200 font-medium whitespace-nowrap">{row.focus}</td>
+                <td class="px-4 py-3 text-slate-500 dark:text-slate-400 leading-relaxed">{row.goal}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <p class="text-xs text-zinc-500 leading-relaxed mt-3">
+      <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mt-3">
         如果每周只能投入 6-8 小时，把周期拉长到 18 个月；如果每天能投入 3 小时以上，可以在 6-8 个月内完成主线。
         不要为了赶进度跳过 SQL、Linux 和项目复盘。
       </p>
@@ -611,25 +611,25 @@ top.show()`}</code></pre>
     <!-- Pitfalls -->
     <section id="pitfalls" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">08 / PITFALLS</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">08 / PITFALLS</p>
         <h2 class="text-xl sm:text-2xl font-bold">常见坑与学习建议</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {pitfalls.map((item) => (
-          <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-4">
-            <h3 class="text-sm font-semibold text-zinc-200 mb-1.5">{item.title}</h3>
-            <p class="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
+          <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-4">
+            <h3 class="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-1.5">{item.title}</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
 
-      <div class="mt-4 rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5">
-        <h3 class="text-sm font-semibold text-white mb-3">每周节奏建议</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-zinc-400">
-          <div><span class="text-indigo-400 font-medium">输入 40%</span><p class="text-xs text-zinc-500 mt-1">看文档、教程、源码解析，做笔记</p></div>
-          <div><span class="text-emerald-400 font-medium">动手 50%</span><p class="text-xs text-zinc-500 mt-1">写代码、跑 SQL、搭环境、做项目</p></div>
-          <div><span class="text-amber-400 font-medium">输出 10%</span><p class="text-xs text-zinc-500 mt-1">写博客、画架构图、向别人讲清楚</p></div>
+      <div class="mt-4 rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5">
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">每周节奏建议</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-slate-500 dark:text-slate-400">
+          <div><span class="text-emerald-700 dark:text-emerald-400 font-medium">输入 40%</span><p class="text-xs text-slate-500 dark:text-slate-400 mt-1">看文档、教程、源码解析，做笔记</p></div>
+          <div><span class="text-emerald-400 font-medium">动手 50%</span><p class="text-xs text-slate-500 dark:text-slate-400 mt-1">写代码、跑 SQL、搭环境、做项目</p></div>
+          <div><span class="text-amber-400 font-medium">输出 10%</span><p class="text-xs text-slate-500 dark:text-slate-400 mt-1">写博客、画架构图、向别人讲清楚</p></div>
         </div>
       </div>
     </section>
@@ -637,40 +637,40 @@ top.show()`}</code></pre>
     <!-- Checklist -->
     <section id="checklist" class="scroll-mt-24 mb-12">
       <div class="mb-5">
-        <p class="text-xs font-mono text-indigo-400 mb-1">09 / CHECKLIST</p>
+        <p class="text-xs font-mono text-emerald-700 dark:text-emerald-400 mb-1">09 / CHECKLIST</p>
         <h2 class="text-xl sm:text-2xl font-bold">出师自测清单</h2>
       </div>
 
-      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
         下面 10 项中至少能独立完成 7 项，再开始投递大数据实习或初级岗位。做不到的项，回到对应阶段补练。
       </p>
 
-      <div class="rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] divide-y divide-zinc-800/80">
+      <div class="rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] divide-y divide-slate-200/80 dark:divide-slate-700/80">
         {selfCheck.map((item, i) => (
-          <label class="flex items-start gap-3 p-3.5 text-sm text-zinc-400 hover:bg-white/[0.02] transition-colors cursor-pointer">
-            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-zinc-700 bg-zinc-900 accent-indigo-500 shrink-0" />
-            <span><span class="text-zinc-600 font-mono text-xs mr-2">{String(i + 1).padStart(2, '0')}</span>{item}</span>
+          <label class="flex items-start gap-3 p-3.5 text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-900/[0.03] dark:hover:bg-white/[0.02] transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 accent-emerald-600 shrink-0" />
+            <span><span class="text-slate-400 dark:text-slate-500 font-mono text-xs mr-2">{String(i + 1).padStart(2, '0')}</span>{item}</span>
           </label>
         ))}
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 p-6 sm:p-8 mb-4">
+    <section class="rounded-2xl border border-emerald-600/20 dark:border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/5 p-6 sm:p-8 mb-4">
       <h2 class="text-lg sm:text-xl font-bold mb-2">下一步：把路线变成每天的阅读</h2>
-      <p class="text-sm text-zinc-400 leading-relaxed mb-5">
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
         本站持续聚合美团技术团队、CSDN 大数据、JavaGuide、涛思数据等教程与实践型来源。
         建议按“本周主题”筛选文章，读完一篇就动手复现一次。
       </p>
       <div class="flex flex-wrap gap-3">
-        <a href={withBase('/')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-400 text-white text-sm font-medium transition-colors">
+        <a href={withBase('/')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium transition-colors">
           浏览最新文章
           <span aria-hidden="true">→</span>
         </a>
-        <a href={withBase('/sources')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-sm font-medium transition-colors">
+        <a href={withBase('/sources')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 dark:text-slate-300 text-sm font-medium transition-colors">
           查看全部来源
         </a>
-        <a href={withBase('/categorie/big-data')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-sm font-medium transition-colors">
+        <a href={withBase('/categorie/big-data')} class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 dark:text-slate-300 text-sm font-medium transition-colors">
           大数据生态
         </a>
       </div>

@@ -26,9 +26,27 @@ const isHome = title === SITE_NAME;
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
   <head>
     <meta charset="UTF-8" />
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('flux-theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          var root = document.documentElement;
+          root.classList.toggle('dark', theme === 'dark');
+          root.dataset.theme = theme;
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
@@ -88,45 +106,45 @@ const isHome = title === SITE_NAME;
     <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <slot />
     </main>
-    <footer class="border-t border-zinc-800/60 py-8 text-sm text-zinc-500">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+    <footer class="border-t border-slate-200/70 py-10 text-sm text-slate-500 dark:border-slate-700/50 dark:text-slate-400">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-600 font-medium mb-3">热门分类</h4>
+            <h4 class="mb-3 text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500">热门分类</h4>
             <nav class="flex flex-col gap-1.5">
-              <a href={withBase('/categorie/python-scala')} class="text-zinc-500 hover:text-indigo-400 transition-colors">Python &amp; Scala</a>
-              <a href={withBase('/categorie/big-data')} class="text-zinc-500 hover:text-indigo-400 transition-colors">大数据生态</a>
-              <a href={withBase('/categorie/linux-cloud-native')} class="text-zinc-500 hover:text-indigo-400 transition-colors">Linux / 云原生</a>
-              <a href={withBase('/categorie/devops')} class="text-zinc-500 hover:text-indigo-400 transition-colors">DevOps 实践</a>
+              <a href={withBase('/categorie/python-scala')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">Python &amp; Scala</a>
+              <a href={withBase('/categorie/big-data')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">大数据生态</a>
+              <a href={withBase('/categorie/linux-cloud-native')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">Linux / 云原生</a>
+              <a href={withBase('/categorie/devops')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">DevOps 实践</a>
             </nav>
           </div>
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-600 font-medium mb-3">站点导航</h4>
+            <h4 class="mb-3 text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500">站点导航</h4>
             <nav class="flex flex-col gap-1.5">
-              <a href={withBase('/')} class="text-zinc-500 hover:text-indigo-400 transition-colors">文章</a>
-              <a href={withBase('/learning-path')} class="text-zinc-500 hover:text-indigo-400 transition-colors">学习路线</a>
-              <a href={withBase('/resources')} class="text-zinc-500 hover:text-indigo-400 transition-colors">学习资料</a>
-              <a href={withBase('/cheatsheet')} class="text-zinc-500 hover:text-indigo-400 transition-colors">极客速查</a>
-              <a href={withBase('/sources')} class="text-zinc-500 hover:text-indigo-400 transition-colors">来源</a>
-              <a href={withBase('/categories')} class="text-zinc-500 hover:text-indigo-400 transition-colors">分类</a>
-              <a href={withBase('/stats')} class="text-zinc-500 hover:text-indigo-400 transition-colors">统计</a>
+              <a href={withBase('/')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">文章</a>
+              <a href={withBase('/learning-path')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">学习路线</a>
+              <a href={withBase('/resources')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">学习资料</a>
+              <a href={withBase('/cheatsheet')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">极客速查</a>
+              <a href={withBase('/sources')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">来源</a>
+              <a href={withBase('/categories')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">分类</a>
+              <a href={withBase('/stats')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">统计</a>
             </nav>
           </div>
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-600 font-medium mb-3">本站</h4>
+            <h4 class="mb-3 text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500">本站</h4>
             <nav class="flex flex-col gap-1.5">
-              <a href={withBase('/rss.xml')} class="text-zinc-500 hover:text-indigo-400 transition-colors inline-flex items-center gap-1.5">
+              <a href={withBase('/rss.xml')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300 inline-flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/></svg>
                 RSS 订阅
               </a>
-              <a href={withBase('/newsletter')} class="text-zinc-500 hover:text-indigo-400 transition-colors">订阅说明</a>
-              <a href={withBase('/confidentialite')} class="text-zinc-500 hover:text-indigo-400 transition-colors">隐私说明</a>
+              <a href={withBase('/newsletter')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">订阅说明</a>
+              <a href={withBase('/confidentialite')} class="text-slate-500 transition-colors hover:text-emerald-700 dark:text-slate-400 dark:hover:text-emerald-300">隐私说明</a>
             </nav>
           </div>
         </div>
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t border-zinc-800/40">
+        <div class="flex flex-col items-center justify-between gap-3 border-t border-slate-200/70 pt-6 sm:flex-row dark:border-slate-700/40">
           <p>{SITE_NAME} — {SITE_TAGLINE}</p>
-          <span class="text-zinc-600">基于 Astro 构建 · 静态托管</span>
+          <span class="text-slate-400 dark:text-slate-500">基于 Astro 构建 · 静态托管</span>
         </div>
       </div>
     </footer>

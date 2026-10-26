@@ -11,17 +11,17 @@ const sources = getAllSources(allArticles);
   <div class="fade-in-up">
     <div class="mb-8">
       <h1 class="text-2xl sm:text-3xl font-bold mb-2">来源</h1>
-      <p class="text-zinc-400 text-sm">
+      <p class="text-slate-500 dark:text-slate-400 text-sm">
         {sources.length} 个 RSS 来源 — 共 {allArticles.length} 篇文章
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {sources.map((source) => (
-        <a href={withBase(`/source/${source.slug}`)} class="card-hover rounded-xl border border-zinc-800 bg-[var(--color-surface-1)] p-5 flex flex-col gap-3 hover:border-zinc-600 transition-all">
+        <a href={withBase(`/source/${source.slug}`)} class="card-hover rounded-xl border border-slate-200/90 dark:border-slate-700/60 bg-[var(--color-surface-1)] p-5 flex flex-col gap-3 hover:border-slate-300 dark:hover:border-slate-600 transition-all">
           <div class="flex items-start justify-between">
             <h3 class="font-semibold text-sm">{source.name}</h3>
-            <span class="text-xs text-zinc-500 bg-[var(--color-surface-2)] px-2 py-0.5 rounded-full">
+            <span class="text-xs text-slate-500 dark:text-slate-400 bg-[var(--color-surface-2)] px-2 py-0.5 rounded-full">
               {source.count} 篇文章
             </span>
           </div>
@@ -34,7 +34,7 @@ const sources = getAllSources(allArticles);
             ))}
           </div>
 
-          <span class="text-xs text-zinc-500 truncate mt-auto">
+          <span class="text-xs text-slate-500 dark:text-slate-400 truncate mt-auto">
             查看全部文章 →
           </span>
         </a>
@@ -42,7 +42,7 @@ const sources = getAllSources(allArticles);
     </div>
 
     {sources.length === 0 && (
-      <div class="text-center py-20 text-zinc-500">
+      <div class="text-center py-20 text-slate-500 dark:text-slate-400">
         <p class="text-lg font-medium">暂无来源</p>
         <p class="text-sm mt-1">请在 feeds.yaml 中添加 RSS 源。</p>
       </div>

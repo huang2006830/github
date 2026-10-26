@@ -1,42 +1,140 @@
 @import "tailwindcss";
 
+/* 让 Tailwind 的 dark: 变体跟随 <html class="dark">，而不是系统偏好，
+   这样右上角的太阳/月亮按钮才能真正控制主题。 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --color-surface-0: #09090b;
-  --color-surface-1: #18181b;
-  --color-surface-2: #27272a;
-  --color-surface-3: #3f3f46;
-  --color-accent: #6366f1;
-  --color-accent-light: #818cf8;
-  --color-accent-glow: #6366f140;
+  --font-sans: 'Inter', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+}
+
+/* ────────────────────────────────────────────────────────────
+   护眼莫兰迪主题令牌
+   亮色：米白纸感；暗色：深灰蓝 slate。
+   这些变量定义在普通 :root / html.dark 上，没有进 @theme，
+   所以既不会被 Tailwind 的 theme 层锁死，也能被 .dark 覆盖。
+   项目中所有 bg-[var(--color-surface-1)] 之类的写法会自动跟随切换。
+   ──────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+
+  /* 表面层级 */
+  --color-surface-0: #f7f6f2;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f1efe9;
+  --color-surface-3: #e3e0d7;
+
+  /* 强调色：温和的莫兰迪绿 */
+  --color-accent: #0f9d7a;
+  --color-accent-strong: #0b7f63;
+  --color-accent-light: #35b996;
+  --color-accent-glow: rgba(15, 157, 122, 0.16);
+
+  /* 文字（避免纯黑 / 纯白） */
+  --color-fg-strong: #1e293b;
+  --color-fg: #414d5f;
+  --color-fg-soft: #5b6779;
+  --color-fg-muted: #6b7788;
+  --color-fg-subtle: #94a3b8;
+
+  /* 描边 */
+  --color-line: rgba(30, 41, 59, 0.09);
+  --color-line-strong: rgba(30, 41, 59, 0.16);
+
+  /* 代码块 */
+  --color-code-bg: #eeebe3;
+  --color-code-fg: #0b7f63;
+  --color-code-block-bg: #f2efe8;
+  --color-code-block-fg: #3f4a5a;
+  --color-code-block-line: rgba(30, 41, 59, 0.1);
+
+  /* 引用块 */
+  --color-quote-bg: rgba(15, 157, 122, 0.07);
+
+  /* 页面氛围光 */
+  --color-ambient-1: rgba(15, 157, 122, 0.08);
+  --color-ambient-2: rgba(146, 118, 191, 0.07);
+
+  /* 吸顶导航 / 浮层的玻璃基底 */
+  --color-glass: rgba(247, 246, 242, 0.78);
+  --color-glass-strong: rgba(247, 246, 242, 0.96);
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --color-surface-0: #0f172a;
+  --color-surface-1: #1e293b;
+  --color-surface-2: #243146;
+  --color-surface-3: #334155;
+
+  --color-accent: #34d399;
+  --color-accent-strong: #6ee7b7;
+  --color-accent-light: #6ee7b7;
+  --color-accent-glow: rgba(52, 211, 153, 0.2);
+
+  --color-fg-strong: #e2e8f0;
+  --color-fg: #cbd5e1;
+  --color-fg-soft: #b4c0d0;
+  --color-fg-muted: #94a3b8;
+  --color-fg-subtle: #64748b;
+
+  --color-line: rgba(148, 163, 184, 0.18);
+  --color-line-strong: rgba(148, 163, 184, 0.32);
+
+  --color-code-bg: rgba(148, 163, 184, 0.14);
+  --color-code-fg: #6ee7b7;
+  --color-code-block-bg: #0b1220;
+  --color-code-block-fg: #cbd5e1;
+  --color-code-block-line: rgba(148, 163, 184, 0.18);
+
+  --color-quote-bg: rgba(52, 211, 153, 0.08);
+
+  --color-ambient-1: rgba(16, 185, 129, 0.14);
+  --color-ambient-2: rgba(129, 140, 248, 0.11);
+
+  --color-glass: rgba(15, 23, 42, 0.76);
+  --color-glass-strong: rgba(15, 23, 42, 0.96);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 body {
+  min-height: 100vh;
   background-color: var(--color-surface-0);
-  color: #fafafa;
+  background-image:
+    radial-gradient(1100px 520px at 8% -10%, var(--color-ambient-1), transparent 70%),
+    radial-gradient(940px 480px at 92% -6%, var(--color-ambient-2), transparent 72%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--color-fg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--color-accent-glow);
+  color: var(--color-fg-strong);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-surface-0);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-surface-3);
-  border-radius: 3px;
+  background: var(--color-line-strong);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -62,26 +160,16 @@ body {
   to { opacity: 1; }
 }
 
-/* Card hover effect */
-.card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
-  border-color: var(--color-accent);
-}
-
-/* Fade in animation for scroll */
+/* 入场动画：只动 opacity + transform，动画结束不残留样式，
+   避免和 hover 的 -translate-y 冲突。 */
 .fade-in-up {
-  animation: fade-in-up 0.4s ease-out;
+  animation: fade-in-up 0.45s ease-out;
 }
 
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -90,13 +178,74 @@ body {
 }
 
 /* ────────────────────────────────────────────────────────────
+   占位图：低饱和度莫兰迪渐变
+   没有配图的文章用这些 class 生成柔和色块（6 种随机交替）。
+   暗色模式下整体压深，保证浅色文字依然可读。
+   ──────────────────────────────────────────────────────────── */
+.ph-sage {
+  --ph-a: #a3b8a8;
+  --ph-b: #cfdccc;
+}
+
+.ph-lavender {
+  --ph-a: #b0a5c8;
+  --ph-b: #d9d2e4;
+}
+
+.ph-clay {
+  --ph-a: #c8a996;
+  --ph-b: #e4d0c4;
+}
+
+.ph-mist {
+  --ph-a: #97aebe;
+  --ph-b: #c4d3dd;
+}
+
+.ph-ochre {
+  --ph-a: #c3b190;
+  --ph-b: #e0d6c1;
+}
+
+.ph-moss {
+  --ph-a: #a6b494;
+  --ph-b: #d0dac2;
+}
+
+.ph-surface {
+  background-image: linear-gradient(135deg, var(--ph-a) 0%, var(--ph-b) 100%);
+}
+
+html.dark .ph-surface {
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--ph-a) 62%, #0f172a) 0%,
+    color-mix(in oklab, var(--ph-b) 52%, #0f172a) 100%
+  );
+}
+
+/* 占位图上叠一层柔光，避免大面积死板色块 */
+.ph-surface::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 60%);
+  pointer-events: none;
+}
+
+html.dark .ph-surface::after {
+  background: radial-gradient(120% 90% at 15% 0%, rgba(255, 255, 255, 0.08), transparent 60%);
+}
+
+/* ────────────────────────────────────────────────────────────
    Markdown 文档页（学习资料 / 极客速查）
    这两个页面以 Markdown 手工维护，样式在此统一，避免逐页写 class。
+   全部改用主题令牌，因此会自动跟随亮色/暗色切换。
    ──────────────────────────────────────────────────────────── */
 .doc-content {
   font-size: 0.9375rem;
-  line-height: 1.85;
-  color: #d4d4d8;
+  line-height: 1.9;
+  color: var(--color-fg-soft);
   word-wrap: break-word;
 }
 
@@ -114,8 +263,8 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.4;
-  color: #fafafa;
-  border-bottom: 1px solid #27272a;
+  color: var(--color-fg-strong);
+  border-bottom: 1px solid var(--color-line);
   scroll-margin-top: 5.5rem;
 }
 
@@ -123,7 +272,7 @@ body {
   margin: 1.9rem 0 0.7rem;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #f4f4f5;
+  color: var(--color-fg-strong);
   scroll-margin-top: 5.5rem;
 }
 
@@ -131,7 +280,7 @@ body {
   margin: 1.35rem 0 0.5rem;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #e4e4e7;
+  color: var(--color-fg);
 }
 
 .doc-content p {
@@ -162,66 +311,66 @@ body {
 }
 
 .doc-content li::marker {
-  color: #6366f1;
+  color: var(--color-accent);
 }
 
 .doc-content a {
-  color: #818cf8;
+  color: var(--color-accent-strong);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(129, 140, 248, 0.4);
+  text-decoration-color: color-mix(in oklab, var(--color-accent) 45%, transparent);
   transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .doc-content a:hover {
-  color: #a5b4fc;
-  text-decoration-color: rgba(165, 180, 252, 0.9);
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
 }
 
 .doc-content strong {
-  color: #fafafa;
+  color: var(--color-fg-strong);
   font-weight: 600;
 }
 
 .doc-content em {
-  color: #e4e4e7;
+  color: var(--color-fg);
 }
 
 .doc-content code {
   font-family: var(--font-mono);
   font-size: 0.85em;
   padding: 0.15rem 0.4rem;
-  border-radius: 0.3rem;
-  background: #27272a;
-  color: #c7d2fe;
+  border-radius: 0.375rem;
+  background: var(--color-code-bg);
+  color: var(--color-code-fg);
   white-space: nowrap;
 }
 
 .doc-content pre {
   margin: 1.1rem 0;
   padding: 1rem 1.15rem;
-  border: 1px solid #27272a;
-  border-radius: 0.75rem;
-  background: #0b0b0e;
+  border: 1px solid var(--color-code-block-line);
+  border-radius: 0.875rem;
+  background: var(--color-code-block-bg);
   overflow-x: auto;
 }
 
 .doc-content pre code {
   padding: 0;
   background: transparent;
-  color: #d4d4d8;
+  color: var(--color-code-block-fg);
   font-size: 0.8rem;
-  line-height: 1.7;
+  line-height: 1.75;
   white-space: pre;
 }
 
 .doc-content blockquote {
   margin: 1.1rem 0;
   padding: 0.8rem 1.1rem;
-  border-left: 3px solid #6366f1;
-  border-radius: 0 0.5rem 0.5rem 0;
-  background: rgba(99, 102, 241, 0.08);
-  color: #a1a1aa;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 0.625rem 0.625rem 0;
+  background: var(--color-quote-bg);
+  color: var(--color-fg-muted);
 }
 
 .doc-content blockquote p {
@@ -236,43 +385,43 @@ body {
 }
 
 .doc-content thead {
-  background: #18181b;
+  background: var(--color-surface-2);
 }
 
 .doc-content th {
   padding: 0.6rem 0.85rem;
   text-align: left;
   font-weight: 600;
-  color: #a1a1aa;
-  border: 1px solid #27272a;
+  color: var(--color-fg-muted);
+  border: 1px solid var(--color-line);
   white-space: nowrap;
 }
 
 .doc-content td {
   padding: 0.55rem 0.85rem;
-  color: #d4d4d8;
-  border: 1px solid #27272a;
+  color: var(--color-fg-soft);
+  border: 1px solid var(--color-line);
   vertical-align: top;
 }
 
 .doc-content tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.015);
+  background: color-mix(in oklab, var(--color-surface-2) 55%, transparent);
 }
 
 .doc-content tbody tr:hover {
-  background: rgba(99, 102, 241, 0.06);
+  background: var(--color-quote-bg);
 }
 
 .doc-content hr {
   margin: 2.25rem 0;
   border: 0;
-  border-top: 1px solid #27272a;
+  border-top: 1px solid var(--color-line);
 }
 
 .doc-content img {
   max-width: 100%;
-  border-radius: 0.75rem;
-  border: 1px solid #27272a;
+  border-radius: 0.875rem;
+  border: 1px solid var(--color-line);
 }
 
 /* 窄屏下表格可横向滚动，避免撑破布局 */
@@ -281,5 +430,23 @@ body {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+}
+
+/* 尊重「减少动态效果」的系统偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-in-up {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
