@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { loadAllArticles, loadWorldArticles, getRelatedArticles, formatDate, getCategoryColor, getCategoryGradient, getFreshnessBadge, getTypeLabel, getTypeColor, slugify, getMetaDescription } from '../../utils/articles';
+import { loadAllArticles, loadWorldArticles, getRelatedArticles, formatDate, getCategoryColor, getCategoryGradient, getCategoryLabel, getFreshnessBadge, getTypeLabel, getTypeColor, slugify, getMetaDescription } from '../../utils/articles';
 
 export function getStaticPaths() {
   const frArticles = loadAllArticles();
@@ -99,7 +99,7 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
     <div class="flex flex-wrap items-center gap-2 mb-4">
       {article.categories.map((cat) => (
         <a href={`/categorie/${slugify(cat)}`} class={`px-2.5 py-1 text-xs font-medium rounded-full border ${getCategoryColor(cat)} hover:opacity-80 transition-opacity`}>
-          {cat}
+          {getCategoryLabel(cat)}
         </a>
       ))}
       {badge && (

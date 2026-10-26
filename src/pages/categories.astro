@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { loadAllArticles, loadWorldArticles, getAllCategories, getCategoryColor, getCategoryGradient, slugify } from '../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllCategories, getCategoryColor, getCategoryGradient, getCategoryLabel, slugify } from '../utils/articles';
 
 const allArticles = [...loadAllArticles(), ...loadWorldArticles()];
 const categories = getAllCategories(allArticles);
@@ -10,6 +10,7 @@ const categoryStats = categories.map((cat) => {
   const sources = new Set(articles.map((a) => a.source));
   return {
     name: cat,
+    label: getCategoryLabel(cat),
     slug: slugify(cat),
     count: articles.length,
     sourceCount: sources.size,
@@ -35,7 +36,7 @@ const categoryStats = categories.map((cat) => {
             <div class="flex items-start justify-between">
               <h3 class="font-semibold text-sm flex items-center gap-2">
                 <span class={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat.name)}`}>
-                  {cat.name}
+                  {cat.label}
                 </span>
               </h3>
               <span class="text-xs text-zinc-500 bg-[var(--color-surface-2)] px-2 py-0.5 rounded-full">

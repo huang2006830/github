@@ -199,6 +199,22 @@ for (let i = 1; i <= totalPages; i++) {
     Web: 'from-amber-600 to-yellow-800',
   };
 
+  const categoryLabels: Record<string, string> = {
+    'Big Data': '大数据',
+    'Data Science': '数据科学',
+    'Data Engineering': '数据工程',
+    Programmation: '编程',
+    IA: '人工智能',
+    DevOps: 'DevOps',
+    'Cybersécurité': '网络安全',
+    Cloud: '云计算',
+    Web: 'Web',
+  };
+
+  function getCatLabel(cat: string): string {
+    return categoryLabels[cat] || cat;
+  }
+
   function getCatColor(cat: string): string {
     return categoryColors[cat] || 'bg-zinc-500/20 text-zinc-400 border-zinc-500/30';
   }
@@ -234,7 +250,7 @@ for (let i = 1; i <= totalPages; i++) {
     const gradient = getCatGradient(a.categories);
 
     const catsHtml = a.categories
-      .map((c) => `<span class="px-2 py-0.5 text-xs font-medium rounded-full border ${getCatColor(c)}">${escapeHtml(c)}</span>`)
+      .map((c) => `<span class="px-2 py-0.5 text-xs font-medium rounded-full border ${getCatColor(c)}">${escapeHtml(getCatLabel(c))}</span>`)
       .join('');
 
     const imageHtml = a.image

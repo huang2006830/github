@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { loadAllArticles, loadWorldArticles, getAllCategories, getAllSources, getCategoryColor, slugify } from '../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllCategories, getAllSources, getCategoryColor, getCategoryLabel, slugify } from '../utils/articles';
 
 const allArticles = [...loadAllArticles(), ...loadWorldArticles()];
 const categories = getAllCategories(allArticles);
@@ -9,6 +9,7 @@ const sources = getAllSources(allArticles);
 // Articles par catégorie
 const catStats = categories.map((cat) => ({
   name: cat,
+  label: getCategoryLabel(cat),
   slug: slugify(cat),
   count: allArticles.filter((a) => a.categories.includes(cat)).length,
 })).sort((a, b) => b.count - a.count);
@@ -192,7 +193,7 @@ const medals = ['text-amber-400', 'text-zinc-400', 'text-amber-700'];
             return (
               <a href={`/categorie/${cat.slug}`} class="block group">
                 <div class="flex items-center justify-between mb-1.5">
-                  <span class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat.name)} transition-all group-hover:scale-105`}>{cat.name}</span>
+                  <span class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat.name)} transition-all group-hover:scale-105`}>{cat.label}</span>
                   <span class="text-xs text-zinc-500 tabular-nums">{cat.count}</span>
                 </div>
                 <div class="h-2 rounded-full bg-zinc-800/80 overflow-hidden">

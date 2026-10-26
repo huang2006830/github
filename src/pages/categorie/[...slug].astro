@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { loadAllArticles, loadWorldArticles, getAllCategories, getCategoryColor, slugify, getMetaDescription } from '../../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllCategories, getCategoryColor, getCategoryLabel, slugify, getMetaDescription } from '../../utils/articles';
 
 export function getStaticPaths() {
   const PAGE_SIZE = 15;
@@ -37,6 +37,7 @@ export function getStaticPaths() {
 
 const { category, catSlug, articles, currentPage, totalPages, totalArticles, recentSources } = Astro.props;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const categoryLabel = getCategoryLabel(category);
 
 function pageUrl(page: number): string {
   return page === 1 ? `/categorie/${catSlug}` : `/categorie/${catSlug}/${page}`;
@@ -52,12 +53,12 @@ for (let i = 1; i <= totalPages; i++) {
 }
 ---
 
-<Layout title={currentPage > 1 ? `${category} - 第 ${currentPage} 页` : `${category} 分类文章`} description={getMetaDescription(`${category}分类下共 ${totalArticles} 篇文章——来源：${recentSources.join('、')}。`)}>
+<Layout title={currentPage > 1 ? `${categoryLabel} - 第 ${currentPage} 页` : `${categoryLabel}分类文章`} description={getMetaDescription(`${categoryLabel}分类下共 ${totalArticles} 篇文章——来源：${recentSources.join('、')}。`)}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": `${category} - 大数据技术学习站`,
-    "description": `${category}分类下共 ${totalArticles} 篇文章。`,
+    "name": `${categoryLabel} - 大数据技术学习站`,
+    "description": `${categoryLabel}分类下共 ${totalArticles} 篇文章。`,
     "url": `${siteUrl}/categorie/${catSlug}/`,
     "numberOfItems": totalArticles,
     "inLanguage": "zh-CN",
@@ -68,7 +69,7 @@ for (let i = 1; i <= totalPages; i++) {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "首页", "item": `${siteUrl}/` },
-      { "@type": "ListItem", "position": 2, "name": category },
+      { "@type": "ListItem", "position": 2, "name": categoryLabel },
     ]
   })} />
   <div class="fade-in-up">
@@ -80,7 +81,7 @@ for (let i = 1; i <= totalPages; i++) {
           <li class="text-zinc-700">/</li>
           <li><a href="/categories" class="hover:text-indigo-400 transition-colors">分类</a></li>
           <li class="text-zinc-700">/</li>
-          <li class="text-zinc-400">{category}</li>
+          <li class="text-zinc-400">{categoryLabel}</li>
         </ol>
       </nav>
       <a href="/categories" class="text-xs text-zinc-500 hover:text-indigo-400 transition-colors mb-3 inline-flex items-center gap-1">
@@ -90,7 +91,7 @@ for (let i = 1; i <= totalPages; i++) {
         全部分类
       </a>
       <h1 class="text-2xl sm:text-3xl font-bold mb-2 flex items-center gap-3">
-        <span class={`px-3 py-1 text-sm font-medium rounded-full border ${getCategoryColor(category)}`}>{category}</span>
+        <span class={`px-3 py-1 text-sm font-medium rounded-full border ${getCategoryColor(category)}`}>{categoryLabel}</span>
       </h1>
       <p class="text-zinc-400 text-sm">
         {totalArticles} 篇文章

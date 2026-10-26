@@ -154,6 +154,22 @@ export function getCategoryColor(category: string): string {
   return categoryColors[category] || 'bg-zinc-500/20 text-zinc-400 border-zinc-500/30';
 }
 
+const categoryLabels: Record<string, string> = {
+  'Big Data': '大数据',
+  'Data Science': '数据科学',
+  'Data Engineering': '数据工程',
+  Programmation: '编程',
+  IA: '人工智能',
+  DevOps: 'DevOps',
+  Cybersécurité: '网络安全',
+  Cloud: '云计算',
+  Web: 'Web',
+};
+
+export function getCategoryLabel(category: string): string {
+  return categoryLabels[category] || category;
+}
+
 const typeLabels: Record<FeedType, string> = {
   blog: '文章',
   podcast: '播客',

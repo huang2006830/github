@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import { loadAllArticles, loadWorldArticles, getAllSources, getCategoryColor, getMetaDescription } from '../../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllSources, getCategoryColor, getCategoryLabel, getMetaDescription } from '../../utils/articles';
 
 export function getStaticPaths() {
   const PAGE_SIZE = 15;
@@ -106,7 +106,7 @@ for (let i = 1; i <= totalPages; i++) {
       <div class="flex flex-wrap gap-1.5">
         {source.categories.map((cat: string) => (
           <span class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat)}`}>
-            {cat}
+            {getCategoryLabel(cat)}
           </span>
         ))}
       </div>

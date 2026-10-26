@@ -1,6 +1,6 @@
 ---
 import type { Article } from '../types/index';
-import { getFreshnessBadge, formatDate, getCategoryGradient, getCategoryColor, getTypeLabel, getTypeColor, slugify } from '../utils/articles';
+import { getFreshnessBadge, formatDate, getCategoryGradient, getCategoryColor, getCategoryLabel, getTypeLabel, getTypeColor, slugify } from '../utils/articles';
 
 interface Props {
   article: Article;
@@ -57,7 +57,7 @@ const badge = getFreshnessBadge(article.pubDate);
     <div class="flex flex-wrap gap-1.5">
       {article.categories.map((cat) => (
         <a href={`/categorie/${slugify(cat)}`} class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat)} hover:opacity-80 transition-opacity`}>
-          {cat}
+          {getCategoryLabel(cat)}
         </a>
       ))}
     </div>

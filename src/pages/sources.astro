@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { loadAllArticles, loadWorldArticles, getAllSources, getCategoryColor } from '../utils/articles';
+import { loadAllArticles, loadWorldArticles, getAllSources, getCategoryColor, getCategoryLabel } from '../utils/articles';
 
 const allArticles = [...loadAllArticles(), ...loadWorldArticles()];
 const sources = getAllSources(allArticles);
@@ -28,7 +28,7 @@ const sources = getAllSources(allArticles);
           <div class="flex flex-wrap gap-1.5">
             {source.categories.map((cat) => (
               <span class={`px-2 py-0.5 text-xs font-medium rounded-full border ${getCategoryColor(cat)}`}>
-                {cat}
+                {getCategoryLabel(cat)}
               </span>
             ))}
           </div>
